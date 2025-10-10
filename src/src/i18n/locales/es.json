@@ -1,0 +1,63 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "privacyPolicy": "Política de Privacidad",
+    "becomeHost": "Conviértete en Anfitrión"
+  },
+  "hero": {
+    "title": "Conéctate con Anfitriones Cercanos y Encuentra Alojamiento Económico en",
+    "description": "Trawise es una aplicación móvil de viajes que conecta a los viajeros con anfitriones de alojamiento locales a través de un sistema de solicitudes basado en ubicación. Los usuarios pueden establecer su ubicación deseada y presupuesto en un mapa interactivo, crear solicitudes de alojamiento con fechas y preferencias específicas, y recibir respuestas de anfitriones cercanos.",
+    "downloadApp": "Descarga la aplicación móvil Trawise"
+  },
+  "footer": {
+    "description": "Conéctate con anfitriones cercanos y encuentra alojamiento económico en Trawise",
+    "contactUs": "Contáctanos",
+    "allRightsReserved": "Todos los Derechos Reservados"
+  },
+  "downloadButtons": {
+    "playStore": {
+      "label": "Disponible en",
+      "store": "Google Play"
+    },
+    "appStore": {
+      "label": "Descargar en",
+      "store": "App Store"
+    }
+  },
+  "languages": {
+    "english": "English",
+    "spanish": "Español",
+    "swedish": "Svenska"
+  },
+  "privacyPolicy": {
+    "title": "Política de Privacidad de Trawise",
+    "lastUpdated": "Última actualización: 20 de julio de 2025",
+    "backToHome": "Volver al Inicio"
+  },
+  "comingSoon": {
+    "title": "Próximamente en Tu Tienda de Aplicaciones",
+    "description": "Estamos dando los toques finales a la aplicación móvil de Trawise. Pronto podrás conectarte con anfitriones cercanos y encontrar alojamiento económico directamente desde tu smartphone.",
+    "backToHome": "Volver al Inicio"
+  },
+  "notFound": {
+    "title": "404 - Página No Encontrada",
+    "description": "La página que buscas no existe. Volvamos a descubrir opciones de alojamiento increíbles.",
+    "backToHome": "Volver al Inicio"
+  },
+  "deleteAccount": {
+    "title": "Eliminar Tu Cuenta",
+    "introMessage": "Lamentamos verte partir. Puedes eliminar tu cuenta de dos maneras:",
+    "viaAppSettings": {
+      "title": "A través de la Configuración de la Aplicación",
+      "description": "Ve a Configuración > Eliminar cuenta para eliminar tus datos instantáneamente."
+    },
+    "requestHere": {
+      "title": "Solicitar Aquí o por Correo Electrónico",
+      "description": "Si lo prefieres, envíanos un correo electrónico y procesaremos tu solicitud de eliminación manualmente."
+    },
+    "contactInfo": {
+      "emailLabel": "Correo electrónico"
+    },
+    "backToHome": "Volver al Inicio"
+  }
+}

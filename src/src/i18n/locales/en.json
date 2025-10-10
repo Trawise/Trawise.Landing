@@ -1,0 +1,63 @@
+{
+  "navigation": {
+    "home": "Home",
+    "privacyPolicy": "Privacy Policy",
+    "becomeHost": "Become a Host"
+  },
+  "hero": {
+    "title": "Connect with Nearby Hosts and Find Budget-Friendly Stays on",
+    "description": "Trawise is a mobile travel application that connects travelers with local accommodation hosts through a location-based request system. Users can set their desired location and budget on an interactive map, create accommodation requests with specific dates and preferences, and receive responses from nearby hosts.",
+    "downloadApp": "Download the Trawise mobile app"
+  },
+  "footer": {
+    "description": "Connect with nearby hosts and find budget-friendly stays on Trawise",
+    "contactUs": "Contact Us",
+    "allRightsReserved": "All Rights Reserved"
+  },
+  "downloadButtons": {
+    "playStore": {
+      "label": "Get It On",
+      "store": "Google Play"
+    },
+    "appStore": {
+      "label": "Download on the",
+      "store": "App Store"
+    }
+  },
+  "languages": {
+    "english": "English",
+    "spanish": "Español",
+    "swedish": "Svenska"
+  },
+  "privacyPolicy": {
+    "title": "Trawise Privacy Policy",
+    "lastUpdated": "Last updated: July 20, 2025",
+    "backToHome": "Back to Home"
+  },
+  "comingSoon": {
+    "title": "Coming Soon to Your App Store",
+    "description": "We're putting the finishing touches on the Trawise mobile app. Soon you'll be able to connect with nearby hosts and find budget-friendly stays right from your smartphone.",
+    "backToHome": "Back to Home"
+  },
+  "notFound": {
+    "title": "404 - Page Not Found",
+    "description": "The page you are looking for doesn't exist. Let's get you back to discovering amazing accommodation options.",
+    "backToHome": "Back to Home"
+  },
+  "deleteAccount": {
+    "title": "Delete Your Account",
+    "introMessage": "We're sorry to see you go. You can delete your account in two ways:",
+    "viaAppSettings": {
+      "title": "Via App Settings",
+      "description": "Go to Settings > Delete Account to remove your data instantly."
+    },
+    "requestHere": {
+      "title": "Request Here or by Email",
+      "description": "If you prefer, email us and we'll process your deletion request manually."
+    },
+    "contactInfo": {
+      "emailLabel": "Email"
+    },
+    "backToHome": "Back to Home"
+  }
+}

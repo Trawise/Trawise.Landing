@@ -1,0 +1,63 @@
+{
+  "navigation": {
+    "home": "Hem",
+    "privacyPolicy": "Integritetspolicy",
+    "becomeHost": "Bli Värd"
+  },
+  "hero": {
+    "title": "Anslut med Närliggande Värdar och Hitta Budgetvänliga Boenden på",
+    "description": "Trawise är en mobil reseapplikation som kopplar samman resenärer med lokala boende värdar genom ett platsbaserat förfrågningssystem. Användare kan ange önskad plats och budget på en interaktiv karta, skapa boendeförfrågningar med specifika datum och preferenser, och få svar från närliggande värdar.",
+    "downloadApp": "Ladda ner Trawise mobilapp"
+  },
+  "footer": {
+    "description": "Anslut med närliggande värdar och hitta budgetvänliga boenden på Trawise",
+    "contactUs": "Kontakta Oss",
+    "allRightsReserved": "Alla Rättigheter Förbehållna"
+  },
+  "downloadButtons": {
+    "playStore": {
+      "label": "Hämta på",
+      "store": "Google Play"
+    },
+    "appStore": {
+      "label": "Ladda ner på",
+      "store": "App Store"
+    }
+  },
+  "languages": {
+    "english": "English",
+    "spanish": "Español",
+    "swedish": "Svenska"
+  },
+  "privacyPolicy": {
+    "title": "Trawise Integritetspolicy",
+    "lastUpdated": "Senast uppdaterad: 20 juli 2025",
+    "backToHome": "Tillbaka till Hem"
+  },
+  "comingSoon": {
+    "title": "Kommer Snart till Din App Store",
+    "description": "Vi lägger sista handen på Trawise mobilapp. Snart kommer du att kunna ansluta med närliggande värdar och hitta budgetvänliga boenden direkt från din smartphone.",
+    "backToHome": "Tillbaka till Hem"
+  },
+  "notFound": {
+    "title": "404 - Sidan Hittades Inte",
+    "description": "Sidan du letar efter finns inte. Låt oss ta dig tillbaka till att upptäcka fantastiska boendealternativ.",
+    "backToHome": "Tillbaka till Hem"
+  },
+  "deleteAccount": {
+    "title": "Ta Bort Ditt Konto",
+    "introMessage": "Vi beklagar att se dig gå. Du kan ta bort ditt konto på två sätt:",
+    "viaAppSettings": {
+      "title": "Via Appinställningar",
+      "description": "Gå till Inställningar > Ta bort konto för att ta bort dina data omedelbart."
+    },
+    "requestHere": {
+      "title": "Begär Här eller via E-post",
+      "description": "Om du föredrar det, mejla oss så behandlar vi din begäran om borttagning manuellt."
+    },
+    "contactInfo": {
+      "emailLabel": "E-post"
+    },
+    "backToHome": "Tillbaka till Hem"
+  }
+}
