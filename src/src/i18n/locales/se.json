@@ -6,7 +6,7 @@
   },
   "hero": {
     "title": "Anslut med Närliggande Värdar och Hitta Budgetvänliga Boenden på",
-    "description": "Trawise är en mobil reseapplikation som kopplar samman resenärer med lokala boende värdar genom ett platsbaserat förfrågningssystem. Användare kan ange önskad plats och budget på en interaktiv karta, skapa boendeförfrågningar med specifika datum och preferenser, och få svar från närliggande värdar.",
+    "description": "Trawise är en mobil reseapplikation som kopplar samman resenärer med lokala boendevärdar genom ett platsbaserat förfrågningssystem. Användare kan ange önskad plats och budget på en interaktiv karta, skapa boendeförfrågningar med specifika datum och preferenser, och få svar från närliggande värdar.",
     "downloadApp": "Ladda ner Trawise mobilapp"
   },
   "footer": {
@@ -27,7 +27,8 @@
   "languages": {
     "english": "English",
     "spanish": "Español",
-    "swedish": "Svenska"
+    "swedish": "Svenska",
+    "italian": "Italienska"
   },
   "privacyPolicy": {
     "title": "Trawise Integritetspolicy",
