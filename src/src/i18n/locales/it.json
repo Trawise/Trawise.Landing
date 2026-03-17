@@ -1,0 +1,64 @@
+{
+  "navigation": {
+    "home": "Home",
+    "privacyPolicy": "Informativa sulla privacy",
+    "becomeHost": "Diventa host"
+  },
+  "hero": {
+    "title": "Connettiti con host vicini e trova alloggi economici su",
+    "description": "Trawise è un'applicazione mobile di viaggio che mette in contatto i viaggiatori con host di alloggi locali attraverso un sistema di richieste basato sulla posizione. Gli utenti possono impostare la posizione desiderata e il budget su una mappa interattiva, creare richieste di alloggio con date e preferenze specifiche e ricevere risposte da host nelle vicinanze.",
+    "downloadApp": "Scarica l'app mobile Trawise"
+  },
+  "footer": {
+    "description": "Connettiti con host vicini e trova alloggi economici su Trawise",
+    "contactUs": "Contattaci",
+    "allRightsReserved": "Tutti i diritti riservati"
+  },
+  "downloadButtons": {
+    "playStore": {
+      "label": "Disponibile su",
+      "store": "Google Play"
+    },
+    "appStore": {
+      "label": "Scarica su",
+      "store": "App Store"
+    }
+  },
+  "languages": {
+    "english": "English",
+    "spanish": "Español",
+    "swedish": "Svenska",
+    "italian": "Italiano"
+  },
+  "privacyPolicy": {
+    "title": "Informativa sulla privacy di Trawise",
+    "lastUpdated": "Ultimo aggiornamento: 20 luglio 2025",
+    "backToHome": "Torna alla home"
+  },
+  "comingSoon": {
+    "title": "Prossimamente nel tuo App Store",
+    "description": "Stiamo mettendo gli ultimi ritocchi all'app mobile Trawise. Presto potrai connetterti con host vicini e trovare alloggi economici direttamente dal tuo smartphone.",
+    "backToHome": "Torna alla home"
+  },
+  "notFound": {
+    "title": "404 - Pagina non trovata",
+    "description": "La pagina che stai cercando non esiste. Torniamo a scoprire fantastiche opzioni di alloggio.",
+    "backToHome": "Torna alla home"
+  },
+  "deleteAccount": {
+    "title": "Elimina il tuo account",
+    "introMessage": "Siamo spiacenti di vederti andare. Puoi eliminare il tuo account in due modi:",
+    "viaAppSettings": {
+      "title": "Tramite le impostazioni dell'app",
+      "description": "Vai in Impostazioni > Elimina account per rimuovere i tuoi dati immediatamente."
+    },
+    "requestHere": {
+      "title": "Richiedi qui o via email",
+      "description": "Se preferisci, inviaci un'email e elaboreremo manualmente la tua richiesta di eliminazione."
+    },
+    "contactInfo": {
+      "emailLabel": "Email"
+    },
+    "backToHome": "Torna alla home"
+  }
+}
