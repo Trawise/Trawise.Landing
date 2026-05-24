@@ -67,5 +67,18 @@
       "emailLabel": "Correo electrónico"
     },
     "backToHome": "Volver al Inicio"
+  },
+  "skipToContent": "Saltar al contenido principal",
+  "errorBoundary": {
+    "title": "Algo Salió Mal",
+    "description": "Lo sentimos, ocurrió algo inesperado. Intenta recargar la página.",
+    "refresh": "Recargar Página"
+  },
+  "pageTitles": {
+    "home": "Conéctate con anfitriones cercanos y encuentra alojamiento económico",
+    "privacyPolicy": "Política de Privacidad",
+    "comingSoon": "Próximamente",
+    "deleteAccount": "Eliminar tu cuenta",
+    "notFound": "Página no encontrada"
   }
 }

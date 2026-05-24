@@ -15,9 +15,11 @@ export function Header() {
             aria-label="Go to homepage"
           >
             <img
-              src="full-logo.png"
+              src="/full-logo.png"
               alt="Trawise logo"
               className="h-10 w-auto"
+              width={160}
+              height={40}
               loading="eager"
             />
           </Link>

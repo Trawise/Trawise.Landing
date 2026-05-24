@@ -28,7 +28,7 @@
     "english": "English",
     "spanish": "Español",
     "swedish": "Svenska",
-    "italian": "Italian"
+    "italian": "Italiano"
   },
   "privacyPolicy": {
     "title": "Trawise Privacy Policy",
@@ -67,5 +67,18 @@
       "emailLabel": "Email"
     },
     "backToHome": "Back to Home"
+  },
+  "skipToContent": "Skip to main content",
+  "errorBoundary": {
+    "title": "Something Went Wrong",
+    "description": "We're sorry, but something unexpected happened. Please try refreshing the page.",
+    "refresh": "Refresh Page"
+  },
+  "pageTitles": {
+    "home": "Connect with Nearby Hosts and Find Budget-Friendly Stays",
+    "privacyPolicy": "Privacy Policy",
+    "comingSoon": "Coming Soon",
+    "deleteAccount": "Delete Your Account",
+    "notFound": "Page Not Found"
   }
 }

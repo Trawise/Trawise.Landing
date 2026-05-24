@@ -67,5 +67,18 @@
       "emailLabel": "Email"
     },
     "backToHome": "Torna alla home"
+  },
+  "skipToContent": "Passa al contenuto principale",
+  "errorBoundary": {
+    "title": "Qualcosa è andato storto",
+    "description": "Ci dispiace, si è verificato un errore inaspettato. Prova a ricaricare la pagina.",
+    "refresh": "Ricarica la pagina"
+  },
+  "pageTitles": {
+    "home": "Connettiti con host vicini e trova alloggi economici",
+    "privacyPolicy": "Informativa sulla privacy",
+    "comingSoon": "Prossimamente",
+    "deleteAccount": "Elimina il tuo account",
+    "notFound": "Pagina non trovata"
   }
 }

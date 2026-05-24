@@ -1,19 +1,21 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { SITE_CONFIG } from "../lib/constants";
+import { Container } from "./ui";
 import { LanguageSwitcher } from "./language-switcher";
+
+const CURRENT_YEAR = new Date().getFullYear();
 
 export function Footer() {
   const { t } = useTranslation();
-  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-gray-50 py-16" role="contentinfo">
-      <div className="container mx-auto px-4">
+      <Container>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-6">
             <img
-              src="full-logo.png"
+              src="/full-logo.png"
               alt={`${SITE_CONFIG.name} logo`}
               className="h-6 w-auto"
               width={120}
@@ -84,7 +86,7 @@ export function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="text-gray-500 order-2 md:order-1">
               <p>
-                &copy; {currentYear} {SITE_CONFIG.name}.{" "}
+                &copy; {CURRENT_YEAR} {SITE_CONFIG.name}.{" "}
                 {t("footer.allRightsReserved")}.
               </p>
             </div>
@@ -117,7 +119,7 @@ export function Footer() {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </footer>
   );
 }

@@ -2,18 +2,19 @@ import { useTranslation } from "react-i18next";
 import { BackLink } from "./components/back-link";
 import { Footer } from "./components/footer";
 import { Header } from "./components/header";
+import { SkipLink } from "./components/skip-link";
 import { Container } from "./components/ui";
 import { SITE_CONFIG } from "./lib/constants";
+import { usePageTitle } from "./hooks/use-page-title";
 
 export function DeleteAccount() {
   const { t } = useTranslation();
 
+  usePageTitle(t("pageTitles.deleteAccount"));
+
   return (
     <>
-      {/* Skip link for accessibility */}
-      <a href="#main-content" className="skip-link sr-only focus:not-sr-only">
-        Skip to main content
-      </a>
+      <SkipLink />
 
       <Header />
 
@@ -65,9 +66,9 @@ export function DeleteAccount() {
                   </section>
                 </div>
 
-                <nav className="pt-8" aria-label="Return navigation">
+                <div className="pt-8">
                   <BackLink to="/">{t("deleteAccount.backToHome")}</BackLink>
-                </nav>
+                </div>
               </div>
             </div>
           </Container>

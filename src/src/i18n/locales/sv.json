@@ -28,7 +28,7 @@
     "english": "English",
     "spanish": "Español",
     "swedish": "Svenska",
-    "italian": "Italienska"
+    "italian": "Italiano"
   },
   "privacyPolicy": {
     "title": "Trawise Integritetspolicy",
@@ -67,5 +67,18 @@
       "emailLabel": "E-post"
     },
     "backToHome": "Tillbaka till Hem"
+  },
+  "skipToContent": "Hoppa till huvudinnehåll",
+  "errorBoundary": {
+    "title": "Något Gick Fel",
+    "description": "Vi beklagar, något oväntat hände. Försök att ladda om sidan.",
+    "refresh": "Ladda Om Sidan"
+  },
+  "pageTitles": {
+    "home": "Anslut med närliggande värdar och hitta budgetvänliga boenden",
+    "privacyPolicy": "Integritetspolicy",
+    "comingSoon": "Kommer snart",
+    "deleteAccount": "Ta bort ditt konto",
+    "notFound": "Sidan hittades inte"
   }
 }

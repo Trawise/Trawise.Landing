@@ -2,18 +2,19 @@ import { useTranslation } from "react-i18next";
 import { BackLink } from "./components/back-link";
 import { Footer } from "./components/footer";
 import { Header } from "./components/header";
+import { SkipLink } from "./components/skip-link";
 import { Container } from "./components/ui";
 import { SITE_CONFIG } from "./lib/constants";
+import { usePageTitle } from "./hooks/use-page-title";
 
 export function PrivacyPolicy() {
   const { t } = useTranslation();
 
+  usePageTitle(t("pageTitles.privacyPolicy"));
+
   return (
     <>
-      {/* Skip link for accessibility */}
-      <a href="#main-content" className="skip-link sr-only focus:not-sr-only">
-        Skip to main content
-      </a>
+      <SkipLink />
 
       <Header />
 
@@ -30,6 +31,9 @@ export function PrivacyPolicy() {
                 </p>
               </header>
 
+              {/* The legal text below is intentionally provided in English only.
+                  This is common practice for privacy policies and ensures legal
+                  precision is not lost in translation. */}
               <div className="prose prose-lg max-w-none">
                 <p className="text-gray-700 leading-relaxed mb-8">
                   This Privacy Policy explains how Trawise ("we", "our", or
@@ -259,9 +263,9 @@ export function PrivacyPolicy() {
                   </section>
                 </div>
 
-                <nav className="pt-8" aria-label="Return navigation">
+                <div className="pt-8">
                   <BackLink to="/">{t("privacyPolicy.backToHome")}</BackLink>
-                </nav>
+                </div>
               </div>
             </div>
           </Container>
