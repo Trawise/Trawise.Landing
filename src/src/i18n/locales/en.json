@@ -45,6 +45,13 @@
     "description": "The page you are looking for doesn't exist. Let's get you back to discovering amazing accommodation options.",
     "backToHome": "Back to Home"
   },
+  "cookieBanner": {
+    "message": "We use cookies to improve your experience. Analytics cookies help us understand how visitors use our website.",
+    "learnMore": "Privacy Policy",
+    "acceptAll": "Accept All",
+    "rejectAll": "Reject All",
+    "ariaLabel": "Cookie consent"
+  },
   "deleteAccount": {
     "title": "Delete Your Account",
     "introMessage": "We're sorry to see you go. You can delete your account in two ways:",

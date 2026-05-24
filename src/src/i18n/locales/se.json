@@ -45,6 +45,13 @@
     "description": "Sidan du letar efter finns inte. Låt oss ta dig tillbaka till att upptäcka fantastiska boendealternativ.",
     "backToHome": "Tillbaka till Hem"
   },
+  "cookieBanner": {
+    "message": "Vi använder cookies för att förbättra din upplevelse. Analytiska cookies hjälper oss att förstå hur besökare använder vår webbplats.",
+    "learnMore": "Integritetspolicy",
+    "acceptAll": "Acceptera alla",
+    "rejectAll": "Avvisa alla",
+    "ariaLabel": "Cookie-samtycke"
+  },
   "deleteAccount": {
     "title": "Ta Bort Ditt Konto",
     "introMessage": "Vi beklagar att se dig gå. Du kan ta bort ditt konto på två sätt:",

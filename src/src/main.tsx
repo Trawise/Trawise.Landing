@@ -7,6 +7,7 @@ import { ComingSoon } from "./ComingSoon.tsx";
 import { DeleteAccount } from "./DeleteAccount.tsx";
 import { NotFound } from "./NotFound.tsx";
 import { PrivacyPolicy } from "./PrivacyPolicy.tsx";
+import { CookieBanner } from "./components/cookie-banner.tsx";
 import "./i18n";
 import "./index.css";
 
@@ -27,6 +28,9 @@ createRoot(rootElement).render(
           <Route path="/delete-account" element={<DeleteAccount />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        {/* Cookie consent banner — rendered outside Routes so it persists
+            across all pages, but inside BrowserRouter so Link works. */}
+        <CookieBanner />
       </BrowserRouter>
     </ErrorBoundary>
   </StrictMode>

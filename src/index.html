@@ -1,78 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9HC828T9RG"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
 
-      gtag('config', 'G-9HC828T9RG');
-    </script>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <!--
+    All inline gtag commands are kept in one script block so the required
+    dataLayer command order (consent default → js timestamp → config) is
+    explicit and easy to audit in one place.  The async loader is a
+    separate tag so it never blocks the HTML parser.
+  -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
 
-    <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    // Google Consent Mode v2 — must be called before gtag('config', ...).
+    // Read any prior decision from localStorage so returning visitors who
+    // already accepted get analytics_storage granted immediately and GA
+    // fires without any delay.
+    // For first-time visitors (no stored decision) analytics_storage is
+    // denied.  wait_for_update gives the React app 2 s to call
+    // gtag('consent','update',...) from useCookieConsent after the user
+    // interacts with the banner.  If no update arrives within that window
+    // GA discards the queued hit — correct GDPR behaviour.
+    // wait_for_update is only meaningful when a signal is 'denied', so it
+    // is omitted entirely for returning visitors who already accepted.
+    (function () {
+      var stored = '';
+      try { stored = localStorage.getItem('cookie-consent') || ''; } catch (e) { }
+      var analyticsGranted = stored === 'accepted';
+      var consentDefaults = {
+        'analytics_storage': analyticsGranted ? 'granted' : 'denied',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'functionality_storage': 'granted',
+        'security_storage': 'granted'
+      };
+      if (!analyticsGranted) {
+        consentDefaults['wait_for_update'] = 2000;
+      }
+      gtag('consent', 'default', consentDefaults);
+    })();
 
-    <!-- Primary Meta Tags -->
-    <title>
-      Trawise - Connect with Nearby Hosts and Find Budget-Friendly Stays
-    </title>
-    <meta
-      name="title"
-      content="Trawise - Connect with Nearby Hosts and Find Budget-Friendly Stays"
-    />
-    <meta
-      name="description"
-      content="Trawise is a mobile travel application that connects travelers with local accommodation hosts through a location-based request system. Find budget-friendly stays worldwide."
-    />
-    <meta
-      name="keywords"
-      content="travel, accommodation, budget stays, hosts, mobile app, location-based, travel app"
-    />
-    <meta name="author" content="Trawise" />
-    <meta name="robots" content="index, follow" />
+    gtag('js', new Date());
+    gtag('config', 'G-9HC828T9RG');
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9HC828T9RG"></script>
 
-    <!-- Preconnect to external domains for performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- DNS Prefetch for better performance -->
-    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  <!-- Primary Meta Tags -->
+  <title>
+    Trawise - Connect with Nearby Hosts and Find Budget-Friendly Stays
+  </title>
+  <meta name="title" content="Trawise - Connect with Nearby Hosts and Find Budget-Friendly Stays" />
+  <meta name="description"
+    content="Trawise is a mobile travel application that connects travelers with local accommodation hosts through a location-based request system. Find budget-friendly stays worldwide." />
+  <meta name="keywords" content="travel, accommodation, budget stays, hosts, mobile app, location-based, travel app" />
+  <meta name="author" content="Trawise" />
+  <meta name="robots" content="index, follow" />
 
-    <!-- Single Page Apps for GitHub Pages -->
-    <!-- https://github.com/rafgraph/spa-github-pages -->
-    <script type="text/javascript">
-      // Single Page Apps for GitHub Pages
-      // MIT License
-      // This script checks to see if a redirect is present in the query string,
-      // converts it back into the correct url and adds it to the
-      // browser's history using window.history.replaceState(...),
-      // which won't cause the browser to attempt to load the new url.
-      // When the single page app is loaded further down in this file,
-      // the correct url will be waiting in the browser's history for
-      // the single page app to route accordingly.
-      (function (l) {
-        if (l.search[1] === "/") {
-          var decoded = l.search
-            .slice(1)
-            .split("&")
-            .map(function (s) {
-              return s.replace(/~and~/g, "&");
-            })
-            .join("?");
-          window.history.replaceState(
-            null,
-            null,
-            l.pathname.slice(0, -1) + decoded + l.hash
-          );
-        }
-      })(window.location);
-    </script>
-  </head>
+  <!-- Preconnect to external domains for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <!-- DNS Prefetch for better performance -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+
+  <!-- Single Page Apps for GitHub Pages -->
+  <!-- https://github.com/rafgraph/spa-github-pages -->
+  <script type="text/javascript">
+    // Single Page Apps for GitHub Pages
+    // MIT License
+    // This script checks to see if a redirect is present in the query string,
+    // converts it back into the correct url and adds it to the
+    // browser's history using window.history.replaceState(...),
+    // which won't cause the browser to attempt to load the new url.
+    // When the single page app is loaded further down in this file,
+    // the correct url will be waiting in the browser's history for
+    // the single page app to route accordingly.
+    (function (l) {
+      if (l.search[1] === "/") {
+        var decoded = l.search
+          .slice(1)
+          .split("&")
+          .map(function (s) {
+            return s.replace(/~and~/g, "&");
+          })
+          .join("?");
+        window.history.replaceState(
+          null,
+          null,
+          l.pathname.slice(0, -1) + decoded + l.hash
+        );
+      }
+    })(window.location);
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
 </html>

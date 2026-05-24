@@ -45,6 +45,13 @@
     "description": "La página que buscas no existe. Volvamos a descubrir opciones de alojamiento increíbles.",
     "backToHome": "Volver al Inicio"
   },
+  "cookieBanner": {
+    "message": "Usamos cookies para mejorar tu experiencia. Las cookies analíticas nos ayudan a entender cómo los visitantes usan nuestro sitio web.",
+    "learnMore": "Política de Privacidad",
+    "acceptAll": "Aceptar todo",
+    "rejectAll": "Rechazar todo",
+    "ariaLabel": "Consentimiento de cookies"
+  },
   "deleteAccount": {
     "title": "Eliminar Tu Cuenta",
     "introMessage": "Lamentamos verte partir. Puedes eliminar tu cuenta de dos maneras:",

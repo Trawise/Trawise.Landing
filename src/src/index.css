@@ -85,6 +85,7 @@ body {
 
 /* Print styles */
 @media print {
+
   *,
   *::before,
   *::after {
@@ -119,8 +120,26 @@ body {
   }
 }
 
+/* Cookie banner entrance animation */
+@keyframes cookie-banner-slide-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.cookie-banner-enter {
+  animation: cookie-banner-slide-up 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
 /* Motion preference respect */
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
