@@ -7,7 +7,47 @@
   "hero": {
     "title": "Connect with Nearby Hosts and Find Budget-Friendly Stays on",
     "description": "Trawise is a mobile travel application that connects travelers with local accommodation hosts through a location-based request system. Users can set their desired location and budget on an interactive map, create accommodation requests with specific dates and preferences, and receive responses from nearby hosts.",
-    "downloadApp": "Download the Trawise mobile app"
+    "downloadApp": "Download the Trawise mobile app",
+    "scrollHint": "See how it works for hotels"
+  },
+  "forHotels": {
+    "eyebrow": "For Hotels",
+    "title": "How Trawise Works for Hotels",
+    "subtitle": "Fill your empty rooms for the closest dates by connecting directly with nearby travelers.",
+    "steps": {
+      "step1": {
+        "title": "Register your hotel",
+        "description": "Create a host account and enter your hotel's basic details, or email us and we'll set it up for you."
+      },
+      "step2": {
+        "title": "Receive requests",
+        "description": "View requests from nearby travelers and choose the ones that work best for you."
+      },
+      "step3": {
+        "title": "Compare and decide",
+        "description": "Compare each traveler's price, dates, and rating to make an informed decision."
+      },
+      "step4": {
+        "title": "Accept and welcome",
+        "description": "Accept your chosen request and welcome the traveler on their arrival date."
+      }
+    },
+    "benefitsHeading": "Why Hotels Choose Trawise",
+    "benefits": {
+      "benefit1": {
+        "title": "Fill your last-minute vacancies",
+        "description": "Turn empty rooms into bookings for the closest dates, with no long-term commitment."
+      },
+      "benefit2": {
+        "title": "Free for hotels",
+        "description": "Joining Trawise and listing your hotel costs nothing — there are no fees to get started."
+      },
+      "benefit3": {
+        "title": "An extra marketing channel",
+        "description": "Reach travelers actively searching nearby, without spending on ads or promotions."
+      }
+    },
+    "cta": "Become a Host"
   },
   "footer": {
     "description": "Connect with nearby hosts and find budget-friendly stays on Trawise",

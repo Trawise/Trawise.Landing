@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { DownloadButton } from "./components/download-buttons";
 import { Footer } from "./components/footer";
+import { ForHotels } from "./components/for-hotels";
 import { Header } from "./components/header";
 import { SkipLink } from "./components/skip-link";
 import { Container } from "./components/ui";
@@ -19,7 +20,7 @@ export function App() {
 
       <main id="main-content" className="flex-grow">
         <section
-          className="min-h-screen flex items-center py-16"
+          className="relative min-h-screen flex items-center py-16"
           aria-labelledby="hero-heading"
         >
           <Container>
@@ -58,7 +59,36 @@ export function App() {
               </div>
             </div>
           </Container>
+
+          <a
+            href="#for-hotels-heading"
+            className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 px-3 py-2 rounded-lg text-gray-400 hover:text-indigo-500 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+            aria-label={t("hero.scrollHint")}
+          >
+            <span className="hidden sm:block text-base font-medium">
+              {t("hero.scrollHint")}
+            </span>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="animate-bounce"
+              aria-hidden="true"
+            >
+              <path
+                d="M6 9l6 6 6-6"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </a>
         </section>
+
+        <ForHotels />
       </main>
 
       <Footer />

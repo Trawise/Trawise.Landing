@@ -7,7 +7,47 @@
   "hero": {
     "title": "Anslut med Närliggande Värdar och Hitta Budgetvänliga Boenden på",
     "description": "Trawise är en mobil reseapplikation som kopplar samman resenärer med lokala boendevärdar genom ett platsbaserat förfrågningssystem. Användare kan ange önskad plats och budget på en interaktiv karta, skapa boendeförfrågningar med specifika datum och preferenser, och få svar från närliggande värdar.",
-    "downloadApp": "Ladda ner Trawise mobilapp"
+    "downloadApp": "Ladda ner Trawise mobilapp",
+    "scrollHint": "Se hur det fungerar för hotell"
+  },
+  "forHotels": {
+    "eyebrow": "För Hotell",
+    "title": "Så Fungerar Trawise för Hotell",
+    "subtitle": "Fyll dina lediga rum för de närmaste datumen genom att koppla samman direkt med resenärer i närheten.",
+    "steps": {
+      "step1": {
+        "title": "Registrera ditt hotell",
+        "description": "Skapa ett konto och ange grundläggande information om ditt hotell, eller mejla oss så ordnar vi det åt dig."
+      },
+      "step2": {
+        "title": "Ta emot förfrågningar",
+        "description": "Granska förfrågningar från resenärer i närheten och välj de som passar dig bäst."
+      },
+      "step3": {
+        "title": "Jämför och välj",
+        "description": "Jämför pris, datum och betyg för varje resenär för att fatta ett välgrundat beslut."
+      },
+      "step4": {
+        "title": "Acceptera och välkomna",
+        "description": "Acceptera den valda förfrågan och välkomna resenären på ankomstdatumet."
+      }
+    },
+    "benefitsHeading": "Varför Hotell Väljer Trawise",
+    "benefits": {
+      "benefit1": {
+        "title": "Fyll dina sista-minuten-rum",
+        "description": "Förvandla lediga rum till bokningar för de närmaste datumen, utan långsiktigt åtagande."
+      },
+      "benefit2": {
+        "title": "Gratis för hotell",
+        "description": "Att gå med i Trawise och lista ditt hotell kostar ingenting — inga avgifter för att komma igång."
+      },
+      "benefit3": {
+        "title": "En extra marknadsföringskanal",
+        "description": "Nå resenärer som aktivt söker boende i närheten, utan att spendera pengar på annonser."
+      }
+    },
+    "cta": "Bli Värd"
   },
   "footer": {
     "description": "Anslut med närliggande värdar och hitta budgetvänliga boenden på Trawise",

@@ -7,7 +7,47 @@
   "hero": {
     "title": "Connettiti con host vicini e trova alloggi economici su",
     "description": "Trawise è un'applicazione mobile di viaggio che mette in contatto i viaggiatori con host di alloggi locali attraverso un sistema di richieste basato sulla posizione. Gli utenti possono impostare la posizione desiderata e il budget su una mappa interattiva, creare richieste di alloggio con date e preferenze specifiche e ricevere risposte da host nelle vicinanze.",
-    "downloadApp": "Scarica l'app mobile Trawise"
+    "downloadApp": "Scarica l'app mobile Trawise",
+    "scrollHint": "Scopri come funziona per gli hotel"
+  },
+  "forHotels": {
+    "eyebrow": "Per gli Hotel",
+    "title": "Come Funziona Trawise per gli Hotel",
+    "subtitle": "Riempi le camere vuote per le date più vicine connettendoti direttamente con i viaggiatori nelle vicinanze.",
+    "steps": {
+      "step1": {
+        "title": "Registra il tuo hotel",
+        "description": "Crea un account e inserisci i dati di base del tuo hotel, oppure scrivici e lo configureremo noi per te."
+      },
+      "step2": {
+        "title": "Ricevi le richieste",
+        "description": "Consulta le richieste dei viaggiatori nelle vicinanze e scegli quelle più adatte a te."
+      },
+      "step3": {
+        "title": "Confronta e decidi",
+        "description": "Confronta prezzo, date e valutazione di ogni viaggiatore per prendere una decisione informata."
+      },
+      "step4": {
+        "title": "Accetta e dai il benvenuto",
+        "description": "Accetta la richiesta scelta e dai il benvenuto al viaggiatore il giorno del suo arrivo."
+      }
+    },
+    "benefitsHeading": "Perché gli Hotel Scelgono Trawise",
+    "benefits": {
+      "benefit1": {
+        "title": "Riempi le camere dell'ultimo minuto",
+        "description": "Trasforma le camere vuote in prenotazioni per le date più vicine, senza impegni a lungo termine."
+      },
+      "benefit2": {
+        "title": "Gratuito per gli hotel",
+        "description": "Iscriversi a Trawise e pubblicare il tuo hotel non costa nulla: nessuna commissione per iniziare."
+      },
+      "benefit3": {
+        "title": "Un canale di marketing in più",
+        "description": "Raggiungi i viaggiatori che cercano alloggi nelle vicinanze, senza spendere in annunci o promozioni."
+      }
+    },
+    "cta": "Diventa Host"
   },
   "footer": {
     "description": "Connettiti con host vicini e trova alloggi economici su Trawise",

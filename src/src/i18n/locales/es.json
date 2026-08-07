@@ -7,7 +7,47 @@
   "hero": {
     "title": "Conéctate con Anfitriones Cercanos y Encuentra Alojamiento Económico en",
     "description": "Trawise es una aplicación móvil de viajes que conecta a los viajeros con anfitriones de alojamiento locales a través de un sistema de solicitudes basado en ubicación. Los usuarios pueden establecer su ubicación deseada y presupuesto en un mapa interactivo, crear solicitudes de alojamiento con fechas y preferencias específicas, y recibir respuestas de anfitriones cercanos.",
-    "downloadApp": "Descarga la aplicación móvil Trawise"
+    "downloadApp": "Descarga la aplicación móvil Trawise",
+    "scrollHint": "Descubre cómo funciona para hoteles"
+  },
+  "forHotels": {
+    "eyebrow": "Para Hoteles",
+    "title": "Así Funciona Trawise para Hoteles",
+    "subtitle": "Llena tus habitaciones vacías para las fechas más próximas conectando directamente con viajeros cercanos.",
+    "steps": {
+      "step1": {
+        "title": "Registra tu hotel",
+        "description": "Crea una cuenta e introduce los datos básicos de tu hotel, o escríbenos y lo configuraremos por ti."
+      },
+      "step2": {
+        "title": "Recibe solicitudes",
+        "description": "Consulta las solicitudes de viajeros cercanos y elige las que más te convengan."
+      },
+      "step3": {
+        "title": "Compara y decide",
+        "description": "Compara el precio, las fechas y la valoración de cada viajero para tomar una decisión informada."
+      },
+      "step4": {
+        "title": "Acepta y da la bienvenida",
+        "description": "Acepta la solicitud elegida y da la bienvenida al viajero en su fecha de llegada."
+      }
+    },
+    "benefitsHeading": "Por Qué los Hoteles Eligen Trawise",
+    "benefits": {
+      "benefit1": {
+        "title": "Llena tus habitaciones de última hora",
+        "description": "Convierte las habitaciones vacías en reservas para las fechas más próximas, sin compromiso a largo plazo."
+      },
+      "benefit2": {
+        "title": "Gratis para hoteles",
+        "description": "Unirte a Trawise y publicar tu hotel no cuesta nada: no hay comisiones para empezar."
+      },
+      "benefit3": {
+        "title": "Un canal de marketing adicional",
+        "description": "Llega a viajeros que buscan alojamiento cerca, sin gastar en anuncios ni promociones."
+      }
+    },
+    "cta": "Conviértete en Anfitrión"
   },
   "footer": {
     "description": "Conéctate con anfitriones cercanos y encuentra alojamiento económico en Trawise",
