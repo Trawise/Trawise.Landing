@@ -17,7 +17,8 @@
     "steps": {
       "step1": {
         "title": "Register your hotel",
-        "description": "Create a host account and enter your hotel's basic details, or email us and we'll set it up for you."
+        "descriptionBeforeEmail": "Create a host account and enter your hotel's basic details, or email us at ",
+        "descriptionAfterEmail": " and we'll set it up for you."
       },
       "step2": {
         "title": "Receive requests",

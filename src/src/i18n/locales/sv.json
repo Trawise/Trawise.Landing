@@ -17,7 +17,8 @@
     "steps": {
       "step1": {
         "title": "Registrera ditt hotell",
-        "description": "Skapa ett konto och ange grundläggande information om ditt hotell, eller mejla oss så ordnar vi det åt dig."
+        "descriptionBeforeEmail": "Skapa ett konto och ange grundläggande information om ditt hotell, eller mejla oss på ",
+        "descriptionAfterEmail": " så ordnar vi det åt dig."
       },
       "step2": {
         "title": "Ta emot förfrågningar",

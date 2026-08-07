@@ -103,7 +103,20 @@ export function ForHotels() {
                 {t(`forHotels.steps.${stepKey}.title`)}
               </h3>
               <p className="text-[15px] text-gray-600 leading-relaxed">
-                {t(`forHotels.steps.${stepKey}.description`)}
+                {stepKey === "step1" ? (
+                  <>
+                    {t("forHotels.steps.step1.descriptionBeforeEmail")}
+                    <a
+                      href="mailto:support@trawise.org"
+                      className="font-medium text-indigo-600 hover:text-indigo-700 underline decoration-transparent hover:decoration-current transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded"
+                    >
+                      support@trawise.org
+                    </a>
+                    {t("forHotels.steps.step1.descriptionAfterEmail")}
+                  </>
+                ) : (
+                  t(`forHotels.steps.${stepKey}.description`)
+                )}
               </p>
             </li>
           ))}

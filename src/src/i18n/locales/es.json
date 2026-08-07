@@ -17,7 +17,8 @@
     "steps": {
       "step1": {
         "title": "Registra tu hotel",
-        "description": "Crea una cuenta e introduce los datos básicos de tu hotel, o escríbenos y lo configuraremos por ti."
+        "descriptionBeforeEmail": "Crea una cuenta e introduce los datos básicos de tu hotel, o escríbenos a ",
+        "descriptionAfterEmail": " y lo configuraremos por ti."
       },
       "step2": {
         "title": "Recibe solicitudes",
