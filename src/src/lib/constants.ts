@@ -2,7 +2,7 @@ export const SITE_CONFIG = {
   name: "Trawise",
   description:
     "Connect with nearby hosts and find budget-friendly stays on Trawise - a mobile travel application with location-based request system.",
-  email: "support@trawise.com",
+  email: "support@trawise.org",
   location: "Stockholm, Sweden",
 } as const;
 
