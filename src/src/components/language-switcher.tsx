@@ -16,7 +16,7 @@ export function LanguageSwitcher() {
   const active = i18n.resolvedLanguage ?? i18n.language;
 
   return (
-    <nav className="flex items-center gap-3" aria-label="Language selection">
+    <div className="flex items-center gap-3" role="group" aria-label={t("languages.groupLabel")}>
       {LANGUAGES.map((lang, index) => (
         <Fragment key={lang.code}>
           {index > 0 && (
@@ -25,19 +25,23 @@ export function LanguageSwitcher() {
             </span>
           )}
           <button
+            type="button"
             onClick={() => i18n.changeLanguage(lang.code)}
-            className={`transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 rounded underline decoration-transparent hover:decoration-current focus:decoration-current ${
+            className={`transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600 rounded underline decoration-transparent hover:decoration-current focus:decoration-current ${
               active === lang.code
                 ? "text-gray-900 font-medium"
                 : "text-gray-600 hover:text-gray-900"
             }`}
-            aria-label={`Switch to ${t(lang.labelKey)}`}
+            // The language name itself always stays in its own language, but
+            // the surrounding phrase is translated — otherwise a Swedish
+            // visitor hears an English sentence read out by their screen reader.
+            aria-label={t("languages.switchTo", { language: t(lang.labelKey) })}
             aria-current={active === lang.code ? true : undefined}
           >
             {t(lang.labelKey)}
           </button>
         </Fragment>
       ))}
-    </nav>
+    </div>
   );
 }

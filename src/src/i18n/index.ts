@@ -38,10 +38,16 @@ i18n
 // Resources are synchronous so i18n is already initialized here; setting the
 // attribute immediately handles the initial load, and the event handler covers
 // all subsequent language switches.
-document.documentElement.lang = i18n.language || "en";
+//
+// resolvedLanguage, not language: the detector reports the raw browser tag
+// (e.g. "en-US" or "sv-SE") while the bundle actually rendered is the base
+// language it resolved to. Declaring "en-US" while serving the "en" resources
+// would announce a locale we do not really ship.
+function syncHtmlLang(): void {
+  document.documentElement.lang = i18n.resolvedLanguage || i18n.language || "en";
+}
 
-i18n.on("languageChanged", (lng: string) => {
-  document.documentElement.lang = lng;
-});
+syncHtmlLang();
+i18n.on("languageChanged", syncHtmlLang);
 
 export default i18n;

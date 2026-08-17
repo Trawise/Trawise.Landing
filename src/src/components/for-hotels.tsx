@@ -1,10 +1,15 @@
 import { type ReactNode } from "react";
 import { useTranslation } from "react-i18next";
+import { HOST_APP_URL, SITE_CONFIG } from "../lib/constants";
 import { Container } from "./ui";
 
 const STEP_KEYS = ["step1", "step2", "step3", "step4"] as const;
 
-const BENEFIT_ICONS: Record<string, ReactNode> = {
+const BENEFIT_KEYS = ["benefit1", "benefit2", "benefit3"] as const;
+
+// Keyed by the literal union rather than `string`, so a lookup can never be
+// undefined and adding a benefit key without an icon is a type error.
+const BENEFIT_ICONS: Record<(typeof BENEFIT_KEYS)[number], ReactNode> = {
   benefit1: (
     <svg
       width="24"
@@ -63,19 +68,20 @@ const BENEFIT_ICONS: Record<string, ReactNode> = {
   ),
 };
 
-const BENEFIT_KEYS = ["benefit1", "benefit2", "benefit3"] as const;
-
 export function ForHotels() {
   const { t } = useTranslation();
 
   return (
     <section
+      id="how-it-works"
       className="py-20 bg-gray-50"
       aria-labelledby="for-hotels-heading"
     >
       <Container>
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
-          <span className="inline-block text-sm font-semibold text-indigo-500 uppercase tracking-wide">
+          {/* brand-600, not brand-500: at 14px this is body-size text, and
+              brand-500 on gray-50 is only 4.27:1 — short of AA's 4.5. */}
+          <span className="inline-block text-sm font-semibold text-brand-600 uppercase tracking-wide">
             {t("forHotels.eyebrow")}
           </span>
           <h2
@@ -91,10 +97,13 @@ export function ForHotels() {
           {STEP_KEYS.map((stepKey, index) => (
             <li
               key={stepKey}
-              className="bg-white rounded-2xl p-7 shadow-sm border border-gray-100 space-y-4 transition-all duration-200 hover:shadow-lg hover:border-indigo-100 hover:-translate-y-1"
+              className="bg-white rounded-2xl p-7 shadow-sm border border-gray-100 space-y-4 transition-all duration-200 hover:shadow-lg hover:border-brand-100 hover:-translate-y-1"
             >
+              {/* Gradient starts at brand-600, not brand-500: the number is
+                  18px bold — just under AA's 18.66px large-text threshold — so
+                  it needs 4.5:1, and white on brand-500 is only 4.47:1. */}
               <div
-                className="flex items-center justify-center w-11 h-11 rounded-full bg-gradient-to-br from-indigo-500 to-indigo-600 text-white text-lg font-bold shadow-md shadow-indigo-500/20"
+                className="flex items-center justify-center w-11 h-11 rounded-full bg-gradient-to-br from-brand-600 to-brand-700 text-white text-lg font-bold shadow-md shadow-brand-600/20"
                 aria-hidden="true"
               >
                 {index + 1}
@@ -107,10 +116,10 @@ export function ForHotels() {
                   <>
                     {t("forHotels.steps.step1.descriptionBeforeEmail")}
                     <a
-                      href="mailto:support@trawise.org"
-                      className="font-medium text-indigo-600 hover:text-indigo-700 underline decoration-transparent hover:decoration-current transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded"
+                      href={`mailto:${SITE_CONFIG.email}`}
+                      className="font-medium text-brand-600 hover:text-brand-700 underline decoration-transparent hover:decoration-current transition-colors focus:outline-none focus:ring-2 focus:ring-brand-600 focus:ring-offset-2 rounded"
                     >
-                      support@trawise.org
+                      {SITE_CONFIG.email}
                     </a>
                     {t("forHotels.steps.step1.descriptionAfterEmail")}
                   </>
@@ -152,13 +161,16 @@ export function ForHotels() {
         </div>
 
         <div className="mt-12 text-center">
+          {/* brand-600 rather than brand-500: white on brand-500 is 4.47:1,
+              just short of AA's 4.5 for this button's 16px text. */}
           <a
-            href="https://host.trawise.org/"
+            href={HOST_APP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-8 py-3.5 bg-indigo-500 text-white font-semibold rounded-lg hover:bg-indigo-600 hover:shadow-md transition-all focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+            className="inline-flex items-center justify-center px-8 py-3.5 bg-brand-600 text-white font-semibold rounded-lg hover:bg-brand-700 hover:shadow-md transition-all focus:outline-none focus:ring-2 focus:ring-brand-600 focus:ring-offset-2"
           >
             {t("forHotels.cta")}
+            <span className="sr-only"> ({t("opensInNewTab")})</span>
           </a>
         </div>
       </Container>

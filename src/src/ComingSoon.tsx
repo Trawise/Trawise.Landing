@@ -4,12 +4,18 @@ import { Footer } from "./components/footer";
 import { Header } from "./components/header";
 import { SkipLink } from "./components/skip-link";
 import { Container } from "./components/ui";
-import { usePageTitle } from "./hooks/use-page-title";
+import { usePageMeta } from "./hooks/use-page-meta";
 
 export function ComingSoon() {
   const { t } = useTranslation();
 
-  usePageTitle(t("pageTitles.comingSoon"));
+  // noindex: a placeholder page carries no search value and would compete
+  // with the homepage for app-download queries.
+  usePageMeta({
+    title: t("pageTitles.comingSoon"),
+    path: "/coming-soon",
+    noindex: true,
+  });
 
   return (
     <>
@@ -17,9 +23,9 @@ export function ComingSoon() {
 
       <Header />
 
-      <main id="main-content" className="flex-grow">
+      <main id="main-content" className="grow">
         <section
-          className="min-h-screen flex items-center"
+          className="flex items-center py-16 min-h-viewport"
           aria-labelledby="coming-soon-heading"
         >
           <Container>

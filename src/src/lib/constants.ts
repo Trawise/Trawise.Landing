@@ -1,7 +1,9 @@
 export const SITE_CONFIG = {
   name: "Trawise",
-  description:
-    "Connect with nearby hosts and find budget-friendly stays on Trawise - a mobile travel application with location-based request system.",
+  url: "https://trawise.org",
+  /** Must stay identical to the <title> in index.html — see usePageMeta. */
+  defaultTitle:
+    "Trawise - Connect with Nearby Hosts and Find Budget-Friendly Stays",
   email: "support@trawise.org",
   location: "Stockholm, Sweden",
 } as const;
@@ -10,3 +12,5 @@ export const DOWNLOAD_LINKS = {
   playStore: "/coming-soon",
   appStore: "/coming-soon",
 } as const;
+
+export const HOST_APP_URL = "https://host.trawise.org/";

@@ -5,12 +5,17 @@ import { Header } from "./components/header";
 import { SkipLink } from "./components/skip-link";
 import { Container } from "./components/ui";
 import { SITE_CONFIG } from "./lib/constants";
-import { usePageTitle } from "./hooks/use-page-title";
+import { usePageMeta } from "./hooks/use-page-meta";
+import { useCookieConsent } from "./hooks/use-cookie-consent";
 
 export function PrivacyPolicy() {
   const { t } = useTranslation();
+  const { reopen } = useCookieConsent();
 
-  usePageTitle(t("pageTitles.privacyPolicy"));
+  usePageMeta({
+    title: t("pageTitles.privacyPolicy"),
+    path: "/privacy-policy",
+  });
 
   return (
     <>
@@ -18,7 +23,7 @@ export function PrivacyPolicy() {
 
       <Header />
 
-      <main id="main-content" className="flex-grow">
+      <main id="main-content" className="grow">
         <section className="py-16">
           <Container>
             <div className="max-w-4xl mx-auto">
@@ -176,7 +181,7 @@ export function PrivacyPolicy() {
                       To exercise these rights, contact us at{" "}
                       <a
                         href={`mailto:${SITE_CONFIG.email}`}
-                        className="text-blue-600 hover:text-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 rounded underline decoration-transparent hover:decoration-current focus:decoration-current"
+                        className="text-brand-600 hover:text-brand-700 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600 rounded underline decoration-transparent hover:decoration-current focus:decoration-current"
                       >
                         {SITE_CONFIG.email}
                       </a>{" "}
@@ -223,11 +228,26 @@ export function PrivacyPolicy() {
                     <h2 className="text-2xl font-semibold text-gray-900 mb-4">
                       10. Cookies and Tracking Technologies
                     </h2>
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      This website uses Google Analytics to understand usage
+                      patterns. Analytics cookies are only set once you accept
+                      them; if you decline, or have not yet chosen, no analytics
+                      identifiers are stored. Strictly necessary storage — such
+                      as remembering your cookie choice and your language — is
+                      always active.
+                    </p>
                     <p className="text-gray-700 leading-relaxed">
-                      We may use cookies or similar technologies to understand
-                      usage patterns and enhance functionality. You may manage
-                      cookie preferences through your device or operating system
-                      settings.
+                      You can change or withdraw your choice at any time using{" "}
+                      <button
+                        type="button"
+                        onClick={reopen}
+                        className="text-brand-600 hover:text-brand-700 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600 rounded underline decoration-transparent hover:decoration-current focus:decoration-current"
+                      >
+                        cookie settings
+                      </button>
+                      , which reopens the consent banner. The mobile app manages
+                      its own tracking preferences through your device or
+                      operating system settings.
                     </p>
                   </section>
 
@@ -255,7 +275,7 @@ export function PrivacyPolicy() {
                       Email:{" "}
                       <a
                         href={`mailto:${SITE_CONFIG.email}`}
-                        className="text-blue-600 hover:text-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 rounded underline decoration-transparent hover:decoration-current focus:decoration-current"
+                        className="text-brand-600 hover:text-brand-700 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600 rounded underline decoration-transparent hover:decoration-current focus:decoration-current"
                       >
                         {SITE_CONFIG.email}
                       </a>

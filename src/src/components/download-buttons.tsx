@@ -4,12 +4,10 @@ import { DOWNLOAD_LINKS } from "../lib/constants";
 
 interface DownloadButtonProps {
   store: "playStore" | "appStore";
-  className?: string;
 }
 
 const playStoreIcon = (
   <svg
-    xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
     fill="currentColor"
@@ -20,11 +18,8 @@ const playStoreIcon = (
   </svg>
 );
 
-// Note: the App Store icon is a single compound path — the duplicate that
-// existed here has been removed.
 const appStoreIcon = (
   <svg
-    xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
     fill="currentColor"
@@ -35,40 +30,36 @@ const appStoreIcon = (
   </svg>
 );
 
-export function DownloadButton({ store, className = "" }: DownloadButtonProps) {
+const STORES = {
+  playStore: {
+    href: DOWNLOAD_LINKS.playStore,
+    icon: playStoreIcon,
+    analyticsEvent: "download_android_clicked",
+  },
+  appStore: {
+    href: DOWNLOAD_LINKS.appStore,
+    icon: appStoreIcon,
+    analyticsEvent: "download_ios_clicked",
+  },
+} as const;
+
+export function DownloadButton({ store }: DownloadButtonProps) {
   const { t } = useTranslation();
 
-  const config = {
-    playStore: {
-      href: DOWNLOAD_LINKS.playStore,
-      icon: playStoreIcon,
-      label: t("downloadButtons.playStore.label"),
-      storeName: t("downloadButtons.playStore.store"),
-      analyticsEvent: "download_android_clicked",
-    },
-    appStore: {
-      href: DOWNLOAD_LINKS.appStore,
-      icon: appStoreIcon,
-      label: t("downloadButtons.appStore.label"),
-      storeName: t("downloadButtons.appStore.store"),
-      analyticsEvent: "download_ios_clicked",
-    },
-  }[store];
+  const config = STORES[store];
+  const label = t(`downloadButtons.${store}.label`);
+  const storeName = t(`downloadButtons.${store}.store`);
 
   const handleClick = () => {
-    if (typeof window !== "undefined" && "gtag" in window) {
-      try {
-        (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag?.(
-          "event",
-          config.analyticsEvent,
-          {
-            event_category: "download",
-            event_label: store,
-          }
-        );
-      } catch (error) {
-        console.error("Analytics tracking failed:", error);
-      }
+    // gtag is absent whenever a tracking blocker stopped the loader, and it
+    // queues into dataLayer rather than throwing when consent is still denied.
+    try {
+      window.gtag?.("event", config.analyticsEvent, {
+        event_category: "download",
+        event_label: store,
+      });
+    } catch (error) {
+      console.error("Analytics tracking failed:", error);
     }
   };
 
@@ -76,18 +67,18 @@ export function DownloadButton({ store, className = "" }: DownloadButtonProps) {
     <Link
       to={config.href}
       onClick={handleClick}
-      className={`inline-flex items-center justify-center gap-3 px-6 py-3 bg-white border-2 border-gray-200 rounded-lg transition-all group hover:border-gray-300 hover:bg-gray-50 hover:shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 focus:border-blue-300 ${className}`}
-      aria-label={`${config.label} ${config.storeName} - Download Trawise mobile app`}
+      className="inline-flex items-center justify-center gap-3 px-6 py-3 bg-white border-2 border-gray-200 rounded-lg transition-all group hover:border-gray-300 hover:bg-gray-50 hover:shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600 focus:border-brand-500"
+      aria-label={t("downloadButtons.ariaLabel", { label, store: storeName })}
     >
-      <div className="flex-shrink-0 text-indigo-500" aria-hidden="true">
+      <div className="flex-shrink-0 text-brand-600" aria-hidden="true">
         {config.icon}
       </div>
       <div className="text-left">
         <div className="text-sm font-semibold text-gray-500 group-hover:text-gray-600 transition-colors">
-          {config.label}
+          {label}
         </div>
         <div className="text-lg font-bold text-gray-900 group-hover:text-gray-800 transition-colors">
-          {config.storeName}
+          {storeName}
         </div>
       </div>
     </Link>

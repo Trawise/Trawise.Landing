@@ -1,15 +1,23 @@
 import { useTranslation } from "react-i18next";
+import { useLocation } from "react-router-dom";
 import { BackLink } from "./components/back-link";
 import { Footer } from "./components/footer";
 import { Header } from "./components/header";
 import { SkipLink } from "./components/skip-link";
 import { Container } from "./components/ui";
-import { usePageTitle } from "./hooks/use-page-title";
+import { usePageMeta } from "./hooks/use-page-meta";
 
 export function NotFound() {
   const { t } = useTranslation();
+  const { pathname } = useLocation();
 
-  usePageTitle(t("pageTitles.notFound"));
+  // GitHub Pages serves this through 404.html, which still responds 200, so
+  // noindex is the only signal telling crawlers not to index the URL.
+  usePageMeta({
+    title: t("pageTitles.notFound"),
+    path: pathname,
+    noindex: true,
+  });
 
   return (
     <>
@@ -17,9 +25,9 @@ export function NotFound() {
 
       <Header />
 
-      <main id="main-content" className="flex-grow">
+      <main id="main-content" className="grow">
         <section
-          className="min-h-screen flex items-center"
+          className="flex items-center py-16 min-h-viewport"
           aria-labelledby="error-heading"
         >
           <Container>

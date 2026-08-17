@@ -1,25 +1,38 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { SITE_CONFIG } from "../lib/constants";
+import { useCookieConsent } from "../hooks/use-cookie-consent";
 import { Container } from "./ui";
 import { LanguageSwitcher } from "./language-switcher";
 
-const CURRENT_YEAR = new Date().getFullYear();
+// Shared by the footer links and the cookie-settings button so they stay
+// visually identical — the button must not read as a different kind of control.
+const LINK_CLASS =
+  "text-gray-600 hover:text-gray-900 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600 rounded underline decoration-transparent hover:decoration-current focus:decoration-current whitespace-nowrap";
+
+const Separator = () => (
+  <span className="text-gray-400" aria-hidden="true">
+    •
+  </span>
+);
 
 export function Footer() {
   const { t } = useTranslation();
+  const { reopen } = useCookieConsent();
 
   return (
-    <footer className="bg-gray-50 py-16" role="contentinfo">
+    <footer className="bg-gray-50 py-16">
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-6">
             <img
               src="/full-logo.png"
-              alt={`${SITE_CONFIG.name} logo`}
+              alt={t("navigation.logoAlt", { name: SITE_CONFIG.name })}
               className="h-6 w-auto"
-              width={120}
+              width={119}
               height={24}
+              loading="lazy"
+              decoding="async"
             />
             <p className="text-gray-600">{t("footer.description")}.</p>
           </div>
@@ -31,13 +44,7 @@ export function Footer() {
             <address className="space-y-4 not-italic">
               <div className="flex items-center gap-3 text-gray-600">
                 <div className="flex-shrink-0" aria-hidden="true">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path
                       opacity="0.2"
                       d="M21 9L13.6359 14.25H10.3641L3 9L12 3L21 9Z"
@@ -49,22 +56,19 @@ export function Footer() {
                     />
                   </svg>
                 </div>
+                {/* py-1 lifts this standalone link to a 24px target height;
+                    it is not inline in a sentence, so WCAG 2.5.8's inline
+                    exception does not cover it. */}
                 <a
                   href={`mailto:${SITE_CONFIG.email}`}
-                  className="text-gray-600 hover:text-gray-900 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 rounded underline decoration-transparent hover:decoration-current focus:decoration-current"
+                  className={`${LINK_CLASS} py-1`}
                 >
                   {SITE_CONFIG.email}
                 </a>
               </div>
               <div className="flex items-center gap-3 text-gray-600">
                 <div className="flex-shrink-0" aria-hidden="true">
-                  <svg
-                    width="24"
-                    height="25"
-                    viewBox="0 0 24 25"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
+                  <svg width="24" height="25" viewBox="0 0 24 25" fill="none">
                     <path
                       opacity="0.2"
                       d="M12 2.75C10.0109 2.75 8.10322 3.54018 6.6967 4.9467C5.29018 6.35322 4.5 8.26088 4.5 10.25C4.5 17 12 22.25 12 22.25C12 22.25 19.5 17 19.5 10.25C19.5 8.26088 18.7098 6.35322 17.3033 4.9467C15.8968 3.54018 13.9891 2.75 12 2.75ZM12 13.25C11.4067 13.25 10.8266 13.0741 10.3333 12.7444C9.83994 12.4148 9.45542 11.9462 9.22836 11.3981C9.0013 10.8499 8.94189 10.2467 9.05764 9.66473C9.1734 9.08279 9.45912 8.54824 9.87868 8.12868C10.2982 7.70912 10.8328 7.4234 11.4147 7.30764C11.9967 7.19189 12.5999 7.2513 13.1481 7.47836C13.6962 7.70542 14.1648 8.08994 14.4944 8.58329C14.8241 9.07664 15 9.65666 15 10.25C15 11.0456 14.6839 11.8087 14.1213 12.3713C13.5587 12.9339 12.7956 13.25 12 13.25Z"
@@ -86,36 +90,35 @@ export function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="text-gray-500 order-2 md:order-1">
               <p>
-                &copy; {CURRENT_YEAR} {SITE_CONFIG.name}.{" "}
+                &copy; {new Date().getFullYear()} {SITE_CONFIG.name}.{" "}
                 {t("footer.allRightsReserved")}.
               </p>
             </div>
 
-            <div className="order-1 md:order-2">
+            {/* The language switcher sits beside the nav rather than inside it:
+                it is a preference control, not site navigation, and nesting it
+                would create a nav landmark within a nav landmark. */}
+            <div className="order-1 md:order-2 flex flex-wrap items-center justify-center gap-3">
+              <LanguageSwitcher />
+              <Separator />
               <nav
                 className="flex flex-wrap items-center justify-center gap-3"
-                aria-label="Footer navigation"
+                aria-label={t("navigation.footer")}
               >
-                <LanguageSwitcher />
-                <span className="text-gray-400" aria-hidden="true">
-                  •
-                </span>
-                <Link
-                  to="/"
-                  className="text-gray-600 hover:text-gray-900 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 rounded underline decoration-transparent hover:decoration-current focus:decoration-current whitespace-nowrap"
-                >
+                <Link to="/" className={LINK_CLASS}>
                   {t("navigation.home")}
                 </Link>
-                <span className="text-gray-400" aria-hidden="true">
-                  •
-                </span>
-                <Link
-                  to="/privacy-policy"
-                  className="text-gray-600 hover:text-gray-900 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 rounded underline decoration-transparent hover:decoration-current focus:decoration-current whitespace-nowrap"
-                >
+                <Separator />
+                <Link to="/privacy-policy" className={LINK_CLASS}>
                   {t("navigation.privacyPolicy")}
                 </Link>
               </nav>
+              <Separator />
+              {/* GDPR: withdrawing consent must be as easy as granting it, so
+                  the banner has to be reachable again after the first choice. */}
+              <button type="button" onClick={reopen} className={LINK_CLASS}>
+                {t("navigation.cookieSettings")}
+              </button>
             </div>
           </div>
         </div>

@@ -20,44 +20,30 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
     "preview": "vite preview",
     "deploy": "npm run build && gh-pages -d dist",
-    "type-check": "tsc --noEmit",
-    "clean": "rimraf dist"
+    "typecheck": "tsc -b"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.3.0",
-    "i18next": "^26.2.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "i18next": "^26.3.6",
     "i18next-browser-languagedetector": "^8.2.1",
-    "react": "^19.2.6",
-    "react-dom": "^19.2.6",
-    "react-i18next": "^17.0.8",
-    "react-router-dom": "^7.15.1",
-    "tailwindcss": "^4.3.0"
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-i18next": "^17.0.11",
+    "react-router-dom": "^7.18.2",
+    "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
-    "@eslint/js": "^10.0.1",
-    "@types/react": "^19.2.15",
-    "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^6.0.2",
-    "eslint": "^10.4.0",
-    "eslint-plugin-react-hooks": "^7.1.1",
-    "eslint-plugin-react-refresh": "^0.5.2",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@vitejs/plugin-react": "^6.0.5",
     "gh-pages": "^6.3.0",
-    "globals": "^17.6.0",
-    "typescript": "~6.0.3",
-    "typescript-eslint": "^8.59.4",
-    "vite": "^8.0.14"
+    "typescript": "~7.0.2",
+    "vite": "^8.2.1"
   },
   "engines": {
     "node": ">=18.0.0",
     "npm": ">=8.0.0"
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+  }
 }

@@ -2,13 +2,19 @@
   "navigation": {
     "home": "Hem",
     "privacyPolicy": "Integritetspolicy",
-    "becomeHost": "Bli Värd"
+    "becomeHost": "Bli Värd",
+    "goToHomepage": "Gå till startsidan",
+    "logoAlt": "{{name}}-logotyp",
+    "primary": "Huvudmeny",
+    "footer": "Sidfot",
+    "cookieSettings": "Cookie-inställningar"
   },
   "hero": {
     "title": "Anslut med Närliggande Värdar och Hitta Budgetvänliga Boenden på",
     "description": "Trawise är en mobil reseapplikation som kopplar samman resenärer med lokala boendevärdar genom ett platsbaserat förfrågningssystem. Användare kan ange önskad plats och budget på en interaktiv karta, skapa boendeförfrågningar med specifika datum och preferenser, och få svar från närliggande värdar.",
     "downloadApp": "Ladda ner Trawise mobilapp",
-    "scrollHint": "Se hur det fungerar för hotell"
+    "scrollHint": "Se hur det fungerar för hotell",
+    "mockupAlt": "Trawise-appen som visar en interaktiv karta med boendeförfrågningar i närheten och detaljer om ett hotell"
   },
   "forHotels": {
     "eyebrow": "För Hotell",
@@ -63,17 +69,20 @@
     "appStore": {
       "label": "Ladda ner på",
       "store": "App Store"
-    }
+    },
+    "ariaLabel": "{{label}} {{store}} — ladda ner Trawise mobilapp"
   },
   "languages": {
     "english": "English",
     "spanish": "Español",
     "swedish": "Svenska",
-    "italian": "Italiano"
+    "italian": "Italiano",
+    "groupLabel": "Språk",
+    "switchTo": "Byt till {{language}}"
   },
   "privacyPolicy": {
     "title": "Trawise Integritetspolicy",
-    "lastUpdated": "Senast uppdaterad: 20 juli 2025",
+    "lastUpdated": "Senast uppdaterad: 11 augusti 2026",
     "backToHome": "Tillbaka till Hem"
   },
   "comingSoon": {
@@ -116,10 +125,10 @@
     "refresh": "Ladda Om Sidan"
   },
   "pageTitles": {
-    "home": "Anslut med närliggande värdar och hitta budgetvänliga boenden",
     "privacyPolicy": "Integritetspolicy",
     "comingSoon": "Kommer snart",
     "deleteAccount": "Ta bort ditt konto",
     "notFound": "Sidan hittades inte"
-  }
+  },
+  "opensInNewTab": "öppnas i en ny flik"
 }

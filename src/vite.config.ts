@@ -11,12 +11,16 @@ export default defineConfig({
     sourcemap: false,
     rollupOptions: {
       output: {
+        // Split the dependencies that change on a completely different cadence
+        // from our own code, so a copy tweak never invalidates a cached React.
         manualChunks(id) {
-          if (id.includes("/react/") || id.includes("/react-dom/")) {
-            return "vendor";
+          if (!id.includes("node_modules")) return;
+          if (id.includes("/react-router")) return "router";
+          if (id.includes("/i18next") || id.includes("/react-i18next/")) {
+            return "i18n";
           }
-          if (id.includes("/react-router") || id.includes("/react-router-dom/")) {
-            return "router";
+          if (id.includes("/react-dom/") || id.includes("/react/")) {
+            return "vendor";
           }
         },
       },

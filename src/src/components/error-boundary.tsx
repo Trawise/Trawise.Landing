@@ -46,7 +46,7 @@ export class ErrorBoundary extends Component<
               <div className="pt-8">
                 <button
                   onClick={() => window.location.reload()}
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-brand-600 text-white font-medium rounded-lg hover:bg-brand-700 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600"
                 >
                   {i18n.t("errorBoundary.refresh")}
                 </button>

@@ -2,22 +2,30 @@
  * useCookieConsent
  *
  * Manages cookie / analytics consent state:
- *  - Reads the prior decision from localStorage on first render so returning
- *    visitors never see the banner again.
+ *  - Reads the prior decision from localStorage so returning visitors never
+ *    see the banner again.
  *  - Exposes `showBanner` (true only when no decision has been recorded yet).
  *  - Updates Google Analytics Consent Mode v2 whenever the user acts.
+ *  - Exposes `reopen()` so the decision can be withdrawn later. GDPR requires
+ *    withdrawing consent to be as easy as giving it, so the footer renders a
+ *    control that calls this.
  *  - Wraps all localStorage access in try/catch so the hook is safe in
  *    private-browsing sessions where storage may be restricted.
+ *
+ * The decision lives in a module-level store rather than component state
+ * because two components observe it (the banner and the footer's "cookie
+ * settings" control) and they must never disagree about whether the banner
+ * is currently open.
  */
 
-import { useState, useCallback } from "react";
+import { useSyncExternalStore } from "react";
 
 const CONSENT_KEY = "cookie-consent";
 
 export type ConsentStatus = "accepted" | "rejected" | null;
 
 // ---------------------------------------------------------------------------
-// Helpers
+// Storage helpers
 // ---------------------------------------------------------------------------
 
 function readStoredConsent(): ConsentStatus {
@@ -30,9 +38,10 @@ function readStoredConsent(): ConsentStatus {
   return null;
 }
 
-function writeStoredConsent(status: "accepted" | "rejected"): void {
+function writeStoredConsent(status: ConsentStatus): void {
   try {
-    localStorage.setItem(CONSENT_KEY, status);
+    if (status === null) localStorage.removeItem(CONSENT_KEY);
+    else localStorage.setItem(CONSENT_KEY, status);
   } catch {
     // ignore write failures
   }
@@ -55,6 +64,24 @@ function updateGtagConsent(accepted: boolean): void {
 }
 
 // ---------------------------------------------------------------------------
+// Module-level store
+// ---------------------------------------------------------------------------
+
+let status: ConsentStatus = readStoredConsent();
+const listeners = new Set<() => void>();
+
+function subscribe(listener: () => void): () => void {
+  listeners.add(listener);
+  return () => listeners.delete(listener);
+}
+
+function setStatus(next: ConsentStatus): void {
+  status = next;
+  writeStoredConsent(next);
+  listeners.forEach((listener) => listener());
+}
+
+// ---------------------------------------------------------------------------
 // Hook
 // ---------------------------------------------------------------------------
 
@@ -67,31 +94,38 @@ export interface CookieConsentState {
   accept: () => void;
   /** Persist 'rejected', update Consent Mode, hide the banner. */
   reject: () => void;
+  /** Clear the stored decision and show the banner again. */
+  reopen: () => void;
+}
+
+function accept(): void {
+  setStatus("accepted");
+  updateGtagConsent(true);
+}
+
+function reject(): void {
+  setStatus("rejected");
+  updateGtagConsent(false);
+}
+
+/**
+ * Revoke the stored decision. Analytics storage is denied immediately rather
+ * than waiting for the new choice, so the user is never tracked during the
+ * window where the banner is open again.
+ */
+function reopen(): void {
+  setStatus(null);
+  updateGtagConsent(false);
 }
 
 export function useCookieConsent(): CookieConsentState {
-  // Initialise from localStorage so the banner never flashes for returning
-  // users (the stored value is available synchronously on first render).
-  const [consentStatus, setConsentStatus] = useState<ConsentStatus>(
-    readStoredConsent
-  );
-
-  const accept = useCallback(() => {
-    writeStoredConsent("accepted");
-    setConsentStatus("accepted");
-    updateGtagConsent(true);
-  }, []);
-
-  const reject = useCallback(() => {
-    writeStoredConsent("rejected");
-    setConsentStatus("rejected");
-    updateGtagConsent(false);
-  }, []);
+  const consentStatus = useSyncExternalStore(subscribe, () => status);
 
   return {
     consentStatus,
     showBanner: consentStatus === null,
     accept,
     reject,
+    reopen,
   };
 }

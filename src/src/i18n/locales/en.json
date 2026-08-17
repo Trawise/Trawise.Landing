@@ -2,13 +2,19 @@
   "navigation": {
     "home": "Home",
     "privacyPolicy": "Privacy Policy",
-    "becomeHost": "Become a Host"
+    "becomeHost": "Become a Host",
+    "goToHomepage": "Go to homepage",
+    "logoAlt": "{{name}} logo",
+    "primary": "Main",
+    "footer": "Footer",
+    "cookieSettings": "Cookie settings"
   },
   "hero": {
     "title": "Connect with Nearby Hosts and Find Budget-Friendly Stays on",
     "description": "Trawise is a mobile travel application that connects travelers with local accommodation hosts through a location-based request system. Users can set their desired location and budget on an interactive map, create accommodation requests with specific dates and preferences, and receive responses from nearby hosts.",
     "downloadApp": "Download the Trawise mobile app",
-    "scrollHint": "See how it works for hotels"
+    "scrollHint": "See how it works for hotels",
+    "mockupAlt": "The Trawise app showing an interactive map of nearby accommodation requests alongside a hotel's details"
   },
   "forHotels": {
     "eyebrow": "For Hotels",
@@ -63,17 +69,20 @@
     "appStore": {
       "label": "Download on the",
       "store": "App Store"
-    }
+    },
+    "ariaLabel": "{{label}} {{store}} — download the Trawise mobile app"
   },
   "languages": {
     "english": "English",
     "spanish": "Español",
     "swedish": "Svenska",
-    "italian": "Italiano"
+    "italian": "Italiano",
+    "groupLabel": "Language",
+    "switchTo": "Switch to {{language}}"
   },
   "privacyPolicy": {
     "title": "Trawise Privacy Policy",
-    "lastUpdated": "Last updated: July 20, 2025",
+    "lastUpdated": "Last updated: August 11, 2026",
     "backToHome": "Back to Home"
   },
   "comingSoon": {
@@ -116,10 +125,10 @@
     "refresh": "Refresh Page"
   },
   "pageTitles": {
-    "home": "Connect with Nearby Hosts and Find Budget-Friendly Stays",
     "privacyPolicy": "Privacy Policy",
     "comingSoon": "Coming Soon",
     "deleteAccount": "Delete Your Account",
     "notFound": "Page Not Found"
-  }
+  },
+  "opensInNewTab": "opens in a new tab"
 }

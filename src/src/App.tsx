@@ -5,12 +5,12 @@ import { ForHotels } from "./components/for-hotels";
 import { Header } from "./components/header";
 import { SkipLink } from "./components/skip-link";
 import { Container } from "./components/ui";
-import { usePageTitle } from "./hooks/use-page-title";
+import { usePageMeta } from "./hooks/use-page-meta";
 
 export function App() {
   const { t } = useTranslation();
 
-  usePageTitle(t("pageTitles.home"));
+  usePageMeta({ path: "/" });
 
   return (
     <>
@@ -18,9 +18,13 @@ export function App() {
 
       <Header />
 
-      <main id="main-content" className="flex-grow">
+      <main id="main-content" className="grow">
+        {/* min-h-viewport, not min-h-screen: the sticky header and the consent
+            banner both eat into the visible area, and min-h-screen would
+            overflow by their combined height — pushing the download buttons
+            underneath the banner on a phone. */}
         <section
-          className="relative min-h-screen flex items-center py-16"
+          className="relative flex items-center py-16 min-h-viewport"
           aria-labelledby="hero-heading"
         >
           <Container>
@@ -31,7 +35,7 @@ export function App() {
                   className="font-extrabold text-4xl leading-tight md:text-5xl lg:text-6xl text-gray-900"
                 >
                   {t("hero.title")}{" "}
-                  <span className="text-indigo-500">Trawise</span>
+                  <span className="text-brand-600">Trawise</span>
                 </h1>
 
                 <p className="text-lg text-gray-600">{t("hero.description")}</p>
@@ -47,23 +51,30 @@ export function App() {
               </div>
 
               <div className="flex justify-center lg:justify-end">
-                <img
-                  src="/app-mockup.png"
-                  alt="Trawise mobile app mockup showing the interface for connecting with hosts"
-                  className="w-full h-auto max-w-xl"
-                  loading="eager"
-                  width={600}
-                  height={800}
-                  fetchPriority="high"
-                />
+                {/* WebP first (67 kB vs 518 kB for the PNG) — this is the LCP
+                    element, and index.html preloads the same WebP. width/height
+                    are the true intrinsic pixels so the aspect-ratio hint
+                    reserves the right box and contributes no CLS. */}
+                <picture>
+                  <source srcSet="/app-mockup.webp" type="image/webp" />
+                  <img
+                    src="/app-mockup.png"
+                    alt={t("hero.mockupAlt")}
+                    className="w-full h-auto max-w-xl"
+                    loading="eager"
+                    width={823}
+                    height={752}
+                    decoding="async"
+                    fetchPriority="high"
+                  />
+                </picture>
               </div>
             </div>
           </Container>
 
           <a
-            href="#for-hotels-heading"
-            className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 px-3 py-2 rounded-lg text-gray-400 hover:text-indigo-500 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-            aria-label={t("hero.scrollHint")}
+            href="#how-it-works"
+            className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 px-3 py-2 rounded-lg text-gray-600 hover:text-brand-600 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-600 focus:ring-offset-2"
           >
             <span className="hidden sm:block text-base font-medium">
               {t("hero.scrollHint")}
@@ -73,7 +84,6 @@ export function App() {
               height="24"
               viewBox="0 0 24 24"
               fill="none"
-              xmlns="http://www.w3.org/2000/svg"
               className="animate-bounce"
               aria-hidden="true"
             >
@@ -85,6 +95,9 @@ export function App() {
                 strokeLinejoin="round"
               />
             </svg>
+            {/* The label is hidden below sm, so the link would otherwise be an
+                icon with no accessible name on mobile. */}
+            <span className="sr-only sm:hidden">{t("hero.scrollHint")}</span>
           </a>
         </section>
 

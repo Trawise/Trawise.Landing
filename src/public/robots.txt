@@ -1,6 +1,9 @@
+# /coming-soon and /delete-account are kept out of search results with a
+# noindex robots meta tag (see usePageMeta), deliberately not with Disallow:
+# a disallowed URL is never fetched, so the noindex is never read, and Google
+# can still index such a URL if anything links to it. Allowing the crawl is
+# what actually lets the directive take effect.
 User-agent: *
 Allow: /
-Disallow: /coming-soon
-Disallow: /delete-account
 
 Sitemap: https://trawise.org/sitemap.xml

@@ -5,12 +5,18 @@ import { Header } from "./components/header";
 import { SkipLink } from "./components/skip-link";
 import { Container } from "./components/ui";
 import { SITE_CONFIG } from "./lib/constants";
-import { usePageTitle } from "./hooks/use-page-title";
+import { usePageMeta } from "./hooks/use-page-meta";
 
 export function DeleteAccount() {
   const { t } = useTranslation();
 
-  usePageTitle(t("pageTitles.deleteAccount"));
+  // noindex: an account-deletion form is a support destination reached from
+  // inside the app, not a search-result landing page.
+  usePageMeta({
+    title: t("pageTitles.deleteAccount"),
+    path: "/delete-account",
+    noindex: true,
+  });
 
   return (
     <>
@@ -18,7 +24,7 @@ export function DeleteAccount() {
 
       <Header />
 
-      <main id="main-content" className="flex-grow">
+      <main id="main-content" className="grow">
         <section className="py-16">
           <Container>
             <div className="max-w-4xl mx-auto">
@@ -57,7 +63,7 @@ export function DeleteAccount() {
                         </strong>{" "}
                         <a
                           href={`mailto:${SITE_CONFIG.email}`}
-                          className="text-blue-600 hover:text-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 rounded underline decoration-transparent hover:decoration-current focus:decoration-current"
+                          className="text-brand-600 hover:text-brand-700 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600 rounded underline decoration-transparent hover:decoration-current focus:decoration-current"
                         >
                           {SITE_CONFIG.email}
                         </a>

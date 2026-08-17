@@ -2,13 +2,19 @@
   "navigation": {
     "home": "Home",
     "privacyPolicy": "Informativa sulla privacy",
-    "becomeHost": "Diventa host"
+    "becomeHost": "Diventa host",
+    "goToHomepage": "Vai alla homepage",
+    "logoAlt": "Logo {{name}}",
+    "primary": "Principale",
+    "footer": "Piè di pagina",
+    "cookieSettings": "Impostazioni cookie"
   },
   "hero": {
     "title": "Connettiti con host vicini e trova alloggi economici su",
     "description": "Trawise è un'applicazione mobile di viaggio che mette in contatto i viaggiatori con host di alloggi locali attraverso un sistema di richieste basato sulla posizione. Gli utenti possono impostare la posizione desiderata e il budget su una mappa interattiva, creare richieste di alloggio con date e preferenze specifiche e ricevere risposte da host nelle vicinanze.",
     "downloadApp": "Scarica l'app mobile Trawise",
-    "scrollHint": "Scopri come funziona per gli hotel"
+    "scrollHint": "Scopri come funziona per gli hotel",
+    "mockupAlt": "L'app Trawise che mostra una mappa interattiva delle richieste di alloggio nelle vicinanze e i dettagli di un hotel"
   },
   "forHotels": {
     "eyebrow": "Per gli Hotel",
@@ -63,17 +69,20 @@
     "appStore": {
       "label": "Scarica su",
       "store": "App Store"
-    }
+    },
+    "ariaLabel": "{{label}} {{store}} — scarica l'app mobile Trawise"
   },
   "languages": {
     "english": "English",
     "spanish": "Español",
     "swedish": "Svenska",
-    "italian": "Italiano"
+    "italian": "Italiano",
+    "groupLabel": "Lingua",
+    "switchTo": "Passa a {{language}}"
   },
   "privacyPolicy": {
     "title": "Informativa sulla privacy di Trawise",
-    "lastUpdated": "Ultimo aggiornamento: 20 luglio 2025",
+    "lastUpdated": "Ultimo aggiornamento: 11 agosto 2026",
     "backToHome": "Torna alla home"
   },
   "comingSoon": {
@@ -116,10 +125,10 @@
     "refresh": "Ricarica la pagina"
   },
   "pageTitles": {
-    "home": "Connettiti con host vicini e trova alloggi economici",
     "privacyPolicy": "Informativa sulla privacy",
     "comingSoon": "Prossimamente",
     "deleteAccount": "Elimina il tuo account",
     "notFound": "Pagina non trovata"
-  }
+  },
+  "opensInNewTab": "si apre in una nuova scheda"
 }

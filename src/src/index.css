@@ -1,15 +1,59 @@
 @import "tailwindcss";
 
+/* ---------------------------------------------------------------------------
+   Design tokens
+   ---------------------------------------------------------------------------
+   The brand accent is indigo.  Interactive text, primary buttons and focus
+   rings all resolve to --color-brand-* so the palette can never drift apart
+   again (previously the accent was indigo while focus rings and links were
+   blue).
+
+   Note the shade choices are contrast-driven, not decorative:
+     brand-500 #6366f1 -> 4.47:1 on white, 4.27:1 on gray-50  (fails AA 4.5)
+     brand-600 #4f46e5 -> 6.29:1 on white, 6.02:1 on gray-50  (passes AA)
+   so brand-600 is the floor for anything below the AA large-text threshold
+   (24px, or 18.66px bold), including white text on a filled brand button.
+   brand-500 is only safe for large display text and decorative fills.
+   --------------------------------------------------------------------------- */
+@theme {
+  --color-brand-100: #e0e7ff;
+  --color-brand-500: #6366f1;
+  --color-brand-600: #4f46e5;
+  --color-brand-700: #4338ca;
+}
+
+/* Height of the sticky header. Must track the h-16 sm:h-20 on the header's
+   inner row in header.tsx. Declared on :root rather than in @theme because it
+   is breakpoint-dependent and @theme cannot hold media queries. */
+:root {
+  --header-height: 4rem;
+
+  /* Overwritten with the live height of the consent banner while it is open
+     (see cookie-banner.tsx) and reset to 0 when it closes. Without it the
+     fixed banner sits on top of the hero's download buttons on a phone, which
+     is where it is tallest — three wrapped lines of copy plus two buttons. */
+  --cookie-banner-height: 0px;
+}
+
+@media (min-width: 40rem) {
+  :root {
+    --header-height: 5rem;
+  }
+}
+
+/* One screenful of usable space: the viewport minus the sticky header and
+   minus whatever the consent banner is currently covering. */
+.min-h-viewport {
+  min-height: calc(
+    100dvh - var(--header-height) - var(--cookie-banner-height)
+  );
+}
+
 /* CSS Reset improvements */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-/* Root variables - only custom values not in Tailwind */
-:root {
-  --primary-600: #2563eb;
 }
 
 /* Base styles */
@@ -18,6 +62,11 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
+
+  /* The header is position:sticky, so without this every in-page anchor
+     (the skip link, the hero's "how it works" jump) lands with its target
+     hidden underneath the header. */
+  scroll-padding-top: calc(var(--header-height) + 1rem);
 }
 
 body {
@@ -26,34 +75,39 @@ body {
     "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   line-height: 1.6;
-  color: theme("colors.gray.900");
+  color: var(--color-gray-900);
   background-color: #ffffff;
   min-height: 100%;
-  display: flex;
-  flex-direction: column;
+
+  /* Keeps the footer reachable above the consent banner. */
+  padding-bottom: var(--cookie-banner-height);
 }
 
 #root {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  min-height: 100dvh;
 }
 
 /* Enhanced focus styles for better accessibility */
 *:focus-visible {
-  outline: 2px solid theme("colors.blue.500");
+  outline: 2px solid var(--color-brand-600);
   outline-offset: 2px;
   border-radius: 2px;
 }
 
-/* Skip link for accessibility */
+/* Skip link — parked just off the top edge and slid into view on focus.
+   Deliberately does NOT use Tailwind's sr-only/not-sr-only pair: not-sr-only
+   resets position to static, which would drop the link into normal flow on
+   focus and shove the whole page down. */
 .skip-link {
   position: absolute;
-  top: -40px;
+  top: -3rem;
   left: 6px;
-  background: var(--primary-600);
+  background: var(--color-brand-600);
   color: white;
-  padding: 8px;
+  padding: 8px 12px;
   text-decoration: none;
   border-radius: 4px;
   z-index: 1000;
@@ -71,16 +125,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: theme("colors.gray.100");
+  background: var(--color-gray-100);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: theme("colors.gray.400");
+  background: var(--color-gray-400);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: theme("colors.gray.500");
+  background: var(--color-gray-500);
 }
 
 /* Print styles */

@@ -3,21 +3,19 @@ import { Link } from "react-router-dom";
 interface BackLinkProps {
   to: string;
   children: string;
-  className?: string;
 }
 
-export function BackLink({ to, children, className = "" }: BackLinkProps) {
+export function BackLink({ to, children }: BackLinkProps) {
   return (
     <Link
       to={to}
-      className={`inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 rounded underline decoration-transparent hover:decoration-current focus:decoration-current ${className}`}
+      className="inline-flex items-center gap-2 text-brand-600 hover:text-brand-700 font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600 rounded underline decoration-transparent hover:decoration-current focus:decoration-current"
     >
       <svg
         width="20"
         height="20"
         viewBox="0 0 24 24"
         fill="none"
-        xmlns="http://www.w3.org/2000/svg"
         aria-hidden="true"
       >
         <path

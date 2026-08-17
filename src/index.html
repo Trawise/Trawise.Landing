@@ -2,6 +2,104 @@
 <html lang="en">
 
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--
+    The two tags above MUST stay first. The HTML spec requires the character
+    encoding declaration to appear within the first 1024 bytes of the document,
+    so no comment block, inline script or other tag may be hoisted above them
+    (the gtag snippet used to sit here, pushing charset past that limit).
+  -->
+
+  <!-- Primary Meta Tags -->
+  <title>Trawise - Connect with Nearby Hosts and Find Budget-Friendly Stays</title>
+  <meta name="description"
+    content="Trawise connects travellers with nearby accommodation hosts through a location-based request system. Set your location and budget on a map, post a request, and get offers from local hosts and hotels." />
+  <meta name="author" content="Trawise" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://trawise.org/" />
+
+  <!-- The hero mockup is the LCP element on "/". It lives inside the JS bundle,
+       so without this hint the browser cannot discover it until React renders. -->
+  <link rel="preload" as="image" href="/app-mockup.webp" type="image/webp" fetchpriority="high" />
+
+  <!-- Icons and browser chrome -->
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#4f46e5" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Trawise" />
+  <meta property="og:url" content="https://trawise.org/" />
+  <meta property="og:title" content="Trawise - Connect with Nearby Hosts and Find Budget-Friendly Stays" />
+  <meta property="og:description"
+    content="Set your location and budget on a map, post an accommodation request, and get offers from nearby hosts and hotels." />
+  <meta property="og:image" content="https://trawise.org/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="The Trawise mobile app showing accommodation requests from nearby hosts" />
+  <meta property="og:locale" content="en" />
+  <meta property="og:locale:alternate" content="es" />
+  <meta property="og:locale:alternate" content="it" />
+  <meta property="og:locale:alternate" content="sv" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Trawise - Connect with Nearby Hosts and Find Budget-Friendly Stays" />
+  <meta name="twitter:description"
+    content="Set your location and budget on a map, post an accommodation request, and get offers from nearby hosts and hotels." />
+  <meta name="twitter:image" content="https://trawise.org/og-image.png" />
+  <meta name="twitter:image:alt"
+    content="The Trawise mobile app showing accommodation requests from nearby hosts" />
+
+  <!-- Structured data.  Deliberately omits `offers` and `aggregateRating` on
+       the SoftwareApplication: those must reflect real store listings, and
+       asserting them before the app ships would be false markup. -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://trawise.org/#organization",
+          "name": "Trawise",
+          "url": "https://trawise.org/",
+          "logo": "https://trawise.org/full-logo.png",
+          "email": "support@trawise.org",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Stockholm",
+            "addressCountry": "SE"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "email": "support@trawise.org",
+            "availableLanguage": ["en", "es", "it", "sv"]
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://trawise.org/#website",
+          "url": "https://trawise.org/",
+          "name": "Trawise",
+          "publisher": { "@id": "https://trawise.org/#organization" },
+          "inLanguage": ["en", "es", "it", "sv"]
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Trawise",
+          "applicationCategory": "TravelApplication",
+          "operatingSystem": "Android, iOS",
+          "url": "https://trawise.org/",
+          "publisher": { "@id": "https://trawise.org/#organization" },
+          "description": "A mobile travel application that connects travellers with local accommodation hosts through a location-based request system."
+        }
+      ]
+    }
+  </script>
+
   <!-- Google tag (gtag.js) -->
   <!--
     All inline gtag commands are kept in one script block so the required
@@ -9,6 +107,7 @@
     explicit and easy to audit in one place.  The async loader is a
     separate tag so it never blocks the HTML parser.
   -->
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
@@ -46,19 +145,6 @@
     gtag('config', 'G-9HC828T9RG');
   </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9HC828T9RG"></script>
-
-  <meta charset="UTF-8" />
-  <link rel="icon" href="/favicon.ico" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Primary Meta Tags -->
-  <title>Trawise - Connect with Nearby Hosts and Find Budget-Friendly Stays</title>
-  <meta name="title" content="Trawise - Connect with Nearby Hosts and Find Budget-Friendly Stays" />
-  <meta name="description"
-    content="Trawise is a mobile travel application that connects travelers with local accommodation hosts through a location-based request system. Find budget-friendly stays worldwide." />
-  <meta name="keywords" content="travel, accommodation, budget stays, hosts, mobile app, location-based, travel app" />
-  <meta name="author" content="Trawise" />
-  <meta name="robots" content="index, follow" />
 
   <!-- Single Page Apps for GitHub Pages -->
   <!-- https://github.com/rafgraph/spa-github-pages -->
