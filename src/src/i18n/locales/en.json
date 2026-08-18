@@ -12,7 +12,7 @@
   },
   "hero": {
     "title": "Connect with Nearby Hosts and Find Budget-Friendly Stays on",
-    "description": "Trawise is a mobile travel application that connects travelers with local accommodation hosts through a location-based request system. Users can set their desired location and budget on an interactive map, create accommodation requests with specific dates and preferences, and receive responses from nearby hosts.",
+    "description": "Trawise is a mobile travel application that connects travellers with local accommodation hosts through a location-based request system. Users can set their desired location and budget on an interactive map, create accommodation requests with specific dates and preferences, and receive responses from nearby hosts.",
     "downloadApp": "Download the Trawise mobile app",
     "scrollHint": "See how it works for hotels",
     "mockupAlt": "The Trawise app showing an interactive map of nearby accommodation requests alongside a hotel's details"
@@ -20,7 +20,7 @@
   "forHotels": {
     "eyebrow": "For Hotels",
     "title": "How Trawise Works for Hotels",
-    "subtitle": "Fill your empty rooms for the closest dates by connecting directly with nearby travelers.",
+    "subtitle": "Fill your empty rooms for the closest dates by connecting directly with nearby travellers.",
     "steps": {
       "step1": {
         "title": "Register your hotel",
@@ -29,15 +29,15 @@
       },
       "step2": {
         "title": "Receive requests",
-        "description": "View requests from nearby travelers and choose the ones that work best for you."
+        "description": "View requests from nearby travellers and choose the ones that work best for you."
       },
       "step3": {
         "title": "Compare and decide",
-        "description": "Compare each traveler's price, dates, and rating to make an informed decision."
+        "description": "Compare each traveller's price, dates, and rating to make an informed decision."
       },
       "step4": {
         "title": "Accept and welcome",
-        "description": "Accept your chosen request and welcome the traveler on their arrival date."
+        "description": "Accept your chosen request and welcome the traveller on their arrival date."
       }
     },
     "benefitsHeading": "Why Hotels Choose Trawise",
@@ -52,7 +52,7 @@
       },
       "benefit3": {
         "title": "An extra marketing channel",
-        "description": "Reach travelers actively searching nearby, without spending on ads or promotions."
+        "description": "Reach travellers actively searching nearby, without spending on ads or promotions."
       }
     },
     "cta": "Become a Host"
