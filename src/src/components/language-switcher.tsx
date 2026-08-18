@@ -1,5 +1,8 @@
 import { Fragment } from "react";
 import { useTranslation } from "react-i18next";
+import { useLocation, useNavigate } from "react-router-dom";
+
+import { DEFAULT_LOCALE, LOCALES, localePath } from "../lib/locales";
 
 const LANGUAGES = [
   { code: "en", labelKey: "languages.english" },
@@ -10,6 +13,21 @@ const LANGUAGES = [
 
 export function LanguageSwitcher() {
   const { i18n, t } = useTranslation();
+  const navigate = useNavigate();
+  const { pathname } = useLocation();
+
+  // Changing language changes the URL: the prefix is what a crawler indexes
+  // and what a visitor can share.
+  const switchTo = (code: string) => {
+    const [, maybeLocale, ...rest] = pathname.split("/");
+    const withoutLocale = LOCALES.includes(
+      maybeLocale as (typeof LOCALES)[number],
+    )
+      ? `/${rest.join("/")}`
+      : pathname;
+
+    navigate(localePath(code as typeof DEFAULT_LOCALE, withoutLocale || "/"));
+  };
 
   // resolvedLanguage normalises variants like "sv-SE" → "sv" so the active
   // state check matches our resource keys correctly.
@@ -26,7 +44,7 @@ export function LanguageSwitcher() {
           )}
           <button
             type="button"
-            onClick={() => i18n.changeLanguage(lang.code)}
+            onClick={() => switchTo(lang.code)}
             className={`transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600 rounded underline decoration-transparent hover:decoration-current focus:decoration-current ${
               active === lang.code
                 ? "text-gray-900 font-medium"

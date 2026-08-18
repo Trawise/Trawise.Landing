@@ -2,6 +2,7 @@ import { StrictMode, Suspense, lazy, useEffect } from "react";
 import { createRoot } from "react-dom/client";
 import {
   BrowserRouter,
+  Outlet,
   Routes,
   Route,
   useLocation,
@@ -9,6 +10,7 @@ import {
 import { ErrorBoundary } from "./components/error-boundary";
 import { App } from "./App.tsx";
 import { CookieBanner } from "./components/cookie-banner.tsx";
+import { LocaleRoute } from "./components/locale-route.tsx";
 import "@fontsource-variable/inter";
 import "./i18n";
 import "./index.css";
@@ -66,11 +68,25 @@ createRoot(rootElement).render(
           fallback={<div className="grow min-h-[50dvh]" aria-hidden="true" />}
         >
           <Routes>
-            <Route path="/" element={<App />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="/terms" element={<TermsOfService />} />
-            <Route path="/coming-soon" element={<ComingSoon />} />
-            <Route path="/delete-account" element={<DeleteAccount />} />
+            {/* Each language gets its own path, and the same tree hangs off
+                both the bare root and the prefixed one. */}
+            {["/", "/:lang"].map((prefix) => (
+              <Route
+                key={prefix}
+                path={prefix}
+                element={
+                  <LocaleRoute>
+                    <Outlet />
+                  </LocaleRoute>
+                }
+              >
+                <Route index element={<App />} />
+                <Route path="privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="terms" element={<TermsOfService />} />
+                <Route path="coming-soon" element={<ComingSoon />} />
+                <Route path="delete-account" element={<DeleteAccount />} />
+              </Route>
+            ))}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

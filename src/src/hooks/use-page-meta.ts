@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { SITE_CONFIG } from "../lib/constants";
+import { DEFAULT_LOCALE, LOCALES, localePath } from "../lib/locales";
 
 interface PageMeta {
   /**
@@ -7,9 +8,7 @@ interface PageMeta {
    *
    * Omit it on the home page: the hook then applies SITE_CONFIG.defaultTitle,
    * which is byte-identical to the <title> already in index.html, so the tab
-   * label never flickers on first paint. That is also the honest choice for
-   * SEO — language is selected client-side and every locale shares one URL,
-   * so the title crawlers index is the default one regardless.
+   * label never flickers on first paint.
    */
   title?: string;
   /** Absolute path of this route, e.g. "/privacy-policy". Sets rel=canonical. */
@@ -31,6 +30,14 @@ interface PageMeta {
  * from a noindex page back to an indexable one cannot leave the directive
  * stuck on.
  */
+const currentLocale = () => {
+  const [, maybeLocale] = window.location.pathname.split("/");
+
+  return LOCALES.includes(maybeLocale as (typeof LOCALES)[number])
+    ? (maybeLocale as (typeof LOCALES)[number])
+    : DEFAULT_LOCALE;
+};
+
 export function usePageMeta({ title, path, noindex = false }: PageMeta): void {
   useEffect(() => {
     document.title = title
@@ -45,7 +52,30 @@ export function usePageMeta({ title, path, noindex = false }: PageMeta): void {
       link.rel = "canonical";
       document.head.appendChild(link);
     }
-    link.href = new URL(path, SITE_CONFIG.url).href;
+    link.href = new URL(localePath(currentLocale(), path), SITE_CONFIG.url).href;
+  }, [path]);
+
+  // One alternate per language plus x-default, rebuilt per route: without
+  // them the four translations compete for one URL and none of them ranks.
+  useEffect(() => {
+    const previous = document.querySelectorAll<HTMLLinkElement>(
+      'link[rel="alternate"][data-page-meta]',
+    );
+    previous.forEach((link) => link.remove());
+
+    const alternates = [
+      ...LOCALES.map((locale) => ({ hreflang: locale, locale })),
+      { hreflang: "x-default", locale: DEFAULT_LOCALE },
+    ];
+
+    alternates.forEach(({ hreflang, locale }) => {
+      const link = document.createElement("link");
+      link.rel = "alternate";
+      link.hreflang = hreflang;
+      link.href = new URL(localePath(locale, path), SITE_CONFIG.url).href;
+      link.dataset.pageMeta = "true";
+      document.head.appendChild(link);
+    });
   }, [path]);
 
   useEffect(() => {
