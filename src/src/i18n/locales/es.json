@@ -7,7 +7,8 @@
     "logoAlt": "Logotipo de {{name}}",
     "primary": "Principal",
     "footer": "Pie de página",
-    "cookieSettings": "Configuración de cookies"
+    "cookieSettings": "Configuración de cookies",
+    "termsOfService": "Términos del servicio"
   },
   "hero": {
     "title": "Conéctate con Anfitriones Cercanos y Encuentra Alojamiento Económico en",
@@ -85,6 +86,11 @@
     "lastUpdated": "Última actualización: 11 de agosto de 2026",
     "backToHome": "Volver al Inicio"
   },
+  "termsOfService": {
+    "title": "Términos del servicio de Trawise",
+    "lastUpdated": "Última actualización: 18 de agosto de 2026",
+    "backToHome": "Volver al inicio"
+  },
   "comingSoon": {
     "title": "Próximamente en Tu Tienda de Aplicaciones",
     "description": "Estamos dando los toques finales a la aplicación móvil de Trawise. Pronto podrás conectarte con anfitriones cercanos y encontrar alojamiento económico directamente desde tu smartphone.",
@@ -128,7 +134,8 @@
     "privacyPolicy": "Política de Privacidad",
     "comingSoon": "Próximamente",
     "deleteAccount": "Eliminar tu cuenta",
-    "notFound": "Página no encontrada"
+    "notFound": "Página no encontrada",
+    "termsOfService": "Términos del servicio"
   },
   "opensInNewTab": "se abre en una pestaña nueva"
 }

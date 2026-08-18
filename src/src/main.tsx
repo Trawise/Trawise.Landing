@@ -27,6 +27,9 @@ const NotFound = lazy(() =>
 const PrivacyPolicy = lazy(() =>
   import("./PrivacyPolicy.tsx").then((m) => ({ default: m.PrivacyPolicy }))
 );
+const TermsOfService = lazy(() =>
+  import("./TermsOfService.tsx").then((m) => ({ default: m.TermsOfService }))
+);
 
 /**
  * React Router keeps the previous scroll offset across navigations, so
@@ -64,6 +67,7 @@ createRoot(rootElement).render(
           <Routes>
             <Route path="/" element={<App />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms" element={<TermsOfService />} />
             <Route path="/coming-soon" element={<ComingSoon />} />
             <Route path="/delete-account" element={<DeleteAccount />} />
             <Route path="*" element={<NotFound />} />

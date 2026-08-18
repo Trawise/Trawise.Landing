@@ -109,6 +109,10 @@ export function Footer() {
                   {t("navigation.home")}
                 </Link>
                 <Separator />
+                <Link to="/terms" className={LINK_CLASS}>
+                  {t("navigation.termsOfService")}
+                </Link>
+                <Separator />
                 <Link to="/privacy-policy" className={LINK_CLASS}>
                   {t("navigation.privacyPolicy")}
                 </Link>

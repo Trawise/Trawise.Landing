@@ -7,7 +7,8 @@
     "logoAlt": "Logo {{name}}",
     "primary": "Principale",
     "footer": "Piè di pagina",
-    "cookieSettings": "Impostazioni cookie"
+    "cookieSettings": "Impostazioni cookie",
+    "termsOfService": "Termini di servizio"
   },
   "hero": {
     "title": "Connettiti con host vicini e trova alloggi economici su",
@@ -85,6 +86,11 @@
     "lastUpdated": "Ultimo aggiornamento: 11 agosto 2026",
     "backToHome": "Torna alla home"
   },
+  "termsOfService": {
+    "title": "Termini di servizio di Trawise",
+    "lastUpdated": "Ultimo aggiornamento: 18 agosto 2026",
+    "backToHome": "Torna alla home"
+  },
   "comingSoon": {
     "title": "Prossimamente nel tuo App Store",
     "description": "Stiamo mettendo gli ultimi ritocchi all'app mobile Trawise. Presto potrai connetterti con host vicini e trovare alloggi economici direttamente dal tuo smartphone.",
@@ -128,7 +134,8 @@
     "privacyPolicy": "Informativa sulla privacy",
     "comingSoon": "Prossimamente",
     "deleteAccount": "Elimina il tuo account",
-    "notFound": "Pagina non trovata"
+    "notFound": "Pagina non trovata",
+    "termsOfService": "Termini di servizio"
   },
   "opensInNewTab": "si apre in una nuova scheda"
 }

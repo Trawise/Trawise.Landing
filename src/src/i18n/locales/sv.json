@@ -7,7 +7,8 @@
     "logoAlt": "{{name}}-logotyp",
     "primary": "Huvudmeny",
     "footer": "Sidfot",
-    "cookieSettings": "Cookie-inställningar"
+    "cookieSettings": "Cookie-inställningar",
+    "termsOfService": "Användarvillkor"
   },
   "hero": {
     "title": "Anslut med Närliggande Värdar och Hitta Budgetvänliga Boenden på",
@@ -85,6 +86,11 @@
     "lastUpdated": "Senast uppdaterad: 11 augusti 2026",
     "backToHome": "Tillbaka till Hem"
   },
+  "termsOfService": {
+    "title": "Trawise användarvillkor",
+    "lastUpdated": "Senast uppdaterad: 18 augusti 2026",
+    "backToHome": "Tillbaka till startsidan"
+  },
   "comingSoon": {
     "title": "Kommer Snart till Din App Store",
     "description": "Vi lägger sista handen på Trawise mobilapp. Snart kommer du att kunna ansluta med närliggande värdar och hitta budgetvänliga boenden direkt från din smartphone.",
@@ -128,7 +134,8 @@
     "privacyPolicy": "Integritetspolicy",
     "comingSoon": "Kommer snart",
     "deleteAccount": "Ta bort ditt konto",
-    "notFound": "Sidan hittades inte"
+    "notFound": "Sidan hittades inte",
+    "termsOfService": "Användarvillkor"
   },
   "opensInNewTab": "öppnas i en ny flik"
 }
