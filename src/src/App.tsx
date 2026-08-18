@@ -1,4 +1,4 @@
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import { DownloadButton } from "./components/download-buttons";
 import { Footer } from "./components/footer";
 import { ForHotels } from "./components/for-hotels";
@@ -34,8 +34,15 @@ export function App() {
                   id="hero-heading"
                   className="font-extrabold text-4xl leading-tight md:text-5xl lg:text-6xl text-gray-900"
                 >
-                  {t("hero.title")}{" "}
-                  <span className="text-brand-600">Trawise</span>
+                  {/* The brand is interpolated, not welded to the end of the
+                      sentence: a translation that does not finish on a
+                      preposition would otherwise read as nonsense. */}
+                  <Trans
+                    i18nKey="hero.title"
+                    components={{
+                      brand: <span className="text-brand-600" />,
+                    }}
+                  />
                 </h1>
 
                 <p className="text-lg text-gray-600">{t("hero.description")}</p>

@@ -11,8 +11,8 @@
     "termsOfService": "Termini di servizio"
   },
   "hero": {
-    "title": "Connettiti con host vicini e trova alloggi economici su",
-    "description": "Trawise è un'applicazione mobile di viaggio che mette in contatto i viaggiatori con host di alloggi locali attraverso un sistema di richieste basato sulla posizione. Gli utenti possono impostare la posizione desiderata e il budget su una mappa interattiva, creare richieste di alloggio con date e preferenze specifiche e ricevere risposte da host nelle vicinanze.",
+    "title": "Di’ a <brand>Trawise</brand> dove vuoi soggiornare. Lascia che siano i luoghi a farsi avanti.",
+    "description": "Scegli un punto sulla mappa, indica budget e date. Hotel, pensioni e host della zona vedono la tua richiesta e rispondono con quello che possono offrire: confronti risposte vere invece di scorrere annunci.",
     "downloadApp": "Scarica l'app mobile Trawise",
     "scrollHint": "Scopri come funziona per gli hotel",
     "mockupAlt": "L'app Trawise che mostra una mappa interattiva delle richieste di alloggio nelle vicinanze e i dettagli di un hotel"
@@ -33,7 +33,7 @@
       },
       "step3": {
         "title": "Confronta e decidi",
-        "description": "Confronta prezzo, date e valutazione di ogni viaggiatore per prendere una decisione informata."
+        "description": "Confronta prezzo, date e valutazione del viaggiatore a colpo d’occhio, poi accetta, fai una controproposta o rifiuta direttamente dalla riga."
       },
       "step4": {
         "title": "Accetta e dai il benvenuto",

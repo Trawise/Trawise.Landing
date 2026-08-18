@@ -11,8 +11,8 @@
     "termsOfService": "Términos del servicio"
   },
   "hero": {
-    "title": "Conéctate con Anfitriones Cercanos y Encuentra Alojamiento Económico en",
-    "description": "Trawise es una aplicación móvil de viajes que conecta a los viajeros con anfitriones de alojamiento locales a través de un sistema de solicitudes basado en ubicación. Los usuarios pueden establecer su ubicación deseada y presupuesto en un mapa interactivo, crear solicitudes de alojamiento con fechas y preferencias específicas, y recibir respuestas de anfitriones cercanos.",
+    "title": "Dile a <brand>Trawise</brand> dónde quieres alojarte. Deja que los lugares vengan a ti.",
+    "description": "Marca un punto en el mapa, indica tu presupuesto y tus fechas. Los hoteles, pensiones y anfitriones cercanos ven tu solicitud y responden con lo que pueden ofrecerte, así comparas respuestas reales en vez de recorrer anuncios.",
     "downloadApp": "Descarga la aplicación móvil Trawise",
     "scrollHint": "Descubre cómo funciona para hoteles",
     "mockupAlt": "La aplicación Trawise mostrando un mapa interactivo de solicitudes de alojamiento cercanas junto a los detalles de un hotel"
@@ -33,7 +33,7 @@
       },
       "step3": {
         "title": "Compara y decide",
-        "description": "Compara el precio, las fechas y la valoración de cada viajero para tomar una decisión informada."
+        "description": "Compara precio, fechas y la valoración del viajero de un vistazo y acepta, haz una contraoferta o rechaza desde la propia fila."
       },
       "step4": {
         "title": "Acepta y da la bienvenida",

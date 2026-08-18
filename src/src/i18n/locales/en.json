@@ -1,25 +1,25 @@
 {
   "navigation": {
     "home": "Home",
-    "privacyPolicy": "Privacy Policy",
-    "becomeHost": "Become a Host",
+    "privacyPolicy": "Privacy policy",
+    "becomeHost": "Become a host",
     "goToHomepage": "Go to homepage",
     "logoAlt": "{{name}} logo",
     "primary": "Main",
     "footer": "Footer",
     "cookieSettings": "Cookie settings",
-    "termsOfService": "Terms of Service"
+    "termsOfService": "Terms of service"
   },
   "hero": {
-    "title": "Connect with Nearby Hosts and Find Budget-Friendly Stays on",
-    "description": "Trawise is a mobile travel application that connects travellers with local accommodation hosts through a location-based request system. Users can set their desired location and budget on an interactive map, create accommodation requests with specific dates and preferences, and receive responses from nearby hosts.",
+    "title": "Tell <brand>Trawise</brand> where you want to stay. Let the places come to you.",
+    "description": "Drop a pin, set your budget and your dates. Hotels, guesthouses and hosts nearby see your request and reply with what they can offer — so you compare real answers instead of scrolling listings.",
     "downloadApp": "Download the Trawise mobile app",
     "scrollHint": "See how it works for hotels",
     "mockupAlt": "The Trawise app showing an interactive map of nearby accommodation requests alongside a hotel's details"
   },
   "forHotels": {
-    "eyebrow": "For Hotels",
-    "title": "How Trawise Works for Hotels",
+    "eyebrow": "For hotels",
+    "title": "How Trawise works for hotels",
     "subtitle": "Fill your empty rooms for the closest dates by connecting directly with nearby travellers.",
     "steps": {
       "step1": {
@@ -33,14 +33,14 @@
       },
       "step3": {
         "title": "Compare and decide",
-        "description": "Compare each traveller's price, dates, and rating to make an informed decision."
+        "description": "Compare price, dates and the traveller’s rating side by side, then accept, counter or decline on the row."
       },
       "step4": {
         "title": "Accept and welcome",
         "description": "Accept your chosen request and welcome the traveller on their arrival date."
       }
     },
-    "benefitsHeading": "Why Hotels Choose Trawise",
+    "benefitsHeading": "Why hotels choose Trawise",
     "benefits": {
       "benefit1": {
         "title": "Fill your last-minute vacancies",
@@ -55,12 +55,12 @@
         "description": "Reach travellers actively searching nearby, without spending on ads or promotions."
       }
     },
-    "cta": "Become a Host"
+    "cta": "Become a host"
   },
   "footer": {
     "description": "Connect with nearby hosts and find budget-friendly stays on Trawise",
-    "contactUs": "Contact Us",
-    "allRightsReserved": "All Rights Reserved"
+    "contactUs": "Contact us",
+    "allRightsReserved": "All rights reserved"
   },
   "downloadButtons": {
     "playStore": {
@@ -84,32 +84,32 @@
   "privacyPolicy": {
     "title": "Trawise Privacy Policy",
     "lastUpdated": "Last updated: August 11, 2026",
-    "backToHome": "Back to Home"
+    "backToHome": "Back to home"
   },
   "termsOfService": {
     "title": "Trawise Terms of Service",
     "lastUpdated": "Last updated: August 18, 2026",
-    "backToHome": "Back to Home"
+    "backToHome": "Back to home"
   },
   "comingSoon": {
     "title": "Coming Soon to Your App Store",
     "description": "We're putting the finishing touches on the Trawise mobile app. Soon you'll be able to connect with nearby hosts and find budget-friendly stays right from your smartphone.",
-    "backToHome": "Back to Home"
+    "backToHome": "Back to home"
   },
   "notFound": {
     "title": "404 - Page Not Found",
     "description": "The page you are looking for doesn't exist. Let's get you back to discovering amazing accommodation options.",
-    "backToHome": "Back to Home"
+    "backToHome": "Back to home"
   },
   "cookieBanner": {
     "message": "We use cookies to improve your experience. Analytics cookies help us understand how visitors use our website.",
-    "learnMore": "Privacy Policy",
+    "learnMore": "Privacy policy",
     "acceptAll": "Accept All",
     "rejectAll": "Reject All",
     "ariaLabel": "Cookie consent"
   },
   "deleteAccount": {
-    "title": "Delete Your Account",
+    "title": "Delete your account",
     "introMessage": "We're sorry to see you go. You can delete your account in two ways:",
     "viaAppSettings": {
       "title": "Via App Settings",
@@ -122,7 +122,7 @@
     "contactInfo": {
       "emailLabel": "Email"
     },
-    "backToHome": "Back to Home"
+    "backToHome": "Back to home"
   },
   "skipToContent": "Skip to main content",
   "errorBoundary": {
@@ -131,11 +131,11 @@
     "refresh": "Refresh Page"
   },
   "pageTitles": {
-    "privacyPolicy": "Privacy Policy",
-    "comingSoon": "Coming Soon",
-    "deleteAccount": "Delete Your Account",
-    "notFound": "Page Not Found",
-    "termsOfService": "Terms of Service"
+    "privacyPolicy": "Privacy policy",
+    "comingSoon": "Coming soon",
+    "deleteAccount": "Delete your account",
+    "notFound": "Page not found",
+    "termsOfService": "Terms of service"
   },
   "opensInNewTab": "opens in a new tab"
 }
