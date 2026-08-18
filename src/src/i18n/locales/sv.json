@@ -15,7 +15,8 @@
     "description": "Sätt en nål på kartan, ange budget och datum. Hotell, pensionat och värdar i närheten ser din förfrågan och svarar med vad de kan erbjuda — du jämför riktiga svar i stället för att bläddra bland annonser.",
     "downloadApp": "Ladda ner Trawise mobilapp",
     "scrollHint": "Se hur det fungerar för hotell",
-    "mockupAlt": "Trawise-appen som visar en interaktiv karta med boendeförfrågningar i närheten och detaljer om ett hotell"
+    "mockupAlt": "Trawise-appen som visar en interaktiv karta med boendeförfrågningar i närheten och detaljer om ett hotell",
+    "free": "Gratis att använda, och Trawise tar aldrig någon andel — du betalar platsen direkt."
   },
   "forHotels": {
     "eyebrow": "För Hotell",
@@ -55,7 +56,11 @@
         "description": "Nå resenärer som aktivt söker boende i närheten, utan att spendera pengar på annonser."
       }
     },
-    "cta": "Bli Värd"
+    "cta": "Bli Värd",
+    "benefit2": {
+      "title": "Gratis medan vi växer",
+      "description": "Att lägga upp din plats och svara på förfrågningar är gratis för alla i dag. Betalfunktioner kommer senare, och vi säger till innan något du redan använder börjar kosta."
+    }
   },
   "footer": {
     "description": "Anslut med närliggande värdar och hitta budgetvänliga boenden på Trawise",

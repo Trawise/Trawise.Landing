@@ -15,7 +15,8 @@
     "description": "Scegli un punto sulla mappa, indica budget e date. Hotel, pensioni e host della zona vedono la tua richiesta e rispondono con quello che possono offrire: confronti risposte vere invece di scorrere annunci.",
     "downloadApp": "Scarica l'app mobile Trawise",
     "scrollHint": "Scopri come funziona per gli hotel",
-    "mockupAlt": "L'app Trawise che mostra una mappa interattiva delle richieste di alloggio nelle vicinanze e i dettagli di un hotel"
+    "mockupAlt": "L'app Trawise che mostra una mappa interattiva delle richieste di alloggio nelle vicinanze e i dettagli di un hotel",
+    "free": "Gratis, e Trawise non trattiene nulla: paghi direttamente alla struttura."
   },
   "forHotels": {
     "eyebrow": "Per gli Hotel",
@@ -55,7 +56,11 @@
         "description": "Raggiungi i viaggiatori che cercano alloggi nelle vicinanze, senza spendere in annunci o promozioni."
       }
     },
-    "cta": "Diventa Host"
+    "cta": "Diventa Host",
+    "benefit2": {
+      "title": "Gratis mentre cresciamo",
+      "description": "Pubblicare il tuo alloggio e rispondere alle richieste oggi è gratis per tutti. In futuro arriveranno funzioni a pagamento e te lo diremo prima che qualcosa che già usi inizi a costare."
+    }
   },
   "footer": {
     "description": "Connettiti con host vicini e trova alloggi economici su Trawise",

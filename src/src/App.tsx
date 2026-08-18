@@ -47,6 +47,8 @@ export function App() {
 
                 <p className="text-lg text-gray-600">{t("hero.description")}</p>
 
+                <p className="text-base text-gray-500">{t("hero.free")}</p>
+
                 <div
                   className="flex flex-col md:flex-row gap-4"
                   role="group"

@@ -15,7 +15,8 @@
     "description": "Drop a pin, set your budget and your dates. Hotels, guesthouses and hosts nearby see your request and reply with what they can offer — so you compare real answers instead of scrolling listings.",
     "downloadApp": "Download the Trawise mobile app",
     "scrollHint": "See how it works for hotels",
-    "mockupAlt": "The Trawise app showing an interactive map of nearby accommodation requests alongside a hotel's details"
+    "mockupAlt": "The Trawise app showing an interactive map of nearby accommodation requests alongside a hotel's details",
+    "free": "Free to use, and Trawise never takes a cut — you pay the place directly."
   },
   "forHotels": {
     "eyebrow": "For hotels",
@@ -55,7 +56,11 @@
         "description": "Reach travellers actively searching nearby, without spending on ads or promotions."
       }
     },
-    "cta": "Become a host"
+    "cta": "Become a host",
+    "benefit2": {
+      "title": "Free while we grow",
+      "description": "Listing your place and answering requests is free for everyone today. Paid features will come later, and we will tell you before anything you already use starts costing money."
+    }
   },
   "footer": {
     "description": "Connect with nearby hosts and find budget-friendly stays on Trawise",

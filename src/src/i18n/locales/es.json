@@ -15,7 +15,8 @@
     "description": "Marca un punto en el mapa, indica tu presupuesto y tus fechas. Los hoteles, pensiones y anfitriones cercanos ven tu solicitud y responden con lo que pueden ofrecerte, así comparas respuestas reales en vez de recorrer anuncios.",
     "downloadApp": "Descarga la aplicación móvil Trawise",
     "scrollHint": "Descubre cómo funciona para hoteles",
-    "mockupAlt": "La aplicación Trawise mostrando un mapa interactivo de solicitudes de alojamiento cercanas junto a los detalles de un hotel"
+    "mockupAlt": "La aplicación Trawise mostrando un mapa interactivo de solicitudes de alojamiento cercanas junto a los detalles de un hotel",
+    "free": "Gratis, y Trawise nunca se lleva una comisión: pagas directamente al alojamiento."
   },
   "forHotels": {
     "eyebrow": "Para Hoteles",
@@ -55,7 +56,11 @@
         "description": "Llega a viajeros que buscan alojamiento cerca, sin gastar en anuncios ni promociones."
       }
     },
-    "cta": "Conviértete en Anfitrión"
+    "cta": "Conviértete en Anfitrión",
+    "benefit2": {
+      "title": "Gratis mientras crecemos",
+      "description": "Publicar tu alojamiento y responder a solicitudes es gratis para todos hoy. Más adelante habrá funciones de pago, y te avisaremos antes de que algo que ya usas empiece a costar dinero."
+    }
   },
   "footer": {
     "description": "Conéctate con anfitriones cercanos y encuentra alojamiento económico en Trawise",
