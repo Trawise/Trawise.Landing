@@ -23,6 +23,7 @@ import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useCookieConsent } from "../hooks/use-cookie-consent";
+import { buttonClass } from "./ui";
 
 export function CookieBanner() {
   const { showBanner } = useCookieConsent();
@@ -122,7 +123,7 @@ function CookieBannerDialog() {
             <button
               type="button"
               onClick={reject}
-              className="flex-1 sm:flex-initial inline-flex items-center justify-center px-5 py-2 text-sm font-medium text-gray-700 bg-white border-2 border-gray-200 rounded-lg hover:bg-gray-50 hover:border-gray-300 hover:shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-brand-600 focus:ring-offset-2 whitespace-nowrap"
+              className={buttonClass("secondary", "sm", "flex-1 sm:flex-initial whitespace-nowrap")}
             >
               {t("cookieBanner.rejectAll")}
             </button>
@@ -131,7 +132,7 @@ function CookieBannerDialog() {
               ref={acceptButtonRef}
               type="button"
               onClick={accept}
-              className="flex-1 sm:flex-initial inline-flex items-center justify-center px-5 py-2 text-sm font-medium text-white bg-brand-600 border-2 border-brand-600 rounded-lg hover:bg-brand-700 hover:border-brand-700 hover:shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-brand-600 focus:ring-offset-2 whitespace-nowrap"
+              className={buttonClass("primary", "sm", "flex-1 sm:flex-initial whitespace-nowrap")}
             >
               {t("cookieBanner.acceptAll")}
             </button>

@@ -1,6 +1,6 @@
 import { Component, type ReactNode, type ErrorInfo } from "react";
 import i18n from "../i18n";
-import { Container } from "./ui";
+import { Container, buttonClass } from "./ui";
 
 interface ErrorBoundaryProps {
   children: ReactNode;
@@ -46,7 +46,7 @@ export class ErrorBoundary extends Component<
               <div className="pt-8">
                 <button
                   onClick={() => window.location.reload()}
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-brand-600 text-white font-medium rounded-lg hover:bg-brand-700 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600"
+                  className={buttonClass("primary", "md", "gap-2")}
                 >
                   {i18n.t("errorBoundary.refresh")}
                 </button>

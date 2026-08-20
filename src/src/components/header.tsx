@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { HOST_APP_URL, SITE_CONFIG } from "../lib/constants";
-import { Container } from "./ui";
+import { Container, buttonClass } from "./ui";
 
 export function Header() {
   const { t } = useTranslation();
@@ -39,7 +39,7 @@ export function Header() {
               href={HOST_APP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-4 sm:px-6 py-2.5 bg-white border-2 border-gray-200 text-gray-900 text-sm sm:text-base font-medium rounded-lg hover:border-gray-300 hover:bg-gray-50 hover:shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-brand-600 focus:ring-offset-2 focus:border-brand-500"
+              className={buttonClass("secondary", "sm", "sm:px-6 sm:text-base")}
             >
               {t("navigation.becomeHost")}
               <span className="sr-only"> ({t("opensInNewTab")})</span>

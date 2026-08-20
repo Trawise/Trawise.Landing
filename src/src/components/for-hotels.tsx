@@ -1,7 +1,7 @@
 import { type ReactNode } from "react";
 import { useTranslation } from "react-i18next";
 import { HOST_APP_URL, SITE_CONFIG } from "../lib/constants";
-import { Container } from "./ui";
+import { Container, buttonClass } from "./ui";
 
 const STEP_KEYS = ["step1", "step2", "step3", "step4"] as const;
 
@@ -167,7 +167,7 @@ export function ForHotels() {
             href={HOST_APP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-8 py-3.5 bg-brand-600 text-white font-semibold rounded-lg hover:bg-brand-700 hover:shadow-md transition-all focus:outline-none focus:ring-2 focus:ring-brand-600 focus:ring-offset-2"
+            className={buttonClass("primary", "lg")}
           >
             {t("forHotels.cta")}
             <span className="sr-only"> ({t("opensInNewTab")})</span>

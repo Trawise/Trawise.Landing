@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { DOWNLOAD_LINKS } from "../lib/constants";
+import { buttonClass } from "./ui";
 
 interface DownloadButtonProps {
   store: "playStore" | "appStore";
@@ -67,7 +68,7 @@ export function DownloadButton({ store }: DownloadButtonProps) {
     <Link
       to={config.href}
       onClick={handleClick}
-      className="inline-flex items-center justify-center gap-3 px-6 py-3 bg-white border-2 border-gray-200 rounded-lg transition-all group hover:border-gray-300 hover:bg-gray-50 hover:shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600 focus:border-brand-500"
+      className={buttonClass("secondary", "md", "gap-3 group")}
       aria-label={t("downloadButtons.ariaLabel", { label, store: storeName })}
     >
       <div className="flex-shrink-0 text-brand-600" aria-hidden="true">
