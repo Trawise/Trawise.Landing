@@ -19,3 +19,10 @@ export const localePath = (locale: Locale, path: string): string => {
 
   return locale === DEFAULT_LOCALE ? clean || "/" : `/${locale}${clean}`;
 };
+
+/** The language a URL is in, which is the only thing that decides it. */
+export const localeFromPath = (pathname: string): Locale => {
+  const [, first] = pathname.split("/");
+
+  return isLocale(first) ? first : DEFAULT_LOCALE;
+};

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { LocaleLink } from "./locale-link";
 import { useTranslation } from "react-i18next";
 import { HOST_APP_URL, SITE_CONFIG } from "../lib/constants";
 import { Container, buttonClass } from "./ui";
@@ -14,7 +14,7 @@ export function Header() {
             calc both depend on it), and deriving that from padding plus an
             inherited line-height is guesswork. */}
         <div className="flex items-center justify-between h-16 sm:h-20">
-          <Link
+          <LocaleLink
             to="/"
             className="flex items-center focus:outline-none focus:ring-2 focus:ring-brand-600 focus:ring-offset-2 rounded"
             aria-label={t("navigation.goToHomepage")}
@@ -32,7 +32,7 @@ export function Header() {
               loading="eager"
               decoding="async"
             />
-          </Link>
+          </LocaleLink>
 
           <nav aria-label={t("navigation.primary")}>
             <a

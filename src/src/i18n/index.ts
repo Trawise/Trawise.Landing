@@ -2,6 +2,8 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 
+import { localeFromPath } from "../lib/locales";
+
 import en from "./locales/en.json";
 import es from "./locales/es.json";
 import it from "./locales/it.json";
@@ -33,11 +35,19 @@ i18n
     },
   });
 
+// The URL decides the language, and it has to decide it before the first
+// paint. The detector starts from localStorage or the browser, so a visitor
+// opening /sv saw a frame of English before LocaleRoute's effect corrected it.
+// Resources are synchronous, so this switch takes effect immediately.
+const urlLocale = localeFromPath(window.location.pathname);
+
+if (i18n.resolvedLanguage !== urlLocale) {
+  void i18n.changeLanguage(urlLocale);
+}
+
 // Keep <html lang> in sync with the active language so screen readers and
-// search engines always see the correct language code.
-// Resources are synchronous so i18n is already initialized here; setting the
-// attribute immediately handles the initial load, and the event handler covers
-// all subsequent language switches.
+// search engines always see the correct language code. Setting it here handles
+// the initial load; the event handler covers every later switch.
 //
 // resolvedLanguage, not language: the detector reports the raw browser tag
 // (e.g. "en-US" or "sv-SE") while the bundle actually rendered is the base

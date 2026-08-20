@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { LocaleLink } from "./locale-link";
 import { useTranslation } from "react-i18next";
 import { DOWNLOAD_LINKS } from "../lib/constants";
 import { buttonClass } from "./ui";
@@ -65,7 +65,7 @@ export function DownloadButton({ store }: DownloadButtonProps) {
   };
 
   return (
-    <Link
+    <LocaleLink
       to={config.href}
       onClick={handleClick}
       className={buttonClass("secondary", "md", "gap-3 group")}
@@ -82,6 +82,6 @@ export function DownloadButton({ store }: DownloadButtonProps) {
           {storeName}
         </div>
       </div>
-    </Link>
+    </LocaleLink>
   );
 }

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { LocaleLink } from "./locale-link";
 
 interface BackLinkProps {
   to: string;
@@ -7,7 +7,7 @@ interface BackLinkProps {
 
 export function BackLink({ to, children }: BackLinkProps) {
   return (
-    <Link
+    <LocaleLink
       to={to}
       className="inline-flex items-center gap-2 text-brand-600 hover:text-brand-700 font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600 rounded underline decoration-transparent hover:decoration-current focus:decoration-current"
     >
@@ -27,6 +27,6 @@ export function BackLink({ to, children }: BackLinkProps) {
         />
       </svg>
       {children}
-    </Link>
+    </LocaleLink>
   );
 }

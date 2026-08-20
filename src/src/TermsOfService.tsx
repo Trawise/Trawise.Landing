@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import { LocaleLink } from "./components/locale-link";
 import { BackLink } from "./components/back-link";
 import { Footer } from "./components/footer";
 import { Header } from "./components/header";
@@ -275,9 +275,9 @@ export function TermsOfService() {
                     </h2>
                     <p className="text-gray-700 leading-relaxed">
                       Our{" "}
-                      <Link to="/privacy-policy" className={LINK_CLASS}>
+                      <LocaleLink to="/privacy-policy" className={LINK_CLASS}>
                         Privacy Policy
-                      </Link>{" "}
+                      </LocaleLink>{" "}
                       explains what personal data we collect and why. It forms
                       part of these Terms.
                     </p>

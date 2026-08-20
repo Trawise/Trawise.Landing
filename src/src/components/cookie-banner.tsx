@@ -20,7 +20,7 @@
  */
 
 import { useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { LocaleLink } from "./locale-link";
 import { useTranslation } from "react-i18next";
 import { useCookieConsent } from "../hooks/use-cookie-consent";
 import { buttonClass } from "./ui";
@@ -103,12 +103,12 @@ function CookieBannerDialog() {
 
             <p className="text-sm text-gray-600 leading-relaxed">
               {t("cookieBanner.message")}{" "}
-              <Link
+              <LocaleLink
                 to="/privacy-policy"
                 className="font-medium text-brand-600 hover:text-brand-700 underline underline-offset-2 decoration-brand-600/40 hover:decoration-current transition-colors focus:outline-none focus:ring-2 focus:ring-brand-600 focus:ring-offset-1 rounded"
               >
                 {t("cookieBanner.learnMore")}
-              </Link>
+              </LocaleLink>
             </p>
           </div>
 

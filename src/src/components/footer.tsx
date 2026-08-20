@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { LocaleLink } from "./locale-link";
 import { useTranslation } from "react-i18next";
 import { SITE_CONFIG } from "../lib/constants";
 import { useCookieConsent } from "../hooks/use-cookie-consent";
@@ -105,17 +105,17 @@ export function Footer() {
                 className="flex flex-wrap items-center justify-center gap-3"
                 aria-label={t("navigation.footer")}
               >
-                <Link to="/" className={LINK_CLASS}>
+                <LocaleLink to="/" className={LINK_CLASS}>
                   {t("navigation.home")}
-                </Link>
+                </LocaleLink>
                 <Separator />
-                <Link to="/terms" className={LINK_CLASS}>
+                <LocaleLink to="/terms" className={LINK_CLASS}>
                   {t("navigation.termsOfService")}
-                </Link>
+                </LocaleLink>
                 <Separator />
-                <Link to="/privacy-policy" className={LINK_CLASS}>
+                <LocaleLink to="/privacy-policy" className={LINK_CLASS}>
                   {t("navigation.privacyPolicy")}
-                </Link>
+                </LocaleLink>
               </nav>
               <Separator />
               {/* GDPR: withdrawing consent must be as easy as granting it, so
