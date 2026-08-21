@@ -27,10 +27,9 @@ export function LocaleRoute({ children }: LocaleRouteProps) {
   const { i18n } = useTranslation();
   const locale = isLocale(lang) ? lang : DEFAULT_LOCALE;
 
-  // `:lang` matches any first segment, so without this every mistyped path —
-  // /foobar — rendered the home page with a 200 and the canonical of "/". A
-  // soft 404 is what a crawler reports it as, and a visitor gets no signal at
-  // all that they are somewhere that does not exist.
+  // `:lang` matches any first segment, so a mistyped path like /foobar would
+  // otherwise render the home page with a 200 and the canonical of "/" — a soft
+  // 404 to a crawler, and no signal at all to the visitor.
   const isUnknownSegment = lang !== undefined && !isLocale(lang);
 
   useEffect(() => {

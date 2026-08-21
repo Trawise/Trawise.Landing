@@ -11,10 +11,10 @@ type LocaleLinkProps = Omit<ComponentProps<typeof Link>, "to"> & {
 /**
  * A link that stays in the language the visitor is reading.
  *
- * Every internal link used to be written as a bare path, so following one from
- * `/sv/…` landed on an unprefixed URL — and since the URL is what decides the
- * language, the site switched back to English and overwrote the stored
- * preference on the way. Going through here makes that impossible to forget.
+ * Internal links go through here rather than being written as bare paths: the
+ * URL is what decides the language, so following an unprefixed path out of
+ * `/sv/…` drops the visitor back into English and overwrites their stored
+ * preference on the way.
  */
 export function LocaleLink({ to, ...props }: LocaleLinkProps) {
   const { pathname } = useLocation();

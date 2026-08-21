@@ -1,21 +1,12 @@
 /**
- * useCookieConsent
- *
- * Manages cookie / analytics consent state:
- *  - Reads the prior decision from localStorage so returning visitors never
- *    see the banner again.
- *  - Exposes `showBanner` (true only when no decision has been recorded yet).
- *  - Updates Google Analytics Consent Mode v2 whenever the user acts.
- *  - Exposes `reopen()` so the decision can be withdrawn later. GDPR requires
- *    withdrawing consent to be as easy as giving it, so the footer renders a
- *    control that calls this.
- *  - Wraps all localStorage access in try/catch so the hook is safe in
- *    private-browsing sessions where storage may be restricted.
+ * Cookie and analytics consent, persisted in localStorage and pushed into
+ * Google Consent Mode v2 on every change.
  *
  * The decision lives in a module-level store rather than component state
- * because two components observe it (the banner and the footer's "cookie
- * settings" control) and they must never disagree about whether the banner
- * is currently open.
+ * because two components observe it — the banner and the footer's "cookie
+ * settings" control — and they must never disagree about whether the banner is
+ * open. Every storage access is guarded: private browsing makes localStorage
+ * throw rather than be absent.
  */
 
 import { useSyncExternalStore } from "react";

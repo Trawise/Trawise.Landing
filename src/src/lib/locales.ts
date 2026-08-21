@@ -1,8 +1,7 @@
 /**
  * The languages the site is published in. English is served at the bare path
  * and the rest under a prefix, so each translation has a URL a crawler can
- * index — sharing one URL is why the translations generated no organic
- * traffic.
+ * index; sharing one URL leaves them all unranked.
  */
 export const LOCALES = ["en", "es", "it", "sv"] as const;
 

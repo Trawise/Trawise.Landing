@@ -1,22 +1,8 @@
 /**
- * CookieBanner
- *
- * A GDPR-compliant cookie consent banner that:
- *  - Appears fixed at the bottom of the viewport on first visit, and again
- *    whenever the user reopens it from the footer's "Cookie settings" control.
- *  - Slides up with a smooth entrance animation (collapsed to 0.01 ms when
- *    the user prefers reduced motion — handled by the global CSS rule).
- *  - Moves keyboard focus to the "Accept All" button on appearance so that
- *    keyboard and screen-reader users are immediately aware of the prompt.
- *    This is the correct mechanism in a CSR app: aria-live on a newly
- *    mounted element is unreliable across screen readers, whereas a focus
- *    change always triggers a screen-reader announcement.
- *  - Offers "Accept All" and "Reject All" actions wired into Google
- *    Consent Mode v2 via the useCookieConsent hook.
- *  - Links to the Privacy Policy page (client-side navigation).
- *  - Is mobile-first: text and buttons stack on narrow viewports and
- *    align in a single row on sm+ viewports.
- *  - Renders nothing (zero cost) once the user has made a choice.
+ * The consent prompt, shown on a first visit and again whenever the footer's
+ * "Cookie settings" control reopens it. Accept and reject are wired into Google
+ * Consent Mode v2 through `useCookieConsent`, and once a choice is recorded
+ * this renders nothing at all.
  */
 
 import { useEffect, useRef } from "react";
@@ -64,19 +50,10 @@ function CookieBannerDialog() {
     };
   }, []);
 
-  // Move focus to the Accept button on mount.
-  //
-  // Why here rather than relying on aria-live:
-  //   This is a client-side-rendered app — the banner is injected into the
-  //   DOM after the initial parse, not present in the original HTML.
-  //   Placing aria-live on the banner's own root element is an anti-pattern
-  //   because screen readers only observe *changes within* a persistent live
-  //   region; they do not reliably announce the region being added to the DOM.
-  //   A focus() call, on the other hand, always triggers an SR announcement.
-  //
-  // Why preventScroll:
-  //   The banner is position:fixed at the bottom of the viewport, so it is
-  //   already visible — scrolling to it would be unexpected and jarring.
+  // Focus, not aria-live: the banner is injected after the initial parse, and
+  // screen readers announce changes *within* a persistent live region rather
+  // than the region's own arrival. preventScroll because the banner is fixed to
+  // the bottom of the viewport and is already in view.
   useEffect(() => {
     acceptButtonRef.current?.focus({ preventScroll: true });
   }, []);

@@ -35,9 +35,9 @@ i18n
     },
   });
 
-// The URL decides the language, and it has to decide it before the first
-// paint. The detector starts from localStorage or the browser, so a visitor
-// opening /sv saw a frame of English before LocaleRoute's effect corrected it.
+// The URL decides the language, and it has to decide it before the first paint:
+// the detector starts from localStorage or the browser, which would show a
+// visitor opening /sv a frame of English before LocaleRoute corrects it.
 // Resources are synchronous, so this switch takes effect immediately.
 const urlLocale = localeFromPath(window.location.pathname);
 

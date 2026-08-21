@@ -33,10 +33,9 @@ const SIZES: Record<ButtonSize, string> = {
 /**
  * The classes every button-like thing on the site shares.
  *
- * Six of them were written by hand across five files, between them using four
- * vertical paddings, two font weights, two transition properties and three
- * hover treatments. They are anchors, links and buttons, so this hands back
- * the classes rather than an element.
+ * Declared once so padding, weight, transition and hover cannot drift between
+ * files. They are anchors, links and buttons alike, so this hands back the
+ * classes rather than an element.
  */
 export function buttonClass(
   variant: ButtonVariant = "primary",
