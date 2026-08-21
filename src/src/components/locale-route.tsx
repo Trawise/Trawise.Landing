@@ -1,9 +1,17 @@
-import { useEffect } from "react";
+import { lazy, useEffect } from "react";
 import type { ReactNode } from "react";
 import { useTranslation } from "react-i18next";
 import { useParams } from "react-router-dom";
 
 import { DEFAULT_LOCALE, isLocale } from "../lib/locales";
+
+// Lazy, like main.tsx's own reference to it: a static import here would pull
+// the page into the entry chunk and silently undo that split — the build says
+// so, as INEFFECTIVE_DYNAMIC_IMPORT. The Suspense boundary above the routes
+// catches it.
+const NotFound = lazy(() =>
+  import("../NotFound").then((m) => ({ default: m.NotFound }))
+);
 
 interface LocaleRouteProps {
   children: ReactNode;
@@ -19,6 +27,12 @@ export function LocaleRoute({ children }: LocaleRouteProps) {
   const { i18n } = useTranslation();
   const locale = isLocale(lang) ? lang : DEFAULT_LOCALE;
 
+  // `:lang` matches any first segment, so without this every mistyped path —
+  // /foobar — rendered the home page with a 200 and the canonical of "/". A
+  // soft 404 is what a crawler reports it as, and a visitor gets no signal at
+  // all that they are somewhere that does not exist.
+  const isUnknownSegment = lang !== undefined && !isLocale(lang);
+
   useEffect(() => {
     if (i18n.resolvedLanguage !== locale) {
       void i18n.changeLanguage(locale);
@@ -28,6 +42,8 @@ export function LocaleRoute({ children }: LocaleRouteProps) {
   useEffect(() => {
     document.documentElement.lang = locale;
   }, [locale]);
+
+  if (isUnknownSegment) return <NotFound />;
 
   return <>{children}</>;
 }
