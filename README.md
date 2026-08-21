@@ -19,15 +19,18 @@ npm run typecheck
 npm run build
 ```
 
-CI runs both on every push and pull request to `main`.
+CI builds and deploys on every push to `main`. It does not run on pull
+requests, so run both yourself before merging.
 
 ## Languages and URLs
 
 The URL is the only thing that decides the language — `/sv/terms` is Swedish,
-`/terms` is English — so each translation has a URL a crawler can index. Two
-rules follow, and both have been broken once: internal links go through
-`LocaleLink`, and a first segment that is not a locale is a 404. See
-`AGENTS.md`.
+`/terms` is English — so each translation has a URL a crawler can index.
+
+Two rules follow, and both have been broken once. Internal links go through
+`LocaleLink`: a bare `<Link>` drops the prefix, which resets the language and
+overwrites the visitor's stored preference. And a first segment that is not a
+locale is a 404, not the home page — `:lang` matches anything.
 
 ## Deploy
 

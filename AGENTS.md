@@ -23,5 +23,4 @@ build failure — that is what keeps dead code out.
 - Consent Mode v2 <https://developers.google.com/tag-platform/security/guides/consent>
 - SPA fallback for `404.html` <https://github.com/rafgraph/spa-github-pages>
 
-`../index.html` §23 is the contract; `../STATUS.md` is the state. Neither is
-committed. Commits: one line, no body, no trailer, never push.
+Commits: one line, no body, no trailer, never push.
