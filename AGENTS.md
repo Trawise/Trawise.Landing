@@ -13,19 +13,6 @@ cd src && npm run typecheck && npm run build
 No lint step and no tests, by design. `noUnusedLocals` makes an unused import a
 build failure — that is what keeps dead code out.
 
-## Rules
-
-- The URL decides the language: `/sv/terms` is Swedish, `/terms` is English.
-- Internal links go through `LocaleLink`. A bare `<Link>` drops the prefix,
-  which resets the language and overwrites the visitor's stored preference.
-- An unknown first segment is a 404, not the home page — `:lang` matches
-  anything, so `LocaleRoute` rejects what is not a locale.
-- Every route sets its title, canonical and hreflang through `usePageMeta`.
-- Buttons use `buttonClass()` from `ui.tsx`.
-- Tailwind v4 is CSS-first: tokens live in `@theme` in `index.css`, and
-  `theme()` is deprecated in favour of `var(--color-*)`.
-- UK spelling, sentence case. Comments say why, not what.
-
 ## Reference
 
 - React 19 <https://react.dev/reference/react> · Vite <https://vite.dev/config/>
