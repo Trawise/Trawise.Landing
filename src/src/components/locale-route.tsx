@@ -10,7 +10,7 @@ import { DEFAULT_LOCALE, isLocale } from "../lib/locales";
 // so, as INEFFECTIVE_DYNAMIC_IMPORT. The Suspense boundary above the routes
 // catches it.
 const NotFound = lazy(() =>
-  import("../NotFound").then((m) => ({ default: m.NotFound }))
+  import("../NotFound").then((m) => ({ default: m.NotFound })),
 );
 
 interface LocaleRouteProps {

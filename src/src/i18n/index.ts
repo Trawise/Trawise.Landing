@@ -54,7 +54,8 @@ if (i18n.resolvedLanguage !== urlLocale) {
 // language it resolved to. Declaring "en-US" while serving the "en" resources
 // would announce a locale we do not really ship.
 function syncHtmlLang(): void {
-  document.documentElement.lang = i18n.resolvedLanguage || i18n.language || "en";
+  document.documentElement.lang =
+    i18n.resolvedLanguage || i18n.language || "en";
 }
 
 syncHtmlLang();

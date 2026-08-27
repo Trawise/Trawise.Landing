@@ -18,20 +18,20 @@ import "./index.css";
 // entry chunk. The secondary routes are split out — the privacy policy alone is
 // a few hundred lines of static prose that no first-time visitor downloads.
 const ComingSoon = lazy(() =>
-  import("./ComingSoon.tsx").then((m) => ({ default: m.ComingSoon }))
+  import("./ComingSoon.tsx").then((m) => ({ default: m.ComingSoon })),
 );
 const DeleteAccount = lazy(() =>
-  import("./DeleteAccount.tsx").then((m) => ({ default: m.DeleteAccount }))
+  import("./DeleteAccount.tsx").then((m) => ({ default: m.DeleteAccount })),
 );
 const Faq = lazy(() => import("./Faq.tsx").then((m) => ({ default: m.Faq })));
 const NotFound = lazy(() =>
-  import("./NotFound.tsx").then((m) => ({ default: m.NotFound }))
+  import("./NotFound.tsx").then((m) => ({ default: m.NotFound })),
 );
 const PrivacyPolicy = lazy(() =>
-  import("./PrivacyPolicy.tsx").then((m) => ({ default: m.PrivacyPolicy }))
+  import("./PrivacyPolicy.tsx").then((m) => ({ default: m.PrivacyPolicy })),
 );
 const TermsOfService = lazy(() =>
-  import("./TermsOfService.tsx").then((m) => ({ default: m.TermsOfService }))
+  import("./TermsOfService.tsx").then((m) => ({ default: m.TermsOfService })),
 );
 
 /**
@@ -96,5 +96,5 @@ createRoot(rootElement).render(
         <CookieBanner />
       </BrowserRouter>
     </ErrorBoundary>
-  </StrictMode>
+  </StrictMode>,
 );

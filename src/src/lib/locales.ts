@@ -25,3 +25,10 @@ export const localeFromPath = (pathname: string): Locale => {
 
   return isLocale(first) ? first : DEFAULT_LOCALE;
 };
+
+/** The same route with its language prefix removed, for switching language. */
+export const pathWithoutLocale = (pathname: string): string => {
+  const [, first, ...rest] = pathname.split("/");
+
+  return isLocale(first) ? `/${rest.join("/")}` : pathname;
+};

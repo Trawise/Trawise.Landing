@@ -100,7 +100,11 @@ function CookieBannerDialog() {
             <button
               type="button"
               onClick={reject}
-              className={buttonClass("secondary", "sm", "flex-1 sm:flex-initial whitespace-nowrap")}
+              className={buttonClass(
+                "secondary",
+                "sm",
+                "flex-1 sm:flex-initial whitespace-nowrap",
+              )}
             >
               {t("cookieBanner.rejectAll")}
             </button>
@@ -109,7 +113,11 @@ function CookieBannerDialog() {
               ref={acceptButtonRef}
               type="button"
               onClick={accept}
-              className={buttonClass("primary", "sm", "flex-1 sm:flex-initial whitespace-nowrap")}
+              className={buttonClass(
+                "primary",
+                "sm",
+                "flex-1 sm:flex-initial whitespace-nowrap",
+              )}
             >
               {t("cookieBanner.acceptAll")}
             </button>

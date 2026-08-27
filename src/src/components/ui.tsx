@@ -8,6 +8,15 @@ export function Container({ children }: ContainerProps) {
   return <div className="container mx-auto px-4">{children}</div>;
 }
 
+/** The mark between two links in a row of them. */
+export function Separator() {
+  return (
+    <span className="text-gray-400" aria-hidden="true">
+      •
+    </span>
+  );
+}
+
 type ButtonVariant = "primary" | "secondary";
 type ButtonSize = "sm" | "md" | "lg";
 
@@ -42,5 +51,7 @@ export function buttonClass(
   size: ButtonSize = "md",
   extra = "",
 ): string {
-  return [BASE, VARIANTS[variant], SIZES[size], extra].filter(Boolean).join(" ");
+  return [BASE, VARIANTS[variant], SIZES[size], extra]
+    .filter(Boolean)
+    .join(" ");
 }

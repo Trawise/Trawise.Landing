@@ -2,19 +2,13 @@ import { LocaleLink } from "./locale-link";
 import { useTranslation } from "react-i18next";
 import { SITE_CONFIG } from "../lib/constants";
 import { useCookieConsent } from "../hooks/use-cookie-consent";
-import { Container } from "./ui";
+import { Container, Separator } from "./ui";
 import { LanguageSwitcher } from "./language-switcher";
 
 // Shared by the footer links and the cookie-settings button so they stay
 // visually identical — the button must not read as a different kind of control.
 const LINK_CLASS =
   "text-gray-600 hover:text-gray-900 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600 rounded underline decoration-transparent hover:decoration-current focus:decoration-current whitespace-nowrap";
-
-const Separator = () => (
-  <span className="text-gray-400" aria-hidden="true">
-    •
-  </span>
-);
 
 export function Footer() {
   const { t } = useTranslation();

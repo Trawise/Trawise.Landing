@@ -215,11 +215,12 @@ export function TermsOfService() {
                     </h2>
                     <p className="text-gray-700 leading-relaxed">
                       Reviews may only be written by someone who completed the
-                      stay being reviewed, and must reflect a genuine, first-hand
-                      experience. Reviews may be corrected shortly after they are
-                      written; they are not a channel for negotiation, threats or
-                      inducements. We do not edit reviews to suit either side,
-                      but we may remove one that breaches these Terms.
+                      stay being reviewed, and must reflect a genuine,
+                      first-hand experience. Reviews may be corrected shortly
+                      after they are written; they are not a channel for
+                      negotiation, threats or inducements. We do not edit
+                      reviews to suit either side, but we may remove one that
+                      breaches these Terms.
                     </p>
                   </section>
 
@@ -244,9 +245,9 @@ export function TermsOfService() {
                     <p className="text-gray-700 leading-relaxed">
                       You may stop using the Service and delete your account at
                       any time. We may suspend or close an account that breaches
-                      these Terms, that is used to harm another user, or where we
-                      are required to do so by law. Where it is reasonable to do
-                      so, we will tell you why.
+                      these Terms, that is used to harm another user, or where
+                      we are required to do so by law. Where it is reasonable to
+                      do so, we will tell you why.
                     </p>
                   </section>
 
@@ -256,16 +257,17 @@ export function TermsOfService() {
                     </h2>
                     <p className="text-gray-700 leading-relaxed">
                       The Service is provided as it is. We do not verify the
-                      identity of every user or inspect the places listed, and we
-                      make no warranty about their conduct, safety or legality.
-                      To the extent the law allows, we are not liable for any
-                      indirect or consequential loss, or for any dispute, injury
-                      or loss arising from a stay agreed through the Service.
+                      identity of every user or inspect the places listed, and
+                      we make no warranty about their conduct, safety or
+                      legality. To the extent the law allows, we are not liable
+                      for any indirect or consequential loss, or for any
+                      dispute, injury or loss arising from a stay agreed through
+                      the Service.
                     </p>
                     <p className="text-gray-700 leading-relaxed mt-4">
                       Nothing in these Terms limits any liability that cannot
-                      lawfully be limited, and nothing here removes the statutory
-                      rights you have as a consumer.
+                      lawfully be limited, and nothing here removes the
+                      statutory rights you have as a consumer.
                     </p>
                   </section>
 

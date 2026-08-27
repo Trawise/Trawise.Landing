@@ -1,6 +1,11 @@
 import { useEffect } from "react";
 import { SITE_CONFIG } from "../lib/constants";
-import { DEFAULT_LOCALE, LOCALES, localePath } from "../lib/locales";
+import {
+  DEFAULT_LOCALE,
+  LOCALES,
+  localeFromPath,
+  localePath,
+} from "../lib/locales";
 
 interface PageMeta {
   /**
@@ -30,14 +35,6 @@ interface PageMeta {
  * from a noindex page back to an indexable one cannot leave the directive
  * stuck on.
  */
-const currentLocale = () => {
-  const [, maybeLocale] = window.location.pathname.split("/");
-
-  return LOCALES.includes(maybeLocale as (typeof LOCALES)[number])
-    ? (maybeLocale as (typeof LOCALES)[number])
-    : DEFAULT_LOCALE;
-};
-
 export function usePageMeta({ title, path, noindex = false }: PageMeta): void {
   useEffect(() => {
     document.title = title
@@ -52,7 +49,10 @@ export function usePageMeta({ title, path, noindex = false }: PageMeta): void {
       link.rel = "canonical";
       document.head.appendChild(link);
     }
-    link.href = new URL(localePath(currentLocale(), path), SITE_CONFIG.url).href;
+    link.href = new URL(
+      localePath(localeFromPath(window.location.pathname), path),
+      SITE_CONFIG.url,
+    ).href;
   }, [path]);
 
   // One alternate per language plus x-default, rebuilt per route: without
