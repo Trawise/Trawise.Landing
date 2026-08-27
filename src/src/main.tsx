@@ -11,7 +11,6 @@ import { ErrorBoundary } from "./components/error-boundary";
 import { App } from "./App.tsx";
 import { CookieBanner } from "./components/cookie-banner.tsx";
 import { LocaleRoute } from "./components/locale-route.tsx";
-import "@fontsource-variable/inter";
 import "./i18n";
 import "./index.css";
 
