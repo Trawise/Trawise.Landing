@@ -8,7 +8,8 @@
     "primary": "Huvudmeny",
     "footer": "Sidfot",
     "cookieSettings": "Cookie-inställningar",
-    "termsOfService": "Användarvillkor"
+    "termsOfService": "Användarvillkor",
+    "faq": "Vanliga frågor"
   },
   "hero": {
     "title": "Berätta för <brand>Trawise</brand> var du vill bo. Låt platserna komma till dig.",
@@ -140,7 +141,13 @@
     "comingSoon": "Kommer snart",
     "deleteAccount": "Ta bort ditt konto",
     "notFound": "Sidan hittades inte",
-    "termsOfService": "Användarvillkor"
+    "termsOfService": "Användarvillkor",
+    "faq": "Vanliga frågor"
   },
-  "opensInNewTab": "öppnas i en ny flik"
+  "opensInNewTab": "öppnas i en ny flik",
+  "faq": {
+    "title": "Vanliga frågor",
+    "subtitle": "Så fungerar Trawise, vad det kostar och vad som händer när ett boende säger ja.",
+    "backToHome": "Tillbaka till startsidan"
+  }
 }

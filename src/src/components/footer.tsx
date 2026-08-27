@@ -109,6 +109,10 @@ export function Footer() {
                   {t("navigation.home")}
                 </LocaleLink>
                 <Separator />
+                <LocaleLink to="/faq" className={LINK_CLASS}>
+                  {t("navigation.faq")}
+                </LocaleLink>
+                <Separator />
                 <LocaleLink to="/terms" className={LINK_CLASS}>
                   {t("navigation.termsOfService")}
                 </LocaleLink>

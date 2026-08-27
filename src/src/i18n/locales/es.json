@@ -8,7 +8,8 @@
     "primary": "Principal",
     "footer": "Pie de página",
     "cookieSettings": "Configuración de cookies",
-    "termsOfService": "Términos del servicio"
+    "termsOfService": "Términos del servicio",
+    "faq": "Preguntas frecuentes"
   },
   "hero": {
     "title": "Dile a <brand>Trawise</brand> dónde quieres alojarte. Deja que los lugares vengan a ti.",
@@ -140,7 +141,13 @@
     "comingSoon": "Próximamente",
     "deleteAccount": "Eliminar tu cuenta",
     "notFound": "Página no encontrada",
-    "termsOfService": "Términos del servicio"
+    "termsOfService": "Términos del servicio",
+    "faq": "Preguntas frecuentes"
   },
-  "opensInNewTab": "se abre en una pestaña nueva"
+  "opensInNewTab": "se abre en una pestaña nueva",
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "subtitle": "Cómo funciona Trawise, cuánto cuesta y qué pasa cuando un alojamiento acepta.",
+    "backToHome": "Volver al inicio"
+  }
 }

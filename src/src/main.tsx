@@ -23,6 +23,7 @@ const ComingSoon = lazy(() =>
 const DeleteAccount = lazy(() =>
   import("./DeleteAccount.tsx").then((m) => ({ default: m.DeleteAccount }))
 );
+const Faq = lazy(() => import("./Faq.tsx").then((m) => ({ default: m.Faq })));
 const NotFound = lazy(() =>
   import("./NotFound.tsx").then((m) => ({ default: m.NotFound }))
 );
@@ -80,6 +81,7 @@ createRoot(rootElement).render(
                 }
               >
                 <Route index element={<App />} />
+                <Route path="faq" element={<Faq />} />
                 <Route path="privacy-policy" element={<PrivacyPolicy />} />
                 <Route path="terms" element={<TermsOfService />} />
                 <Route path="coming-soon" element={<ComingSoon />} />
