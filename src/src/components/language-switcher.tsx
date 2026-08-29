@@ -29,8 +29,8 @@ export function LanguageSwitcher() {
     navigate(localePath(locale, pathWithoutLocale(pathname) || "/"));
   };
 
-  // resolvedLanguage normalises variants like "sv-SE" → "sv" so the active
-  // state check matches our resource keys correctly.
+  // resolvedLanguage normalises variants like "sv-SE" to "sv", which is how
+  // the resource keys are named — so the active check matches one.
   const active = i18n.resolvedLanguage ?? i18n.language;
 
   return (

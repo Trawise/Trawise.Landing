@@ -52,7 +52,7 @@ if (i18n.resolvedLanguage !== urlLocale) {
 // resolvedLanguage, not language: the detector reports the raw browser tag
 // (e.g. "en-US" or "sv-SE") while the bundle actually rendered is the base
 // language it resolved to. Declaring "en-US" while serving the "en" resources
-// would announce a locale we do not really ship.
+// would announce a locale the site does not ship.
 function syncHtmlLang(): void {
   document.documentElement.lang =
     i18n.resolvedLanguage || i18n.language || "en";

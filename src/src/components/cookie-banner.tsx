@@ -68,9 +68,7 @@ function CookieBannerDialog() {
     >
       <div className="container mx-auto px-4 py-4 sm:py-5">
         <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
-          {/* ── Icon + message ─────────────────────────────────────────── */}
           <div className="flex items-start gap-3 flex-1 min-w-0">
-            {/* Decorative emoji — hidden from assistive technology */}
             <span
               className="text-xl leading-none mt-0.5 flex-shrink-0 select-none"
               aria-hidden="true"
@@ -89,13 +87,8 @@ function CookieBannerDialog() {
             </p>
           </div>
 
-          {/* ── Action buttons ──────────────────────────────────────────── */}
-          {/*
-            Mobile  (< sm): flex row, each button is flex-1 → equal width,
-                             balanced feel on narrow screens.
-            Desktop (≥ sm): buttons shrink to their content width and sit
-                             at the trailing edge of the row.
-          */}
+          {/* Equal widths on a phone, where the two answers share the row;
+              content-width and trailing from `sm`, where they do not. */}
           <div className="flex items-center gap-3 flex-shrink-0">
             <button
               type="button"

@@ -15,10 +15,6 @@ const CONSENT_KEY = "cookie-consent";
 
 export type ConsentStatus = "accepted" | "rejected" | null;
 
-// ---------------------------------------------------------------------------
-// Storage helpers
-// ---------------------------------------------------------------------------
-
 function readStoredConsent(): ConsentStatus {
   try {
     const val = localStorage.getItem(CONSENT_KEY);
@@ -34,14 +30,13 @@ function writeStoredConsent(status: ConsentStatus): void {
     if (status === null) localStorage.removeItem(CONSENT_KEY);
     else localStorage.setItem(CONSENT_KEY, status);
   } catch {
-    // ignore write failures
+    // A decision that cannot be stored is still honoured this visit.
   }
 }
 
 /**
- * Update Google Consent Mode v2 state.
- * Safe to call even if gtag hasn't loaded yet — dataLayer is already
- * defined and commands will be replayed when the library loads.
+ * Safe before gtag has loaded: the command queues into dataLayer and is
+ * replayed when the library arrives.
  */
 function updateGtagConsent(accepted: boolean): void {
   if (typeof window === "undefined") return;
@@ -53,10 +48,6 @@ function updateGtagConsent(accepted: boolean): void {
     });
   }
 }
-
-// ---------------------------------------------------------------------------
-// Module-level store
-// ---------------------------------------------------------------------------
 
 let status: ConsentStatus = readStoredConsent();
 const listeners = new Set<() => void>();
@@ -71,10 +62,6 @@ function setStatus(next: ConsentStatus): void {
   writeStoredConsent(next);
   listeners.forEach((listener) => listener());
 }
-
-// ---------------------------------------------------------------------------
-// Hook
-// ---------------------------------------------------------------------------
 
 export interface CookieConsentState {
   /** The current decision, or null if no decision has been made yet. */

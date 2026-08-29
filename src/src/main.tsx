@@ -91,8 +91,8 @@ createRoot(rootElement).render(
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
-        {/* Cookie consent banner — rendered outside Routes so it persists
-            across all pages, but inside BrowserRouter so Link works. */}
+        {/* Outside Routes, so it survives a navigation; inside the router, so
+            the link in it routes. */}
         <CookieBanner />
       </BrowserRouter>
     </ErrorBoundary>

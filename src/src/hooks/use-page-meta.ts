@@ -26,8 +26,8 @@ interface PageMeta {
  * Keeps document title, rel=canonical and the robots directive in sync with
  * the active route.
  *
- * React Router swaps components without a document load, so none of these are
- * updated for us. Without the canonical link every route would keep reporting
+ * React Router swaps components without a document load, so nothing updates
+ * these on its own. Without the canonical link every route would keep reporting
  * the homepage URL that index.html hardcodes, and noindex pages would stay
  * indexable on the strength of robots.txt alone.
  *
