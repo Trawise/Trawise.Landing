@@ -9,7 +9,7 @@ import { HOST_APP_URL, SITE_CONFIG } from "./lib/constants";
 import { usePageMeta } from "./hooks/use-page-meta";
 
 const LINK_CLASS =
-  "text-brand-600 hover:text-brand-700 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600 rounded underline decoration-transparent hover:decoration-current focus:decoration-current";
+  "text-brand-600 hover:text-brand-700 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600 rounded underline underline-offset-2 decoration-gray-400 hover:decoration-current focus:decoration-current";
 
 export function TermsOfService() {
   const { t } = useTranslation();

@@ -117,7 +117,7 @@ export function ForHotels() {
                     {t("forHotels.steps.step1.descriptionBeforeEmail")}
                     <a
                       href={`mailto:${SITE_CONFIG.email}`}
-                      className="font-medium text-brand-600 hover:text-brand-700 underline decoration-transparent hover:decoration-current transition-colors focus:outline-none focus:ring-2 focus:ring-brand-600 focus:ring-offset-2 rounded"
+                      className="font-medium text-brand-600 hover:text-brand-700 underline underline-offset-2 decoration-gray-400 hover:decoration-current transition-colors focus:outline-none focus:ring-2 focus:ring-brand-600 focus:ring-offset-2 rounded"
                     >
                       {SITE_CONFIG.email}
                     </a>

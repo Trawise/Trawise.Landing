@@ -82,7 +82,7 @@ function CookieBannerDialog() {
               {t("cookieBanner.message")}{" "}
               <LocaleLink
                 to="/privacy-policy"
-                className="font-medium text-brand-600 hover:text-brand-700 underline underline-offset-2 decoration-brand-600/40 hover:decoration-current transition-colors focus:outline-none focus:ring-2 focus:ring-brand-600 focus:ring-offset-1 rounded"
+                className="font-medium text-brand-600 hover:text-brand-700 underline underline-offset-2 decoration-gray-400 hover:decoration-current transition-colors focus:outline-none focus:ring-2 focus:ring-brand-600 focus:ring-offset-1 rounded"
               >
                 {t("cookieBanner.learnMore")}
               </LocaleLink>
