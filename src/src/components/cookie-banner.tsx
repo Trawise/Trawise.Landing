@@ -9,7 +9,7 @@ import { useEffect, useRef } from "react";
 import { LocaleLink } from "./locale-link";
 import { useTranslation } from "react-i18next";
 import { useCookieConsent } from "../hooks/use-cookie-consent";
-import { buttonClass } from "./ui";
+import { CONTENT_WIDTH, buttonClass } from "./ui";
 
 export function CookieBanner() {
   const { showBanner } = useCookieConsent();
@@ -67,53 +67,55 @@ function CookieBannerDialog() {
       style={{ boxShadow: "0 -4px 24px rgba(0,0,0,0.08)" }}
     >
       <div className="container mx-auto px-4 py-4 sm:py-5">
-        <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
-          <div className="flex items-start gap-3 flex-1 min-w-0">
-            <span
-              className="text-xl leading-none mt-0.5 flex-shrink-0 select-none"
-              aria-hidden="true"
-            >
-              🍪
-            </span>
-
-            <p className="text-sm text-gray-600 leading-relaxed">
-              {t("cookieBanner.message")}{" "}
-              <LocaleLink
-                to="/privacy-policy"
-                className="font-medium text-brand-600 hover:text-brand-700 underline underline-offset-2 decoration-gray-400 hover:decoration-current transition-colors focus:outline-none focus:ring-2 focus:ring-brand-600 focus:ring-offset-1 rounded"
+        <div className={CONTENT_WIDTH}>
+          <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
+            <div className="flex items-start gap-3 flex-1 min-w-0">
+              <span
+                className="text-xl leading-none mt-0.5 flex-shrink-0 select-none"
+                aria-hidden="true"
               >
-                {t("cookieBanner.learnMore")}
-              </LocaleLink>
-            </p>
-          </div>
+                🍪
+              </span>
 
-          {/* Equal widths on a phone, where the two answers share the row;
+              <p className="text-sm text-gray-600 leading-relaxed">
+                {t("cookieBanner.message")}{" "}
+                <LocaleLink
+                  to="/privacy-policy"
+                  className="font-medium text-brand-600 hover:text-brand-700 underline underline-offset-2 decoration-gray-400 hover:decoration-current transition-colors focus:outline-none focus:ring-2 focus:ring-brand-600 focus:ring-offset-1 rounded"
+                >
+                  {t("cookieBanner.learnMore")}
+                </LocaleLink>
+              </p>
+            </div>
+
+            {/* Equal widths on a phone, where the two answers share the row;
               content-width and trailing from `sm`, where they do not. */}
-          <div className="flex items-center gap-3 flex-shrink-0">
-            <button
-              type="button"
-              onClick={reject}
-              className={buttonClass(
-                "secondary",
-                "sm",
-                "flex-1 sm:flex-initial whitespace-nowrap",
-              )}
-            >
-              {t("cookieBanner.rejectAll")}
-            </button>
+            <div className="flex items-center gap-3 flex-shrink-0">
+              <button
+                type="button"
+                onClick={reject}
+                className={buttonClass(
+                  "secondary",
+                  "sm",
+                  "flex-1 sm:flex-initial whitespace-nowrap",
+                )}
+              >
+                {t("cookieBanner.rejectAll")}
+              </button>
 
-            <button
-              ref={acceptButtonRef}
-              type="button"
-              onClick={accept}
-              className={buttonClass(
-                "primary",
-                "sm",
-                "flex-1 sm:flex-initial whitespace-nowrap",
-              )}
-            >
-              {t("cookieBanner.acceptAll")}
-            </button>
+              <button
+                ref={acceptButtonRef}
+                type="button"
+                onClick={accept}
+                className={buttonClass(
+                  "primary",
+                  "sm",
+                  "flex-1 sm:flex-initial whitespace-nowrap",
+                )}
+              >
+                {t("cookieBanner.acceptAll")}
+              </button>
+            </div>
           </div>
         </div>
       </div>

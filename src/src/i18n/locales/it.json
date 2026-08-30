@@ -1,83 +1,116 @@
 {
   "navigation": {
-    "home": "Home",
     "privacyPolicy": "Informativa sulla privacy",
     "becomeHost": "Diventa host",
     "goToHomepage": "Vai alla homepage",
     "logoAlt": "Logo {{name}}",
     "primary": "Principale",
-    "footer": "Piè di pagina",
     "cookieSettings": "Impostazioni cookie",
     "termsOfService": "Termini di servizio",
     "faq": "FAQ"
   },
   "hero": {
-    "title": "Di’ a <brand>Trawise</brand> dove vuoi soggiornare. Lascia che siano i luoghi a farsi avanti.",
-    "description": "Scegli un punto sulla mappa, indica budget e date. Hotel, pensioni e host della zona vedono la tua richiesta e rispondono con quello che possono offrire: confronti risposte vere invece di scorrere annunci.",
-    "downloadApp": "Scarica l'app mobile Trawise",
-    "scrollHint": "Scopri come funziona per gli hotel",
-    "mockupAlt": "L'app Trawise che mostra una mappa interattiva delle richieste di alloggio nelle vicinanze e i dettagli di un hotel",
-    "free": "Gratis, e Trawise non trattiene nulla: paghi direttamente alla struttura."
+    "title": "Di' a <brand>Trawise</brand> dove vuoi soggiornare. Lascia che siano le strutture a farsi avanti.",
+    "description": "Metti un segnaposto sulla mappa e indica il tuo budget e le tue date. Hotel, pensioni e host nelle vicinanze vedono la tua richiesta e rispondono con quello che possono offrirti: così confronti risposte vere invece di scorrere annunci.",
+    "free": "Gratis, e Trawise non trattiene alcuna commissione: paghi direttamente la struttura.",
+    "seeHowItWorks": "Scopri come funziona",
+    "hostCta": "Ho camere da riempire",
+    "storeNote": "L'app arriverà presto su App Store e Google Play.",
+    "mapAlt": "L'app Trawise con una mappa di Stoccolma e cinque strutture entro cinque chilometri dal segnaposto",
+    "offerAlt": "Due risposte alla stessa richiesta: una struttura ha proposto 1.450 SEK a notte, un'altra ha accettato 1.200 SEK"
   },
-  "forHotels": {
-    "eyebrow": "Per gli Hotel",
-    "title": "Come Funziona Trawise per gli Hotel",
-    "subtitle": "Riempi le camere vuote per le date più vicine connettendoti direttamente con i viaggiatori nelle vicinanze.",
+  "travellers": {
+    "eyebrow": "Per i viaggiatori",
+    "title": "Una richiesta. Rispondono tutte le strutture vicine.",
+    "subtitle": "Un sito di prenotazioni ti fa controllare le stesse date venti volte. Trawise ribalta le cose: chiedi una volta sola e ti rispondono le strutture che possono ospitarti.",
+    "tablist": "I tre passaggi",
+    "previous": "Passaggio precedente",
+    "next": "Passaggio successivo",
     "steps": {
-      "step1": {
-        "title": "Registra il tuo hotel",
-        "descriptionBeforeEmail": "Crea un account e inserisci i dati di base del tuo hotel, oppure scrivici a ",
-        "descriptionAfterEmail": " e lo configureremo noi per te."
+      "ask": {
+        "title": "Chiedi una volta sola",
+        "description": "Metti un segnaposto, scegli quanto lontano sei disposto a spostarti e indica le notti, quante persone siete e quanto vuoi pagare a notte. Se le tue date possono spostarsi di qualche giorno, possono rispondere anche le strutture il cui calendario si sovrappone solo agli estremi. Il totale e il numero di strutture raggiunte si aggiornano mentre scrivi.",
+        "imageAlt": "Il modulo di nuova richiesta nell'app Trawise: un budget di 700 SEK a notte per un soggiorno entro due chilometri da Stoccolma, che raggiunge due strutture"
       },
-      "step2": {
-        "title": "Ricevi le richieste",
-        "description": "Consulta le richieste dei viaggiatori nelle vicinanze e scegli quelle più adatte a te."
+      "answers": {
+        "title": "Leggi le risposte",
+        "description": "Ogni struttura pubblicata all'interno della tua zona che può ospitarvi nelle tue date vede la richiesta. Ognuna accetta il tuo budget, propone un proprio prezzo a notte, oppure lascia perdere. La controproposta è un solo giro: la prenoti o la rifiuti.",
+        "imageAlt": "Una richiesta per tre notti a ottobre a 1.200 SEK a notte, con un'offerta accettata e una controproposta"
       },
-      "step3": {
-        "title": "Confronta e decidi",
-        "description": "Confronta prezzo, date e valutazione del viaggiatore a colpo d’occhio, poi accetta, fai una controproposta o rifiuta direttamente dalla riga."
-      },
-      "step4": {
-        "title": "Accetta e dai il benvenuto",
-        "description": "Accetta la richiesta scelta e dai il benvenuto al viaggiatore il giorno del suo arrivo."
+      "book": {
+        "title": "Prenota quella che preferisci",
+        "description": "Prenotando una struttura le altre offerte vengono rifiutate e avvisate, così nessuno tiene bloccata una camera che non prenderai. L'indirizzo e i contatti dell'host ti vengono comunicati una volta prenotato il soggiorno.",
+        "imageAlt": "La scheda di una struttura nell'app: foto, descrizione, valutazione e il prezzo a notte a cui può ospitarti"
       }
-    },
-    "benefitsHeading": "Perché gli Hotel Scelgono Trawise",
-    "benefits": {
-      "benefit1": {
-        "title": "Riempi le camere dell'ultimo minuto",
-        "description": "Trasforma le camere vuote in prenotazioni per le date più vicine, senza impegni a lungo termine."
-      },
-      "benefit2": {
-        "title": "Gratuito per gli hotel",
-        "description": "Iscriversi a Trawise e pubblicare il tuo hotel non costa nulla: nessuna commissione per iniziare."
-      },
-      "benefit3": {
-        "title": "Un canale di marketing in più",
-        "description": "Raggiungi i viaggiatori che cercano alloggi nelle vicinanze, senza spendere in annunci o promozioni."
-      }
-    },
-    "cta": "Diventa Host",
-    "benefit2": {
-      "title": "Gratis mentre cresciamo",
-      "description": "Pubblicare il tuo alloggio e rispondere alle richieste oggi è gratis per tutti. In futuro arriveranno funzioni a pagamento e te lo diremo prima che qualcosa che già usi inizi a costare."
     }
+  },
+  "why": {
+    "title": "Perché costa meno",
+    "subtitle": "Non è un codice sconto. Una camera che resterebbe vuota di martedì vale di più per un host al tuo prezzo che a nessun prezzo.",
+    "points": {
+      "price": {
+        "title": "Il prezzo lo fai tu",
+        "description": "Non filtri in base al numero di qualcun altro. Dici quanto vuoi pagare a notte, e ogni struttura decide se può riempire quelle notti a quel prezzo."
+      },
+      "fees": {
+        "title": "Nessuna commissione, nessun intermediario",
+        "description": "Trawise non trattiene commissioni, non custodisce caparre e non applica costi di prenotazione. Paghi direttamente la struttura, con i metodi che accetta."
+      }
+    }
+  },
+  "forHosts": {
+    "eyebrow": "Per gli host",
+    "title": "Le camere vuote diventano guadagno.",
+    "subtitle": "I viaggiatori nelle vicinanze dicono dove vogliono stare, quando e quanto possono spendere. Tu rispondi a quelli che ti convengono, nelle date che hai ancora libere.",
+    "steps": {
+      "register": {
+        "title": "Registra la tua struttura",
+        "descriptionBeforeEmail": "Crea un account host e aggiungi il tuo hotel, la tua pensione o il tuo appartamento, oppure scrivici a ",
+        "descriptionAfterEmail": " e lo configuriamo noi per te."
+      },
+      "receive": {
+        "title": "Ricevi le richieste",
+        "description": "Richieste collocate in una zona che ti comprende, per date in cui hai camere libere, per un gruppo che le tue camere possono ospitare."
+      },
+      "decide": {
+        "title": "Confronta e decidi",
+        "description": "Prezzo, date e valutazione del viaggiatore uno accanto all'altro. Accetta, controproponi o rifiuta dalla riga stessa."
+      },
+      "welcome": {
+        "title": "Accetta e accogli",
+        "description": "Accetta, e il viaggiatore riceve il tuo indirizzo e i tuoi contatti per il giorno dell'arrivo."
+      }
+    },
+    "inboxAlt": "La dashboard host di Trawise, con le richieste aperte e i pulsanti Accetta, Controproponi e Rifiuta su ogni riga",
+    "benefitsHeading": "Perché gli host scelgono Trawise",
+    "benefits": {
+      "lastMinute": {
+        "title": "Riempi le camere dell'ultimo minuto",
+        "description": "Trasforma le camere vuote in prenotazioni per le date più vicine, senza vincoli a lungo termine."
+      },
+      "reach": {
+        "title": "Un canale di marketing in più",
+        "description": "Raggiungi viaggiatori che stanno già cercando nelle vicinanze, senza spendere in annunci o promozioni."
+      },
+      "team": {
+        "title": "Il tuo team, non la tua password",
+        "description": "Una struttura appartiene a un'organizzazione. Invita i colleghi via email con un ruolo che stabilisce cosa può fare ciascuno."
+      }
+    },
+    "cta": "Diventa host"
+  },
+  "questions": {
+    "title": "Domande prima di iniziare?",
+    "description": "Le domande frequenti spiegano quanto costa, chi può vedere la tua richiesta, cos'è una controproposta e cosa succede quando una struttura accetta.",
+    "cta": "Leggi le FAQ"
   },
   "footer": {
     "description": "Connettiti con host vicini e trova alloggi economici su Trawise",
     "contactUs": "Contattaci",
-    "allRightsReserved": "Tutti i diritti riservati"
-  },
-  "downloadButtons": {
-    "playStore": {
-      "label": "Disponibile su",
-      "store": "Google Play"
-    },
-    "appStore": {
-      "label": "Scarica su",
-      "store": "App Store"
-    },
-    "ariaLabel": "{{label}} {{store}} — scarica l'app mobile Trawise"
+    "allRightsReserved": "Tutti i diritti riservati",
+    "legal": "Note legali",
+    "hostDashboard": "Dashboard host",
+    "deleteAccount": "Elimina il tuo account"
   },
   "languages": {
     "english": "English",
@@ -97,14 +130,9 @@
     "lastUpdated": "Ultimo aggiornamento: 28 agosto 2026",
     "backToHome": "Torna alla home"
   },
-  "comingSoon": {
-    "title": "Prossimamente nel tuo App Store",
-    "description": "Stiamo mettendo gli ultimi ritocchi all'app mobile Trawise. Presto potrai connetterti con host vicini e trovare alloggi economici direttamente dal tuo smartphone.",
-    "backToHome": "Torna alla home"
-  },
   "notFound": {
-    "title": "404 - Pagina non trovata",
-    "description": "La pagina che stai cercando non esiste. Torniamo a scoprire fantastiche opzioni di alloggio.",
+    "title": "404 — pagina non trovata",
+    "description": "La pagina che stai cercando non esiste. Torniamo a cercarti un posto dove dormire.",
     "backToHome": "Torna alla home"
   },
   "cookieBanner": {
@@ -116,14 +144,14 @@
   },
   "deleteAccount": {
     "title": "Elimina il tuo account",
-    "introMessage": "Siamo spiacenti di vederti andare. Puoi eliminare il tuo account in due modi:",
+    "introMessage": "Ci dispiace vederti andare via. Puoi eliminare il tuo account in due modi:",
     "viaAppSettings": {
-      "title": "Tramite le impostazioni dell'app",
-      "description": "Vai in Impostazioni > Elimina account per rimuovere i tuoi dati immediatamente."
+      "title": "Dall'app",
+      "description": "Vai in Impostazioni, poi Elimina account, e conferma con la tua password."
     },
     "requestHere": {
-      "title": "Richiedi qui o via email",
-      "description": "Se preferisci, inviaci un'email e elaboreremo manualmente la tua richiesta di eliminazione."
+      "title": "Via email",
+      "description": "Se preferisci, scrivici e gestiremo manualmente la tua richiesta di eliminazione."
     },
     "contactInfo": {
       "emailLabel": "Email"
@@ -138,7 +166,6 @@
   },
   "pageTitles": {
     "privacyPolicy": "Informativa sulla privacy",
-    "comingSoon": "Prossimamente",
     "deleteAccount": "Elimina il tuo account",
     "notFound": "Pagina non trovata",
     "termsOfService": "Termini di servizio",

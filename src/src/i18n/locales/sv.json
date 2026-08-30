@@ -1,83 +1,116 @@
 {
   "navigation": {
-    "home": "Hem",
     "privacyPolicy": "Integritetspolicy",
-    "becomeHost": "Bli Värd",
+    "becomeHost": "Bli värd",
     "goToHomepage": "Gå till startsidan",
     "logoAlt": "{{name}}-logotyp",
     "primary": "Huvudmeny",
-    "footer": "Sidfot",
     "cookieSettings": "Cookie-inställningar",
     "termsOfService": "Användarvillkor",
     "faq": "Vanliga frågor"
   },
   "hero": {
-    "title": "Berätta för <brand>Trawise</brand> var du vill bo. Låt platserna komma till dig.",
-    "description": "Sätt en nål på kartan, ange budget och datum. Hotell, pensionat och värdar i närheten ser din förfrågan och svarar med vad de kan erbjuda — du jämför riktiga svar i stället för att bläddra bland annonser.",
-    "downloadApp": "Ladda ner Trawise mobilapp",
-    "scrollHint": "Se hur det fungerar för hotell",
-    "mockupAlt": "Trawise-appen som visar en interaktiv karta med boendeförfrågningar i närheten och detaljer om ett hotell",
-    "free": "Gratis att använda, och Trawise tar aldrig någon andel — du betalar platsen direkt."
+    "title": "Berätta för <brand>Trawise</brand> var du vill bo. Låt boendena komma till dig.",
+    "description": "Sätt en nål på kartan och ange din budget och dina datum. Hotell, gästhus och värdar i närheten ser din förfrågan och svarar med vad de kan erbjuda — så jämför du riktiga svar i stället för att bläddra bland annonser.",
+    "free": "Gratis att använda, och Trawise tar aldrig någon andel — du betalar boendet direkt.",
+    "seeHowItWorks": "Se hur det fungerar",
+    "hostCta": "Jag har rum att fylla",
+    "storeNote": "Appen kommer snart till App Store och Google Play.",
+    "mapAlt": "Trawise-appen med en karta över Stockholm och fem boenden inom fem kilometer från den utsatta nålen",
+    "offerAlt": "Två svar på samma förfrågan — ett boende lade ett motbud på 1 450 SEK per natt, ett annat accepterade 1 200 SEK"
   },
-  "forHotels": {
-    "eyebrow": "För Hotell",
-    "title": "Så Fungerar Trawise för Hotell",
-    "subtitle": "Fyll dina lediga rum för de närmaste datumen genom att koppla samman direkt med resenärer i närheten.",
+  "travellers": {
+    "eyebrow": "För resenärer",
+    "title": "En förfrågan. Alla boenden i närheten svarar.",
+    "subtitle": "En bokningssajt får dig att kontrollera samma datum tjugo gånger. Trawise vänder på det: du frågar en gång, och de boenden som kan ta emot dig svarar.",
+    "tablist": "De tre stegen",
+    "previous": "Föregående steg",
+    "next": "Nästa steg",
     "steps": {
-      "step1": {
-        "title": "Registrera ditt hotell",
-        "descriptionBeforeEmail": "Skapa ett konto och ange grundläggande information om ditt hotell, eller mejla oss på ",
+      "ask": {
+        "title": "Fråga en gång",
+        "description": "Sätt en nål, välj hur långt därifrån du kan tänka dig att bo och ange dina nätter, hur många ni är och vad du vill betala per natt. Säger du att dina datum kan flyttas några dagar kan även boenden vars kalender krockar bara i kanterna svara. Totalsumman och antalet boenden du når uppdateras medan du skriver.",
+        "imageAlt": "Formuläret för en ny förfrågan i Trawise-appen: en budget på 700 SEK per natt för ett boende inom två kilometer från Stockholm, som når två boenden"
+      },
+      "answers": {
+        "title": "Läs vad som kommer tillbaka",
+        "description": "Varje publicerat boende inom ditt område som kan ta emot er på dina datum ser förfrågan. Var och en accepterar din budget, lägger ett eget pris per natt, eller avstår. Ett motbud är en enda runda — du bokar det eller tackar nej.",
+        "imageAlt": "En förfrågan om tre nätter i oktober för 1 200 SEK per natt, med ett accepterat bud och ett motbud"
+      },
+      "book": {
+        "title": "Boka det du vill ha",
+        "description": "När du bokar ett boende tackas de andra buden nej och de får besked, så att ingen håller ett rum du ändå inte tar. Gatuadressen och värdens kontaktuppgifter delas med dig när vistelsen är bokad.",
+        "imageAlt": "Ett boendes sida i appen: bilder, beskrivning, betyg och priset per natt som det kan ta emot dig för"
+      }
+    }
+  },
+  "why": {
+    "title": "Därför blir det billigare",
+    "subtitle": "Ingen rabattkod. Ett rum som ändå skulle stå tomt en tisdag är värt mer för en värd till ditt pris än till inget pris alls.",
+    "points": {
+      "price": {
+        "title": "Du sätter priset",
+        "description": "Du filtrerar inte efter någon annans siffra. Du säger vad du vill betala per natt, och boendet avgör om det kan fylla de nätterna till det priset."
+      },
+      "fees": {
+        "title": "Inga avgifter, ingen mellanhand",
+        "description": "Trawise tar ingen andel, håller ingen deposition och tar ingen bokningsavgift. Du betalar boendet direkt, med de metoder det accepterar."
+      }
+    }
+  },
+  "forHosts": {
+    "eyebrow": "För värdar",
+    "title": "Tomma rum blir intäkter.",
+    "subtitle": "Resenärer i närheten säger var de vill bo, när, och vad de kan betala. Du svarar på dem som passar dig, på de datum du fortfarande har lediga.",
+    "steps": {
+      "register": {
+        "title": "Registrera ditt boende",
+        "descriptionBeforeEmail": "Skapa ett värdkonto och lägg till ditt hotell, gästhus eller din lägenhet, eller mejla oss på ",
         "descriptionAfterEmail": " så ordnar vi det åt dig."
       },
-      "step2": {
+      "receive": {
         "title": "Ta emot förfrågningar",
-        "description": "Granska förfrågningar från resenärer i närheten och välj de som passar dig bäst."
+        "description": "Förfrågningar som satts ut i ett område som täcker dig, för datum då du har rum lediga, för ett sällskap dina rum rymmer."
       },
-      "step3": {
-        "title": "Jämför och välj",
-        "description": "Jämför pris, datum och resenärens omdöme sida vid sida och acceptera, lägg ett motbud eller tacka nej direkt i raden."
+      "decide": {
+        "title": "Jämför och bestäm",
+        "description": "Pris, datum och resenärens betyg sida vid sida. Acceptera, lägg motbud eller tacka nej direkt på raden."
       },
-      "step4": {
+      "welcome": {
         "title": "Acceptera och välkomna",
-        "description": "Acceptera den valda förfrågan och välkomna resenären på ankomstdatumet."
+        "description": "Acceptera, så får resenären din adress och dina uppgifter inför ankomstdagen."
       }
     },
-    "benefitsHeading": "Varför Hotell Väljer Trawise",
+    "inboxAlt": "Trawise värdpanel med öppna förfrågningar och knapparna Acceptera, Motbud och Avslå på varje rad",
+    "benefitsHeading": "Därför väljer värdar Trawise",
     "benefits": {
-      "benefit1": {
-        "title": "Fyll dina sista-minuten-rum",
-        "description": "Förvandla lediga rum till bokningar för de närmaste datumen, utan långsiktigt åtagande."
+      "lastMinute": {
+        "title": "Fyll dina sista-minuten-luckor",
+        "description": "Gör tomma rum till bokningar för de närmaste datumen, utan långa åtaganden."
       },
-      "benefit2": {
-        "title": "Gratis för hotell",
-        "description": "Att gå med i Trawise och lista ditt hotell kostar ingenting — inga avgifter för att komma igång."
+      "reach": {
+        "title": "En marknadsföringskanal till",
+        "description": "Nå resenärer som redan söker i närheten, utan att lägga pengar på annonser eller kampanjer."
       },
-      "benefit3": {
-        "title": "En extra marknadsföringskanal",
-        "description": "Nå resenärer som aktivt söker boende i närheten, utan att spendera pengar på annonser."
+      "team": {
+        "title": "Ditt team, inte ditt lösenord",
+        "description": "En plats tillhör en organisation. Bjud in kollegor via e-post med en roll som avgör vad var och en får göra."
       }
     },
-    "cta": "Bli Värd",
-    "benefit2": {
-      "title": "Gratis medan vi växer",
-      "description": "Att lägga upp din plats och svara på förfrågningar är gratis för alla i dag. Betalfunktioner kommer senare, och vi säger till innan något du redan använder börjar kosta."
-    }
+    "cta": "Bli värd"
+  },
+  "questions": {
+    "title": "Frågor innan du börjar?",
+    "description": "Vanliga frågor tar upp vad det kostar, vem som kan se din förfrågan, vad ett motbud är och vad som händer när ett boende säger ja.",
+    "cta": "Läs vanliga frågor"
   },
   "footer": {
     "description": "Anslut med närliggande värdar och hitta budgetvänliga boenden på Trawise",
-    "contactUs": "Kontakta Oss",
-    "allRightsReserved": "Alla Rättigheter Förbehållna"
-  },
-  "downloadButtons": {
-    "playStore": {
-      "label": "Hämta på",
-      "store": "Google Play"
-    },
-    "appStore": {
-      "label": "Ladda ner på",
-      "store": "App Store"
-    },
-    "ariaLabel": "{{label}} {{store}} — ladda ner Trawise mobilapp"
+    "contactUs": "Kontakta oss",
+    "allRightsReserved": "Alla rättigheter förbehållna",
+    "legal": "Juridik",
+    "hostDashboard": "Värdpanel",
+    "deleteAccount": "Ta bort ditt konto"
   },
   "languages": {
     "english": "English",
@@ -88,24 +121,19 @@
     "switchTo": "Byt till {{language}}"
   },
   "privacyPolicy": {
-    "title": "Trawise Integritetspolicy",
+    "title": "Trawise integritetspolicy",
     "lastUpdated": "Senast uppdaterad: 28 augusti 2026",
-    "backToHome": "Tillbaka till Hem"
+    "backToHome": "Tillbaka till startsidan"
   },
   "termsOfService": {
     "title": "Trawise användarvillkor",
     "lastUpdated": "Senast uppdaterad: 28 augusti 2026",
     "backToHome": "Tillbaka till startsidan"
   },
-  "comingSoon": {
-    "title": "Kommer Snart till Din App Store",
-    "description": "Vi lägger sista handen på Trawise mobilapp. Snart kommer du att kunna ansluta med närliggande värdar och hitta budgetvänliga boenden direkt från din smartphone.",
-    "backToHome": "Tillbaka till Hem"
-  },
   "notFound": {
-    "title": "404 - Sidan Hittades Inte",
-    "description": "Sidan du letar efter finns inte. Låt oss ta dig tillbaka till att upptäcka fantastiska boendealternativ.",
-    "backToHome": "Tillbaka till Hem"
+    "title": "404 — sidan hittades inte",
+    "description": "Sidan du letar efter finns inte. Låt oss ta dig tillbaka till att hitta någonstans att bo.",
+    "backToHome": "Tillbaka till startsidan"
   },
   "cookieBanner": {
     "message": "Vi använder cookies för att förbättra din upplevelse. Analytiska cookies hjälper oss att förstå hur besökare använder vår webbplats.",
@@ -115,30 +143,29 @@
     "ariaLabel": "Cookie-samtycke"
   },
   "deleteAccount": {
-    "title": "Ta Bort Ditt Konto",
-    "introMessage": "Vi beklagar att se dig gå. Du kan ta bort ditt konto på två sätt:",
+    "title": "Ta bort ditt konto",
+    "introMessage": "Vi beklagar att du lämnar oss. Du kan ta bort ditt konto på två sätt:",
     "viaAppSettings": {
-      "title": "Via Appinställningar",
-      "description": "Gå till Inställningar > Ta bort konto för att ta bort dina data omedelbart."
+      "title": "I appen",
+      "description": "Gå till Inställningar, sedan Ta bort konto, och bekräfta med ditt lösenord."
     },
     "requestHere": {
-      "title": "Begär Här eller via E-post",
-      "description": "Om du föredrar det, mejla oss så behandlar vi din begäran om borttagning manuellt."
+      "title": "Via e-post",
+      "description": "Om du hellre vill det, mejla oss så behandlar vi din begäran om borttagning manuellt."
     },
     "contactInfo": {
       "emailLabel": "E-post"
     },
-    "backToHome": "Tillbaka till Hem"
+    "backToHome": "Tillbaka till startsidan"
   },
   "skipToContent": "Hoppa till huvudinnehåll",
   "errorBoundary": {
-    "title": "Något Gick Fel",
+    "title": "Något gick fel",
     "description": "Vi beklagar, något oväntat hände. Försök att ladda om sidan.",
-    "refresh": "Ladda Om Sidan"
+    "refresh": "Ladda om sidan"
   },
   "pageTitles": {
     "privacyPolicy": "Integritetspolicy",
-    "comingSoon": "Kommer snart",
     "deleteAccount": "Ta bort ditt konto",
     "notFound": "Sidan hittades inte",
     "termsOfService": "Användarvillkor",

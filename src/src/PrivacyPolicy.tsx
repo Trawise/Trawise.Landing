@@ -43,7 +43,7 @@ export function PrivacyPolicy() {
               {/* The legal text below is intentionally provided in English only.
                   This is common practice for privacy policies and ensures legal
                   precision is not lost in translation. */}
-              <div className="prose prose-lg max-w-none">
+              <div>
                 <p className="text-gray-700 leading-relaxed mb-8">
                   This Privacy Policy explains what personal data Trawise ("we",
                   "our", or "us") collects, why, who else sees it and how long

@@ -34,7 +34,7 @@ export function DeleteAccount() {
                 </h1>
               </header>
 
-              <div className="prose prose-lg max-w-none">
+              <div>
                 <p className="text-gray-700 leading-relaxed mb-8">
                   {t("deleteAccount.introMessage")}
                 </p>

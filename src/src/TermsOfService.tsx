@@ -40,7 +40,7 @@ export function TermsOfService() {
 
               {/* English only, for the same reason as the privacy policy: the
                   legal meaning must not drift between translations. */}
-              <div className="prose prose-lg max-w-none">
+              <div>
                 <p className="text-gray-700 leading-relaxed mb-4">
                   These Terms of Service ("Terms") govern your use of Trawise
                   ("we", "our", or "us") — our mobile applications, our host
