@@ -29,7 +29,7 @@
     "steps": {
       "ask": {
         "title": "Pregunta una sola vez",
-        "description": "Coloca un punto en el mapa, elige hasta dónde estás dispuesto a desplazarte e indica tus noches, cuántos sois y cuánto quieres pagar por noche. Si tus fechas admiten unos días de margen, también podrán responderte los alojamientos cuyo calendario solo choca en los extremos. El total y el número de alojamientos a los que llegas se actualizan mientras escribes.",
+        "description": "Coloca un punto en el mapa, elige hasta dónde estás dispuesto a desplazarte e indica tus noches, cuántos sois y cuánto quieres pagar por noche. El total y el número de alojamientos a los que llegas se actualizan mientras escribes.",
         "imageAlt": "El formulario de nueva solicitud en la aplicación de Trawise: un presupuesto de 700 SEK por noche para una estancia a menos de dos kilómetros de Estocolmo, que llega a dos alojamientos"
       },
       "answers": {

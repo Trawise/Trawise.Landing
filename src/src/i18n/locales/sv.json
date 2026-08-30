@@ -29,7 +29,7 @@
     "steps": {
       "ask": {
         "title": "Fråga en gång",
-        "description": "Sätt en nål, välj hur långt därifrån du kan tänka dig att bo och ange dina nätter, hur många ni är och vad du vill betala per natt. Säger du att dina datum kan flyttas några dagar kan även boenden vars kalender krockar bara i kanterna svara. Totalsumman och antalet boenden du når uppdateras medan du skriver.",
+        "description": "Sätt en nål, välj hur långt därifrån du kan tänka dig att bo och ange dina nätter, hur många ni är och vad du vill betala per natt. Totalsumman och antalet boenden du når uppdateras medan du skriver.",
         "imageAlt": "Formuläret för en ny förfrågan i Trawise-appen: en budget på 700 SEK per natt för ett boende inom två kilometer från Stockholm, som når två boenden"
       },
       "answers": {

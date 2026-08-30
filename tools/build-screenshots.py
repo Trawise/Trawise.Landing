@@ -34,7 +34,7 @@ JOBS = [
     (SHOTS / "02-new-request.png", "step-when", None, PHONE_WIDTH),
     (SHOTS / "03-request-offers.png", "step-answers", None, PHONE_WIDTH),
     (SHOTS / "04-place-detail.png", "step-book", None, PHONE_WIDTH),
-    (SHOTS / "03-request-offers.png", "offer-card", (56, 1370, 1024, 1800), 760),
+    (SHOTS / "03-request-offers.png", "offer-card", (56, 1307, 1024, 1737), 760),
     (
         ROOT.parent / "screenshots" / "verify" / "host" / "03-requests.png",
         "host-inbox",

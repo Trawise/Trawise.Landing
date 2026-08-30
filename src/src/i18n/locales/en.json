@@ -29,7 +29,7 @@
     "steps": {
       "ask": {
         "title": "Ask once",
-        "description": "Drop a pin, choose how far around it you are willing to go, and name your nights, your party and what you want to pay per night. Say your dates can bend a few days and places whose calendars clash only at the edges can answer too. The total and the number of places you reach update as you type.",
+        "description": "Drop a pin, choose how far around it you are willing to go, and name your nights, your party and what you want to pay per night. The total and the number of places you reach update as you type.",
         "imageAlt": "The new request form in the Trawise app: a budget of 700 SEK per night for a stay within two kilometres of Stockholm, reaching two places"
       },
       "answers": {

@@ -29,7 +29,7 @@
     "steps": {
       "ask": {
         "title": "Chiedi una volta sola",
-        "description": "Metti un segnaposto, scegli quanto lontano sei disposto a spostarti e indica le notti, quante persone siete e quanto vuoi pagare a notte. Se le tue date possono spostarsi di qualche giorno, possono rispondere anche le strutture il cui calendario si sovrappone solo agli estremi. Il totale e il numero di strutture raggiunte si aggiornano mentre scrivi.",
+        "description": "Metti un segnaposto, scegli quanto lontano sei disposto a spostarti e indica le notti, quante persone siete e quanto vuoi pagare a notte. Il totale e il numero di strutture raggiunte si aggiornano mentre scrivi.",
         "imageAlt": "Il modulo di nuova richiesta nell'app Trawise: un budget di 700 SEK a notte per un soggiorno entro due chilometri da Stoccolma, che raggiunge due strutture"
       },
       "answers": {
