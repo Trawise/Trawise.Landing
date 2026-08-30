@@ -22,6 +22,17 @@ npm run build
 CI builds and deploys on every push to `main`. It does not run on pull
 requests, so run both yourself before merging.
 
+## App screenshots
+
+`src/public/app/*.webp` are downscales of real captures of the traveller app and
+the host dashboard, kept in `screenshots/` at the workspace root. The page draws
+its own phone and browser frames in CSS, so the assets stay plain screenshots.
+After recapturing, regenerate them with:
+
+```bash
+python tools/build-screenshots.py
+```
+
 ## Deploy
 
 GitHub Pages, on every push to `main`. Only `src/dist/` is uploaded; the custom
