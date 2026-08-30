@@ -68,12 +68,6 @@ const GROUPS: Group[] = [
           "Drop a pin on the map or name an area, choose your dates, your nightly budget and who is coming, and send it. Every published place inside that area that can sleep your party on those dates sees it, and can accept your budget, propose a different nightly price, or pass.",
       },
       {
-        id: "flexible-dates",
-        question: "What does date flexibility do?",
-        answer:
-          "It widens who hears you. Saying you can move a few days either side means a place whose calendar clashes only at the edges of your dates still sees your request and can offer you the nights it has free. You can move up to seven days either way.",
-      },
-      {
         id: "limits",
         question: "How many requests can I have open, and how long can a stay be?",
         answer:
