@@ -177,11 +177,6 @@ export function PrivacyPolicy() {
                         can be shown whether you are online
                       </li>
                       <li>
-                        <strong>Diagnostics:</strong> crash reports and
-                        performance samples from the traveller app, sent to
-                        Sentry with its personal-data option switched off
-                      </li>
-                      <li>
                         <strong>Website analytics:</strong> aggregate use of
                         this website through Google Analytics, and only if you
                         accept analytics cookies — see section 9
@@ -250,7 +245,7 @@ export function PrivacyPolicy() {
                       <li>
                         <strong>To keep the Service working and safe</strong> —
                         rate limiting, preventing abuse and fraud, looking into
-                        what is reported to us, fixing crashes.{" "}
+                        what is reported to us.{" "}
                         <em>
                           Ground: our legitimate interest in a service that is
                           not abused.
@@ -336,10 +331,6 @@ export function PrivacyPolicy() {
                       <li>
                         <strong>Google Maps and Places</strong> — the map you
                         read and the place-name search you type into
-                      </li>
-                      <li>
-                        <strong>Sentry</strong> — crash and error diagnostics
-                        for the traveller app
                       </li>
                       <li>
                         <strong>Our email provider</strong> — delivery of the
