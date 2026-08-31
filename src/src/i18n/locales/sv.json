@@ -171,6 +171,11 @@
     "termsOfService": "Användarvillkor",
     "faq": "Vanliga frågor"
   },
+  "pageDescriptions": {
+    "home": "Sätt ut din plats och din budget på en karta, lägg upp en boendeförfrågan och få erbjudanden från värdar och hotell i närheten.",
+    "privacyPolicy": "Vilka uppgifter Trawise samlar in, varför, hur länge de sparas och vilka rättigheter du har till dem.",
+    "termsOfService": "Villkoren du godkänner när du använder Trawise, och vad Trawise ansvarar och inte ansvarar för."
+  },
   "opensInNewTab": "öppnas i en ny flik",
   "faq": {
     "title": "Vanliga frågor",

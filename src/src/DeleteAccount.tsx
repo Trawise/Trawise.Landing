@@ -14,6 +14,7 @@ export function DeleteAccount() {
   // inside the app, not a search-result landing page.
   usePageMeta({
     title: t("pageTitles.deleteAccount"),
+    description: t("deleteAccount.introMessage"),
     path: "/delete-account",
     noindex: true,
   });

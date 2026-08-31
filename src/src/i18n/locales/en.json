@@ -171,6 +171,11 @@
     "termsOfService": "Terms of service",
     "faq": "FAQ"
   },
+  "pageDescriptions": {
+    "home": "Set your location and budget on a map, post an accommodation request, and get offers from nearby hosts and hotels.",
+    "privacyPolicy": "What Trawise collects, why it collects it, how long it is kept, and the rights you have over it.",
+    "termsOfService": "The terms you agree to when you use Trawise, and what Trawise is and is not responsible for."
+  },
   "opensInNewTab": "opens in a new tab",
   "faq": {
     "title": "Frequently asked questions",

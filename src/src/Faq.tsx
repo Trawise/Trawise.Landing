@@ -220,6 +220,7 @@ export function Faq() {
 
   usePageMeta({
     title: t("pageTitles.faq"),
+    description: t("faq.subtitle"),
     path: "/faq",
   });
 

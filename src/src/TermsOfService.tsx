@@ -16,6 +16,7 @@ export function TermsOfService() {
 
   usePageMeta({
     title: t("pageTitles.termsOfService"),
+    description: t("pageDescriptions.termsOfService"),
     path: "/terms",
   });
 

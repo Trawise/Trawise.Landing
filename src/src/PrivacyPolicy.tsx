@@ -18,6 +18,7 @@ export function PrivacyPolicy() {
 
   usePageMeta({
     title: t("pageTitles.privacyPolicy"),
+    description: t("pageDescriptions.privacyPolicy"),
     path: "/privacy-policy",
   });
 

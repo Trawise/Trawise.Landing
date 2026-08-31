@@ -171,6 +171,11 @@
     "termsOfService": "Termini di servizio",
     "faq": "Domande frequenti"
   },
+  "pageDescriptions": {
+    "home": "Indica la tua posizione e il tuo budget su una mappa, pubblica una richiesta di alloggio e ricevi offerte da host e hotel nelle vicinanze.",
+    "privacyPolicy": "Quali dati raccoglie Trawise, perché li raccoglie, per quanto tempo li conserva e quali diritti hai su di essi.",
+    "termsOfService": "Le condizioni che accetti usando Trawise, e di che cosa Trawise risponde e di che cosa non risponde."
+  },
   "opensInNewTab": "si apre in una nuova scheda",
   "faq": {
     "title": "Domande frequenti",

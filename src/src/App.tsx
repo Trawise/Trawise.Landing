@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 import { Footer } from "./components/footer";
 import { ForHosts } from "./components/for-hosts";
 import { Header } from "./components/header";
@@ -9,7 +11,9 @@ import { WhyTrawise } from "./components/why-trawise";
 import { usePageMeta } from "./hooks/use-page-meta";
 
 export function App() {
-  usePageMeta({ path: "/" });
+  const { t } = useTranslation();
+
+  usePageMeta({ description: t("pageDescriptions.home"), path: "/" });
 
   return (
     <>

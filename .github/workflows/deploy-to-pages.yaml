@@ -27,7 +27,9 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
-          node-version: lts/*
+          # Pinned, like the other three repositories: the one surface that is
+          # live and indexed had the least reproducible build.
+          node-version: "22.x"
           cache: 'npm'
           cache-dependency-path: src/package-lock.json
 
