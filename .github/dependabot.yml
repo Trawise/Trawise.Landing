@@ -1,0 +1,26 @@
+# Dependency updates, opened as pull requests against main.
+#
+# Grouped so a routine bump is one review rather than a dozen. Security
+# advisories still arrive on their own, ungrouped, whenever GitHub finds one.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /src
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 5
+    groups:
+      types:
+        patterns: ["@types/*"]
+      production:
+        dependency-type: production
+      development:
+        dependency-type: development
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    groups:
+      actions:
+        patterns: ["*"]

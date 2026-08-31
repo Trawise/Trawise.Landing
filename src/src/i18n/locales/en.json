@@ -1,76 +1,116 @@
 {
   "navigation": {
-    "home": "Home",
-    "privacyPolicy": "Privacy Policy",
-    "becomeHost": "Become a Host",
+    "privacyPolicy": "Privacy policy",
+    "becomeHost": "Become a host",
     "goToHomepage": "Go to homepage",
     "logoAlt": "{{name}} logo",
     "primary": "Main",
-    "footer": "Footer",
-    "cookieSettings": "Cookie settings"
+    "cookieSettings": "Cookie settings",
+    "termsOfService": "Terms of service",
+    "faq": "FAQ"
   },
   "hero": {
-    "title": "Connect with Nearby Hosts and Find Budget-Friendly Stays on",
-    "description": "Trawise is a mobile travel application that connects travelers with local accommodation hosts through a location-based request system. Users can set their desired location and budget on an interactive map, create accommodation requests with specific dates and preferences, and receive responses from nearby hosts.",
-    "downloadApp": "Download the Trawise mobile app",
-    "scrollHint": "See how it works for hotels",
-    "mockupAlt": "The Trawise app showing an interactive map of nearby accommodation requests alongside a hotel's details"
+    "title": "Tell <brand>Trawise</brand> where you want to stay. Let the places come to you.",
+    "description": "Drop a pin, set your budget and your dates. Hotels, guesthouses and hosts nearby see your request and reply with what they can offer — so you compare real answers instead of scrolling listings.",
+    "free": "Free to use, and Trawise never takes a cut — you pay the place directly.",
+    "seeHowItWorks": "See how it works",
+    "hostCta": "I have rooms to fill",
+    "storeNote": "The app is coming soon to the App Store and Google Play.",
+    "mapAlt": "The Trawise app showing a map of Stockholm with five places within five kilometres of a dropped pin",
+    "offerAlt": "Two replies to one request — one place countered at 1,450 SEK a night, another accepted at 1,200 SEK"
   },
-  "forHotels": {
-    "eyebrow": "For Hotels",
-    "title": "How Trawise Works for Hotels",
-    "subtitle": "Fill your empty rooms for the closest dates by connecting directly with nearby travelers.",
+  "travellers": {
+    "eyebrow": "For travellers",
+    "title": "One request. Every place nearby answers.",
+    "subtitle": "A booking site makes you check the same dates twenty times. Trawise turns it around: you ask once, and the places that can host you reply.",
+    "tablist": "The three steps",
+    "previous": "Previous step",
+    "next": "Next step",
     "steps": {
-      "step1": {
-        "title": "Register your hotel",
-        "descriptionBeforeEmail": "Create a host account and enter your hotel's basic details, or email us at ",
+      "ask": {
+        "title": "Ask once",
+        "description": "Drop a pin, choose how far around it you are willing to go, and name your nights, your party and what you want to pay per night. The total and the number of places you reach update as you type.",
+        "imageAlt": "The new request form in the Trawise app: a budget of 700 SEK per night for a stay within two kilometres of Stockholm, reaching two places"
+      },
+      "answers": {
+        "title": "Read what comes back",
+        "description": "Every published place inside your area that can sleep your party on your dates sees the request. Each one accepts your budget, counters with a nightly price of its own, or passes. A counter is one round — you book it or you turn it down.",
+        "imageAlt": "A request for three nights in October at 1,200 SEK per night, with one offer accepted and one countered"
+      },
+      "book": {
+        "title": "Book the one you want",
+        "description": "Booking a place declines the other offers and tells them, so nobody is holding a room you are not going to take. The street address and the host's contact details are shared with you once the stay is booked.",
+        "imageAlt": "A place's listing in the app: photos, description, rating, and the nightly price it can host you for"
+      }
+    }
+  },
+  "why": {
+    "title": "Why it works out cheaper",
+    "subtitle": "Not a discount code. A room that would sit empty on a Tuesday is worth more to a host at your price than at no price.",
+    "points": {
+      "price": {
+        "title": "You name the price",
+        "description": "You do not filter by someone else's number. You say what you want to pay per night, and a place decides whether it can fill those nights at that price."
+      },
+      "fees": {
+        "title": "No fees, no middleman",
+        "description": "Trawise takes no cut, holds no deposit and charges no booking fee. You pay the place directly, with whichever methods it accepts."
+      }
+    }
+  },
+  "forHosts": {
+    "eyebrow": "For hosts",
+    "title": "Empty rooms become income.",
+    "subtitle": "Travellers nearby say where they want to be, when, and what they can pay. You answer the ones that suit you, on the dates you still have free.",
+    "steps": {
+      "register": {
+        "title": "Register your place",
+        "descriptionBeforeEmail": "Create a host account and add your hotel, guesthouse or flat, or email us at ",
         "descriptionAfterEmail": " and we'll set it up for you."
       },
-      "step2": {
+      "receive": {
         "title": "Receive requests",
-        "description": "View requests from nearby travelers and choose the ones that work best for you."
+        "description": "Requests pinned inside an area that covers you, for dates you have rooms free, for a party your rooms can sleep."
       },
-      "step3": {
+      "decide": {
         "title": "Compare and decide",
-        "description": "Compare each traveler's price, dates, and rating to make an informed decision."
+        "description": "Price, dates and the traveller's rating side by side. Accept, counter or decline on the row."
       },
-      "step4": {
+      "welcome": {
         "title": "Accept and welcome",
-        "description": "Accept your chosen request and welcome the traveler on their arrival date."
+        "description": "Accept, and the traveller gets your address and your details for their arrival date."
       }
     },
-    "benefitsHeading": "Why Hotels Choose Trawise",
+    "inboxAlt": "The Trawise host dashboard, showing open requests with Accept, Counter and Decline on each row",
+    "benefitsHeading": "Why hosts choose Trawise",
     "benefits": {
-      "benefit1": {
+      "lastMinute": {
         "title": "Fill your last-minute vacancies",
         "description": "Turn empty rooms into bookings for the closest dates, with no long-term commitment."
       },
-      "benefit2": {
-        "title": "Free for hotels",
-        "description": "Joining Trawise and listing your hotel costs nothing — there are no fees to get started."
-      },
-      "benefit3": {
+      "reach": {
         "title": "An extra marketing channel",
-        "description": "Reach travelers actively searching nearby, without spending on ads or promotions."
+        "description": "Reach travellers actively looking nearby, without spending on ads or promotions."
+      },
+      "team": {
+        "title": "Your team, not your password",
+        "description": "A place belongs to an organisation. Invite colleagues by email with a role that decides what each of them can do."
       }
     },
-    "cta": "Become a Host"
+    "cta": "Become a host"
+  },
+  "questions": {
+    "title": "Questions before you start?",
+    "description": "The FAQ covers what it costs, who can see your request, what a counter-offer is, and what happens after a place says yes.",
+    "cta": "Read the FAQ"
   },
   "footer": {
     "description": "Connect with nearby hosts and find budget-friendly stays on Trawise",
-    "contactUs": "Contact Us",
-    "allRightsReserved": "All Rights Reserved"
-  },
-  "downloadButtons": {
-    "playStore": {
-      "label": "Get It On",
-      "store": "Google Play"
-    },
-    "appStore": {
-      "label": "Download on the",
-      "store": "App Store"
-    },
-    "ariaLabel": "{{label}} {{store}} — download the Trawise mobile app"
+    "contactUs": "Contact us",
+    "allRightsReserved": "All rights reserved",
+    "legal": "Legal",
+    "hostDashboard": "Host dashboard",
+    "deleteAccount": "Delete your account"
   },
   "languages": {
     "english": "English",
@@ -82,53 +122,64 @@
   },
   "privacyPolicy": {
     "title": "Trawise Privacy Policy",
-    "lastUpdated": "Last updated: August 11, 2026",
-    "backToHome": "Back to Home"
+    "lastUpdated": "Last updated: August 31, 2026",
+    "backToHome": "Back to home"
   },
-  "comingSoon": {
-    "title": "Coming Soon to Your App Store",
-    "description": "We're putting the finishing touches on the Trawise mobile app. Soon you'll be able to connect with nearby hosts and find budget-friendly stays right from your smartphone.",
-    "backToHome": "Back to Home"
+  "termsOfService": {
+    "title": "Trawise Terms of Service",
+    "lastUpdated": "Last updated: August 28, 2026",
+    "backToHome": "Back to home"
   },
   "notFound": {
-    "title": "404 - Page Not Found",
-    "description": "The page you are looking for doesn't exist. Let's get you back to discovering amazing accommodation options.",
-    "backToHome": "Back to Home"
+    "title": "404 — page not found",
+    "description": "The page you are looking for doesn't exist. Let's get you back to finding somewhere to stay.",
+    "backToHome": "Back to home"
   },
   "cookieBanner": {
     "message": "We use cookies to improve your experience. Analytics cookies help us understand how visitors use our website.",
-    "learnMore": "Privacy Policy",
-    "acceptAll": "Accept All",
-    "rejectAll": "Reject All",
+    "learnMore": "Privacy policy",
+    "acceptAll": "Accept all",
+    "rejectAll": "Reject all",
     "ariaLabel": "Cookie consent"
   },
   "deleteAccount": {
-    "title": "Delete Your Account",
+    "title": "Delete your account",
     "introMessage": "We're sorry to see you go. You can delete your account in two ways:",
     "viaAppSettings": {
-      "title": "Via App Settings",
-      "description": "Go to Settings > Delete Account to remove your data instantly."
+      "title": "In the app",
+      "description": "Go to Settings, then Delete account, and confirm with your password."
     },
     "requestHere": {
-      "title": "Request Here or by Email",
+      "title": "By email",
       "description": "If you prefer, email us and we'll process your deletion request manually."
     },
     "contactInfo": {
       "emailLabel": "Email"
     },
-    "backToHome": "Back to Home"
+    "backToHome": "Back to home"
   },
   "skipToContent": "Skip to main content",
   "errorBoundary": {
-    "title": "Something Went Wrong",
+    "title": "Something went wrong",
     "description": "We're sorry, but something unexpected happened. Please try refreshing the page.",
-    "refresh": "Refresh Page"
+    "refresh": "Refresh page"
   },
   "pageTitles": {
-    "privacyPolicy": "Privacy Policy",
-    "comingSoon": "Coming Soon",
-    "deleteAccount": "Delete Your Account",
-    "notFound": "Page Not Found"
+    "privacyPolicy": "Privacy policy",
+    "deleteAccount": "Delete your account",
+    "notFound": "Page not found",
+    "termsOfService": "Terms of service",
+    "faq": "FAQ"
   },
-  "opensInNewTab": "opens in a new tab"
+  "pageDescriptions": {
+    "home": "Set your location and budget on a map, post an accommodation request, and get offers from nearby hosts and hotels.",
+    "privacyPolicy": "What Trawise collects, why it collects it, how long it is kept, and the rights you have over it.",
+    "termsOfService": "The terms you agree to when you use Trawise, and what Trawise is and is not responsible for."
+  },
+  "opensInNewTab": "opens in a new tab",
+  "faq": {
+    "title": "Frequently asked questions",
+    "subtitle": "How Trawise works, what it costs, and what happens after a place says yes.",
+    "backToHome": "Back to home"
+  }
 }

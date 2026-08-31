@@ -15,6 +15,7 @@ export function NotFound() {
   // noindex is the only signal telling crawlers not to index the URL.
   usePageMeta({
     title: t("pageTitles.notFound"),
+    description: t("notFound.description"),
     path: pathname,
     noindex: true,
   });

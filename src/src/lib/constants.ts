@@ -8,9 +8,4 @@ export const SITE_CONFIG = {
   location: "Stockholm, Sweden",
 } as const;
 
-export const DOWNLOAD_LINKS = {
-  playStore: "/coming-soon",
-  appStore: "/coming-soon",
-} as const;
-
 export const HOST_APP_URL = "https://host.trawise.org/";

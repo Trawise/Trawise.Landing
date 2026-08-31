@@ -14,6 +14,7 @@ export function DeleteAccount() {
   // inside the app, not a search-result landing page.
   usePageMeta({
     title: t("pageTitles.deleteAccount"),
+    description: t("deleteAccount.introMessage"),
     path: "/delete-account",
     noindex: true,
   });
@@ -34,7 +35,7 @@ export function DeleteAccount() {
                 </h1>
               </header>
 
-              <div className="prose prose-lg max-w-none">
+              <div>
                 <p className="text-gray-700 leading-relaxed mb-8">
                   {t("deleteAccount.introMessage")}
                 </p>
@@ -63,7 +64,7 @@ export function DeleteAccount() {
                         </strong>{" "}
                         <a
                           href={`mailto:${SITE_CONFIG.email}`}
-                          className="text-brand-600 hover:text-brand-700 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600 rounded underline decoration-transparent hover:decoration-current focus:decoration-current"
+                          className="text-brand-600 hover:text-brand-700 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600 rounded underline underline-offset-2 decoration-gray-400 hover:decoration-current focus:decoration-current"
                         >
                           {SITE_CONFIG.email}
                         </a>

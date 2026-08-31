@@ -1,44 +1,64 @@
 import { Fragment } from "react";
 import { useTranslation } from "react-i18next";
+import { useLocation, useNavigate } from "react-router-dom";
 
-const LANGUAGES = [
-  { code: "en", labelKey: "languages.english" },
-  { code: "es", labelKey: "languages.spanish" },
-  { code: "sv", labelKey: "languages.swedish" },
-  { code: "it", labelKey: "languages.italian" },
-] as const;
+import {
+  LOCALES,
+  type Locale,
+  localePath,
+  pathWithoutLocale,
+} from "../lib/locales";
+import { Separator } from "./ui";
+
+/** Derived from LOCALES, so a new language cannot be routed but unlisted. */
+const LABEL_KEYS: Record<Locale, string> = {
+  en: "languages.english",
+  es: "languages.spanish",
+  it: "languages.italian",
+  sv: "languages.swedish",
+};
 
 export function LanguageSwitcher() {
   const { i18n, t } = useTranslation();
+  const navigate = useNavigate();
+  const { pathname } = useLocation();
 
-  // resolvedLanguage normalises variants like "sv-SE" → "sv" so the active
-  // state check matches our resource keys correctly.
+  // Changing language changes the URL: the prefix is what a crawler indexes
+  // and what a visitor can share.
+  const switchTo = (locale: Locale) => {
+    navigate(localePath(locale, pathWithoutLocale(pathname) || "/"));
+  };
+
+  // resolvedLanguage normalises variants like "sv-SE" to "sv", which is how
+  // the resource keys are named — so the active check matches one.
   const active = i18n.resolvedLanguage ?? i18n.language;
 
   return (
-    <div className="flex items-center gap-3" role="group" aria-label={t("languages.groupLabel")}>
-      {LANGUAGES.map((lang, index) => (
-        <Fragment key={lang.code}>
-          {index > 0 && (
-            <span className="text-gray-400" aria-hidden="true">
-              •
-            </span>
-          )}
+    <div
+      className="flex items-center gap-3"
+      role="group"
+      aria-label={t("languages.groupLabel")}
+    >
+      {LOCALES.map((locale, index) => (
+        <Fragment key={locale}>
+          {index > 0 && <Separator />}
           <button
             type="button"
-            onClick={() => i18n.changeLanguage(lang.code)}
+            onClick={() => switchTo(locale)}
             className={`transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600 rounded underline decoration-transparent hover:decoration-current focus:decoration-current ${
-              active === lang.code
+              active === locale
                 ? "text-gray-900 font-medium"
                 : "text-gray-600 hover:text-gray-900"
             }`}
             // The language name itself always stays in its own language, but
             // the surrounding phrase is translated — otherwise a Swedish
             // visitor hears an English sentence read out by their screen reader.
-            aria-label={t("languages.switchTo", { language: t(lang.labelKey) })}
-            aria-current={active === lang.code ? true : undefined}
+            aria-label={t("languages.switchTo", {
+              language: t(LABEL_KEYS[locale]),
+            })}
+            aria-current={active === locale ? true : undefined}
           >
-            {t(lang.labelKey)}
+            {t(LABEL_KEYS[locale])}
           </button>
         </Fragment>
       ))}

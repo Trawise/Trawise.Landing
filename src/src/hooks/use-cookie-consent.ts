@@ -1,21 +1,12 @@
 /**
- * useCookieConsent
- *
- * Manages cookie / analytics consent state:
- *  - Reads the prior decision from localStorage so returning visitors never
- *    see the banner again.
- *  - Exposes `showBanner` (true only when no decision has been recorded yet).
- *  - Updates Google Analytics Consent Mode v2 whenever the user acts.
- *  - Exposes `reopen()` so the decision can be withdrawn later. GDPR requires
- *    withdrawing consent to be as easy as giving it, so the footer renders a
- *    control that calls this.
- *  - Wraps all localStorage access in try/catch so the hook is safe in
- *    private-browsing sessions where storage may be restricted.
+ * Cookie and analytics consent, persisted in localStorage and pushed into
+ * Google Consent Mode v2 on every change.
  *
  * The decision lives in a module-level store rather than component state
- * because two components observe it (the banner and the footer's "cookie
- * settings" control) and they must never disagree about whether the banner
- * is currently open.
+ * because two components observe it — the banner and the footer's "cookie
+ * settings" control — and they must never disagree about whether the banner is
+ * open. Every storage access is guarded: private browsing makes localStorage
+ * throw rather than be absent.
  */
 
 import { useSyncExternalStore } from "react";
@@ -23,10 +14,6 @@ import { useSyncExternalStore } from "react";
 const CONSENT_KEY = "cookie-consent";
 
 export type ConsentStatus = "accepted" | "rejected" | null;
-
-// ---------------------------------------------------------------------------
-// Storage helpers
-// ---------------------------------------------------------------------------
 
 function readStoredConsent(): ConsentStatus {
   try {
@@ -43,14 +30,13 @@ function writeStoredConsent(status: ConsentStatus): void {
     if (status === null) localStorage.removeItem(CONSENT_KEY);
     else localStorage.setItem(CONSENT_KEY, status);
   } catch {
-    // ignore write failures
+    // A decision that cannot be stored is still honoured this visit.
   }
 }
 
 /**
- * Update Google Consent Mode v2 state.
- * Safe to call even if gtag hasn't loaded yet — dataLayer is already
- * defined and commands will be replayed when the library loads.
+ * Safe before gtag has loaded: the command queues into dataLayer and is
+ * replayed when the library arrives.
  */
 function updateGtagConsent(accepted: boolean): void {
   if (typeof window === "undefined") return;
@@ -62,10 +48,6 @@ function updateGtagConsent(accepted: boolean): void {
     });
   }
 }
-
-// ---------------------------------------------------------------------------
-// Module-level store
-// ---------------------------------------------------------------------------
 
 let status: ConsentStatus = readStoredConsent();
 const listeners = new Set<() => void>();
@@ -80,10 +62,6 @@ function setStatus(next: ConsentStatus): void {
   writeStoredConsent(next);
   listeners.forEach((listener) => listener());
 }
-
-// ---------------------------------------------------------------------------
-// Hook
-// ---------------------------------------------------------------------------
 
 export interface CookieConsentState {
   /** The current decision, or null if no decision has been made yet. */
