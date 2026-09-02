@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
 import { SITE_CONFIG } from "../lib/constants";
 import {
   DEFAULT_LOCALE,
@@ -67,6 +69,8 @@ export function usePageMeta({
   path,
   noindex = false,
 }: PageMeta): void {
+  const { pathname } = useLocation();
+
   useEffect(() => {
     const fullTitle = title
       ? `${title} | ${SITE_CONFIG.name}`
@@ -81,52 +85,53 @@ export function usePageMeta({
     setMeta("name", "twitter:description", description);
   }, [title, description]);
 
+  // One effect for everything the route's URL decides. The locale comes from
+  // the router rather than from `window.location`, so it is a dependency and
+  // not a value read behind React's back: a language switch keeps `path` the
+  // same, and these tags all have to move with it.
   useEffect(() => {
-    const locale = localeFromPath(window.location.pathname);
+    const locale = localeFromPath(pathname);
+    const canonical = new URL(localePath(locale, path), SITE_CONFIG.url).href;
 
-    setMeta(
-      "property",
-      "og:url",
-      new URL(localePath(locale, path), SITE_CONFIG.url).href,
-    );
+    setMeta("property", "og:url", canonical);
     setMeta("property", "og:locale", locale);
-  }, [path]);
 
-  useEffect(() => {
     let link = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+
     if (!link) {
       link = document.createElement("link");
       link.rel = "canonical";
       document.head.appendChild(link);
     }
-    link.href = new URL(
-      localePath(localeFromPath(window.location.pathname), path),
-      SITE_CONFIG.url,
-    ).href;
-  }, [path]);
 
-  // One alternate per language plus x-default, rebuilt per route: without
-  // them the four translations compete for one URL and none of them ranks.
-  useEffect(() => {
-    const previous = document.querySelectorAll<HTMLLinkElement>(
-      'link[rel="alternate"][data-page-meta]',
-    );
-    previous.forEach((link) => link.remove());
+    link.href = canonical;
+
+    // One alternate per language plus x-default, rebuilt per route: without
+    // them the four translations compete for one URL and none of them ranks.
+    document
+      .querySelectorAll<HTMLLinkElement>(
+        'link[rel="alternate"][data-page-meta]',
+      )
+      .forEach((previous) => previous.remove());
 
     const alternates = [
-      ...LOCALES.map((locale) => ({ hreflang: locale, locale })),
+      ...LOCALES.map((alternate) => ({ hreflang: alternate, locale: alternate })),
       { hreflang: "x-default", locale: DEFAULT_LOCALE },
     ];
 
-    alternates.forEach(({ hreflang, locale }) => {
-      const link = document.createElement("link");
-      link.rel = "alternate";
-      link.hreflang = hreflang;
-      link.href = new URL(localePath(locale, path), SITE_CONFIG.url).href;
-      link.dataset.pageMeta = "true";
-      document.head.appendChild(link);
+    alternates.forEach(({ hreflang, locale: alternate }) => {
+      const alternateLink = document.createElement("link");
+
+      alternateLink.rel = "alternate";
+      alternateLink.hreflang = hreflang;
+      alternateLink.href = new URL(
+        localePath(alternate, path),
+        SITE_CONFIG.url,
+      ).href;
+      alternateLink.dataset.pageMeta = "true";
+      document.head.appendChild(alternateLink);
     });
-  }, [path]);
+  }, [path, pathname]);
 
   useEffect(() => {
     let meta = document.querySelector<HTMLMetaElement>('meta[name="robots"]');

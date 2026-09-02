@@ -24,6 +24,9 @@ const Faq = lazy(() => import("./Faq.tsx").then((m) => ({ default: m.Faq })));
 const NotFound = lazy(() =>
   import("./NotFound.tsx").then((m) => ({ default: m.NotFound })),
 );
+const OpenInApp = lazy(() =>
+  import("./OpenInApp.tsx").then((m) => ({ default: m.OpenInApp })),
+);
 const PrivacyPolicy = lazy(() =>
   import("./PrivacyPolicy.tsx").then((m) => ({ default: m.PrivacyPolicy })),
 );
@@ -101,6 +104,8 @@ createRoot(rootElement).render(
                 <Route path="delete-account" element={<DeleteAccount />} />
               </Route>
             ))}
+            {/* Outside the language tree: an email link carries no locale. */}
+            <Route path="/open/*" element={<OpenInApp />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

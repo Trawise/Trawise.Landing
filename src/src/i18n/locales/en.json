@@ -181,5 +181,14 @@
     "title": "Frequently asked questions",
     "subtitle": "How Trawise works, what it costs, and what happens after a place says yes.",
     "backToHome": "Back to home"
+  },
+  "openInApp": {
+    "title": "Opening Trawise",
+    "description": "Opening this link in the Trawise app.",
+    "heading": "Opening Trawise",
+    "body": "This link opens in the Trawise app. If nothing happens, use the button below.",
+    "action": "Open the app",
+    "fallback": "App not installed?",
+    "fallbackLink": "Go to trawise.org"
   }
 }
