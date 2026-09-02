@@ -177,6 +177,12 @@ export function PrivacyPolicy() {
                         can be shown whether you are online
                       </li>
                       <li>
+                        <strong>Performance:</strong> how long the traveller app
+                        takes to start and become usable, with the app version,
+                        device model and operating system it was measured on,
+                        sent to Expo
+                      </li>
+                      <li>
                         <strong>Website analytics:</strong> aggregate use of
                         this website through Google Analytics, and only if you
                         accept analytics cookies — see section 9
@@ -245,7 +251,8 @@ export function PrivacyPolicy() {
                       <li>
                         <strong>To keep the Service working and safe</strong> —
                         rate limiting, preventing abuse and fraud, looking into
-                        what is reported to us.{" "}
+                        what is reported to us, seeing how long the app takes to
+                        start.{" "}
                         <em>
                           Ground: our legitimate interest in a service that is
                           not abused.
@@ -322,7 +329,8 @@ export function PrivacyPolicy() {
                       </li>
                       <li>
                         <strong>Expo</strong> — delivery of push notifications
-                        and of updates to the mobile apps
+                        and of updates to the mobile apps, and measurement of how
+                        quickly the traveller app starts
                       </li>
                       <li>
                         <strong>Apple and Google</strong> — the push networks
