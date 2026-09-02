@@ -181,5 +181,14 @@
     "title": "Preguntas frecuentes",
     "subtitle": "Cómo funciona Trawise, cuánto cuesta y qué pasa cuando un alojamiento acepta.",
     "backToHome": "Volver al inicio"
+  },
+  "openInApp": {
+    "title": "Abriendo Trawise",
+    "description": "Abriendo el enlace en la app de Trawise.",
+    "heading": "Abriendo Trawise",
+    "body": "Este enlace se abre en la app de Trawise. Si no ocurre nada, usa el botón de abajo.",
+    "action": "Abrir la app",
+    "fallback": "¿No tienes la app?",
+    "fallbackLink": "Ir a trawise.org"
   }
 }

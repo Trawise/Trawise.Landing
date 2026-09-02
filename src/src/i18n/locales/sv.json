@@ -181,5 +181,14 @@
     "title": "Vanliga frågor",
     "subtitle": "Så fungerar Trawise, vad det kostar och vad som händer när ett boende säger ja.",
     "backToHome": "Tillbaka till startsidan"
+  },
+  "openInApp": {
+    "title": "Öppnar Trawise",
+    "description": "Öppnar länken i Trawise-appen.",
+    "heading": "Öppnar Trawise",
+    "body": "Länken öppnas i Trawise-appen. Händer inget, använd knappen nedan.",
+    "action": "Öppna appen",
+    "fallback": "Appen är inte installerad?",
+    "fallbackLink": "Gå till trawise.org"
   }
 }
