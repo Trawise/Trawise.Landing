@@ -16,7 +16,7 @@ function HeroDevice() {
         <img
           src="/app/map.webp"
           alt={t("hero.mapAlt")}
-          width={720}
+          width={620}
           height={1392}
           loading="eager"
           decoding="async"
@@ -26,15 +26,19 @@ function HeroDevice() {
       </PhoneFrame>
 
       {/* Hidden below sm: at phone widths it would cover the map it is meant to
-          sit beside, and the same offers appear in full further down the page. */}
+          sit beside, and the same offers appear in full further down the page.
+
+          Three rows tall, so it is placed inside the phone's own height rather
+          than hung off the bottom of it: overhanging on one edge reads as a
+          callout, overhanging on two reads as a mistake. */}
       <img
         src="/app/offer-card.webp"
         alt={t("hero.offerAlt")}
         width={760}
-        height={338}
+        height={586}
         loading="eager"
         decoding="async"
-        className="hidden sm:block absolute -left-10 -bottom-6 w-56 lg:w-60 rounded-xl border border-gray-200 bg-white shadow-2xl"
+        className="hidden sm:block absolute -left-10 bottom-10 w-52 lg:w-56 rounded-xl border border-gray-200 bg-white shadow-2xl"
       />
     </div>
   );

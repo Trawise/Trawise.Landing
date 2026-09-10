@@ -4,6 +4,15 @@ React 19 + Vite + Tailwind CSS v4. The marketing site at `trawise.org`, browser
 only. App root is `src/`, code is under `src/src/`. **It is live and indexed**,
 so a copy change is public immediately — nothing else in the product is.
 
+## Instructions
+
+- Branches: Branch names must use one of these prefixes:
+  - `feature/...` — new features or functionality
+  - `bugfix/...` — bug fixes
+  - `chore/...` — maintenance, tooling, refactoring, or other non-feature work
+- Commits: Use a single-line commit message. No body or trailer. Never push commits.
+- Comments: Avoid comments unless they are absolutely necessary. When a comment is necessary, keep it short and focused on why, not what the code is doing.
+
 ## Verify
 
 ```bash

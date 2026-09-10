@@ -16,13 +16,13 @@
     "seeHowItWorks": "Ver cómo funciona",
     "hostCta": "Tengo habitaciones que llenar",
     "storeNote": "La aplicación llegará muy pronto a App Store y Google Play.",
-    "mapAlt": "La aplicación de Trawise con un mapa de Estocolmo y cinco alojamientos a menos de cinco kilómetros del punto elegido",
-    "offerAlt": "Dos respuestas a una misma solicitud: un alojamiento contraofertó 1450 SEK por noche y otro aceptó 1200 SEK"
+    "mapAlt": "La aplicación de Trawise con un mapa de San Francisco y cinco alojamientos a menos de dos kilómetros del punto elegido, listados debajo",
+    "offerAlt": "Tres respuestas a una misma solicitud: dos alojamientos aceptaron 240 $ por noche y un tercero contraofertó 268 $"
   },
   "travellers": {
     "eyebrow": "Para viajeros",
     "title": "Una solicitud. Responden todos los alojamientos cercanos.",
-    "subtitle": "Una web de reservas te obliga a comprobar las mismas fechas veinte veces. Trawise le da la vuelta: preguntas una vez y te responden los alojamientos que pueden alojarte.",
+    "subtitle": "Eliges el punto, la distancia, las noches y la cifra. Cada alojamiento dentro de ese alcance que tenga una habitación libre la ve y decide por su cuenta.",
     "tablist": "Los tres pasos",
     "previous": "Paso anterior",
     "next": "Paso siguiente",
@@ -30,17 +30,17 @@
       "ask": {
         "title": "Pregunta una sola vez",
         "description": "Coloca un punto en el mapa, elige hasta dónde estás dispuesto a desplazarte e indica tus noches, cuántos sois y cuánto quieres pagar por noche. El total y el número de alojamientos a los que llegas se actualizan mientras escribes.",
-        "imageAlt": "El formulario de nueva solicitud en la aplicación de Trawise: un presupuesto de 700 SEK por noche para una estancia a menos de dos kilómetros de Estocolmo, que llega a dos alojamientos"
+        "imageAlt": "El formulario de nueva solicitud en la aplicación de Trawise: cuatro noches para tres huéspedes a 260 $ por noche, que llega a tres alojamientos"
       },
       "answers": {
         "title": "Lee lo que te responden",
-        "description": "Cada alojamiento publicado dentro de tu zona que pueda alojaros en esas fechas ve la solicitud. Cada uno acepta tu presupuesto, contraoferta con su propio precio por noche o la deja pasar. La contraoferta es una sola ronda: la reservas o la rechazas.",
-        "imageAlt": "Una solicitud de tres noches en octubre a 1200 SEK por noche, con una oferta aceptada y otra contraofertada"
+        "description": "Cada alojamiento que la ve acepta tu presupuesto, contraoferta con su propio precio por noche o la deja pasar. La contraoferta es una sola ronda: la reservas o la rechazas. Rechazarla deja libre a ese alojamiento para volver con otro precio.",
+        "imageAlt": "Una solicitud de cuatro noches en octubre a 240 $ por noche, con dos alojamientos que aceptaron y uno que contraofertó"
       },
       "book": {
         "title": "Reserva el que prefieras",
         "description": "Al reservar un alojamiento se rechazan las demás ofertas y se les avisa, para que nadie te guarde una habitación que no vas a ocupar. La dirección y los datos de contacto del anfitrión se comparten contigo una vez reservada la estancia.",
-        "imageAlt": "La ficha de un alojamiento en la aplicación: fotos, descripción, valoración y el precio por noche al que puede alojarte"
+        "imageAlt": "Hotel Marbury en la aplicación: una foto de la habitación, los 240 $ por noche que aceptó y un botón para reservar"
       }
     }
   },
@@ -74,14 +74,14 @@
       },
       "decide": {
         "title": "Compara y decide",
-        "description": "Precio, fechas y valoración del viajero, uno al lado del otro. Acepta, contraoferta o rechaza desde la misma fila."
+        "description": "Fechas, viajeros, precio y el tiempo que lleva esperando, todo en la misma fila. Acepta, contraoferta o rechaza ahí, o abre la solicitud para ver la valoración del viajero."
       },
       "welcome": {
         "title": "Acepta y da la bienvenida",
         "description": "Acepta, y el viajero recibe tu dirección y tus datos para el día de su llegada."
       }
     },
-    "inboxAlt": "El panel de anfitrión de Trawise, con las solicitudes abiertas y los botones Aceptar, Contraoferta y Rechazar en cada fila",
+    "inboxAlt": "El panel de anfitrión de Trawise, con las solicitudes de los hoteles de una organización y los botones Aceptar, Contraoferta y Rechazar en cada fila abierta",
     "benefitsHeading": "Por qué los anfitriones eligen Trawise",
     "benefits": {
       "lastMinute": {
