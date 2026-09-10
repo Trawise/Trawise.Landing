@@ -16,13 +16,13 @@
     "seeHowItWorks": "See how it works",
     "hostCta": "I have rooms to fill",
     "storeNote": "The app is coming soon to the App Store and Google Play.",
-    "mapAlt": "The Trawise app showing a map of Stockholm with five places within five kilometres of a dropped pin",
-    "offerAlt": "Two replies to one request — one place countered at 1,450 SEK a night, another accepted at 1,200 SEK"
+    "mapAlt": "The Trawise app showing a map of San Francisco with five places within two kilometres of a dropped pin, listed underneath",
+    "offerAlt": "Three replies to one request — two places accepted at $240 a night, a third countered at $268"
   },
   "travellers": {
     "eyebrow": "For travellers",
     "title": "One request. Every place nearby answers.",
-    "subtitle": "A booking site makes you check the same dates twenty times. Trawise turns it around: you ask once, and the places that can host you reply.",
+    "subtitle": "You set the spot, the distance, the nights and the figure. Every place inside that reach with a room free sees it, and decides for itself.",
     "tablist": "The three steps",
     "previous": "Previous step",
     "next": "Next step",
@@ -30,17 +30,17 @@
       "ask": {
         "title": "Ask once",
         "description": "Drop a pin, choose how far around it you are willing to go, and name your nights, your party and what you want to pay per night. The total and the number of places you reach update as you type.",
-        "imageAlt": "The new request form in the Trawise app: a budget of 700 SEK per night for a stay within two kilometres of Stockholm, reaching two places"
+        "imageAlt": "The new request form in the Trawise app: four nights for three guests at $260 a night, reaching three places"
       },
       "answers": {
         "title": "Read what comes back",
-        "description": "Every published place inside your area that can sleep your party on your dates sees the request. Each one accepts your budget, counters with a nightly price of its own, or passes. A counter is one round — you book it or you turn it down.",
-        "imageAlt": "A request for three nights in October at 1,200 SEK per night, with one offer accepted and one countered"
+        "description": "Each place that sees it accepts your budget, counters with a nightly price of its own, or passes. A counter is one round: book it or turn it down. Turning it down frees that place to come back with a different price.",
+        "imageAlt": "A request for four nights in October at $240 a night, with two places accepted and one countered"
       },
       "book": {
         "title": "Book the one you want",
         "description": "Booking a place declines the other offers and tells them, so nobody is holding a room you are not going to take. The street address and the host's contact details are shared with you once the stay is booked.",
-        "imageAlt": "A place's listing in the app: photos, description, rating, and the nightly price it can host you for"
+        "imageAlt": "Hotel Marbury in the app: a photo of the room, the $240 a night it accepted, and a button to book it"
       }
     }
   },
@@ -74,14 +74,14 @@
       },
       "decide": {
         "title": "Compare and decide",
-        "description": "Price, dates and the traveller's rating side by side. Accept, counter or decline on the row."
+        "description": "Dates, party, price and how long it has waited, all on the row. Accept, counter or decline there, or open the request for the traveller's rating."
       },
       "welcome": {
         "title": "Accept and welcome",
         "description": "Accept, and the traveller gets your address and your details for their arrival date."
       }
     },
-    "inboxAlt": "The Trawise host dashboard, showing open requests with Accept, Counter and Decline on each row",
+    "inboxAlt": "The Trawise host dashboard, showing requests across an organisation's hotels with Accept, Counter and Decline on each open row",
     "benefitsHeading": "Why hosts choose Trawise",
     "benefits": {
       "lastMinute": {

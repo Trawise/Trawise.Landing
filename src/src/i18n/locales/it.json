@@ -16,13 +16,13 @@
     "seeHowItWorks": "Scopri come funziona",
     "hostCta": "Ho camere da riempire",
     "storeNote": "L'app arriverà presto su App Store e Google Play.",
-    "mapAlt": "L'app Trawise con una mappa di Stoccolma e cinque strutture entro cinque chilometri dal segnaposto",
-    "offerAlt": "Due risposte alla stessa richiesta: una struttura ha proposto 1.450 SEK a notte, un'altra ha accettato 1.200 SEK"
+    "mapAlt": "L'app Trawise con una mappa di San Francisco e cinque strutture entro due chilometri dal segnaposto, elencate sotto",
+    "offerAlt": "Tre risposte alla stessa richiesta: due strutture hanno accettato 240 $ a notte, una terza ha proposto 268 $"
   },
   "travellers": {
     "eyebrow": "Per i viaggiatori",
     "title": "Una richiesta. Rispondono tutte le strutture vicine.",
-    "subtitle": "Un sito di prenotazioni ti fa controllare le stesse date venti volte. Trawise ribalta le cose: chiedi una volta sola e ti rispondono le strutture che possono ospitarti.",
+    "subtitle": "Scegli il punto, la distanza, le notti e la cifra. Ogni struttura entro quel raggio con una camera libera la riceve e decide per conto proprio.",
     "tablist": "I tre passaggi",
     "previous": "Passaggio precedente",
     "next": "Passaggio successivo",
@@ -30,17 +30,17 @@
       "ask": {
         "title": "Chiedi una volta sola",
         "description": "Metti un segnaposto, scegli quanto lontano sei disposto a spostarti e indica le notti, quante persone siete e quanto vuoi pagare a notte. Il totale e il numero di strutture raggiunte si aggiornano mentre scrivi.",
-        "imageAlt": "Il modulo di nuova richiesta nell'app Trawise: un budget di 700 SEK a notte per un soggiorno entro due chilometri da Stoccolma, che raggiunge due strutture"
+        "imageAlt": "Il modulo di nuova richiesta nell'app Trawise: quattro notti per tre ospiti a 260 $ a notte, che raggiunge tre strutture"
       },
       "answers": {
         "title": "Leggi le risposte",
-        "description": "Ogni struttura pubblicata all'interno della tua zona che può ospitarvi nelle tue date vede la richiesta. Ognuna accetta il tuo budget, propone un proprio prezzo a notte, oppure lascia perdere. La controproposta è un solo giro: la prenoti o la rifiuti.",
-        "imageAlt": "Una richiesta per tre notti a ottobre a 1.200 SEK a notte, con un'offerta accettata e una controproposta"
+        "description": "Ogni struttura che la riceve accetta il tuo budget, propone un proprio prezzo a notte, oppure lascia perdere. La controproposta è un solo giro: la prenoti o la rifiuti. Rifiutarla lascia quella struttura libera di tornare con un altro prezzo.",
+        "imageAlt": "Una richiesta per quattro notti a ottobre a 240 $ a notte, con due strutture che hanno accettato e una che ha controproposto"
       },
       "book": {
         "title": "Prenota quella che preferisci",
         "description": "Prenotando una struttura le altre offerte vengono rifiutate e avvisate, così nessuno tiene bloccata una camera che non prenderai. L'indirizzo e i contatti dell'host ti vengono comunicati una volta prenotato il soggiorno.",
-        "imageAlt": "La scheda di una struttura nell'app: foto, descrizione, valutazione e il prezzo a notte a cui può ospitarti"
+        "imageAlt": "Hotel Marbury nell'app: una foto della camera, i 240 $ a notte che ha accettato e un pulsante per prenotare"
       }
     }
   },
@@ -74,14 +74,14 @@
       },
       "decide": {
         "title": "Confronta e decidi",
-        "description": "Prezzo, date e valutazione del viaggiatore uno accanto all'altro. Accetta, controproponi o rifiuta dalla riga stessa."
+        "description": "Date, ospiti, prezzo e da quanto tempo è in attesa, tutto sulla riga. Accetta, controproponi o rifiuta lì, oppure apri la richiesta per la valutazione del viaggiatore."
       },
       "welcome": {
         "title": "Accetta e accogli",
         "description": "Accetta, e il viaggiatore riceve il tuo indirizzo e i tuoi contatti per il giorno dell'arrivo."
       }
     },
-    "inboxAlt": "La dashboard host di Trawise, con le richieste aperte e i pulsanti Accetta, Controproponi e Rifiuta su ogni riga",
+    "inboxAlt": "La dashboard host di Trawise, con le richieste per gli hotel di un'organizzazione e i pulsanti Accetta, Controproponi e Rifiuta su ogni riga aperta",
     "benefitsHeading": "Perché gli host scelgono Trawise",
     "benefits": {
       "lastMinute": {

@@ -16,13 +16,13 @@
     "seeHowItWorks": "Se hur det fungerar",
     "hostCta": "Jag har rum att fylla",
     "storeNote": "Appen kommer snart till App Store och Google Play.",
-    "mapAlt": "Trawise-appen med en karta över Stockholm och fem boenden inom fem kilometer från den utsatta nålen",
-    "offerAlt": "Två svar på samma förfrågan — ett boende lade ett motbud på 1 450 SEK per natt, ett annat accepterade 1 200 SEK"
+    "mapAlt": "Trawise-appen med en karta över San Francisco och fem boenden inom två kilometer från den utsatta nålen, listade under",
+    "offerAlt": "Tre svar på samma förfrågan – två boenden accepterade 240 $ per natt, ett tredje lade ett motbud på 268 $"
   },
   "travellers": {
     "eyebrow": "För resenärer",
     "title": "En förfrågan. Alla boenden i närheten svarar.",
-    "subtitle": "En bokningssajt får dig att kontrollera samma datum tjugo gånger. Trawise vänder på det: du frågar en gång, och de boenden som kan ta emot dig svarar.",
+    "subtitle": "Du väljer punkten, avståndet, nätterna och summan. Varje boende inom den räckvidden med ett rum ledigt ser den och avgör själv.",
     "tablist": "De tre stegen",
     "previous": "Föregående steg",
     "next": "Nästa steg",
@@ -30,17 +30,17 @@
       "ask": {
         "title": "Fråga en gång",
         "description": "Sätt en nål, välj hur långt därifrån du kan tänka dig att bo och ange dina nätter, hur många ni är och vad du vill betala per natt. Totalsumman och antalet boenden du når uppdateras medan du skriver.",
-        "imageAlt": "Formuläret för en ny förfrågan i Trawise-appen: en budget på 700 SEK per natt för ett boende inom två kilometer från Stockholm, som når två boenden"
+        "imageAlt": "Formuläret för en ny förfrågan i Trawise-appen: fyra nätter för tre gäster för 260 $ per natt, som når tre boenden"
       },
       "answers": {
         "title": "Läs vad som kommer tillbaka",
-        "description": "Varje publicerat boende inom ditt område som kan ta emot er på dina datum ser förfrågan. Var och en accepterar din budget, lägger ett eget pris per natt, eller avstår. Ett motbud är en enda runda — du bokar det eller tackar nej.",
-        "imageAlt": "En förfrågan om tre nätter i oktober för 1 200 SEK per natt, med ett accepterat bud och ett motbud"
+        "description": "Varje boende som ser den accepterar din budget, lägger ett eget pris per natt, eller avstår. Ett motbud är en enda runda: du bokar det eller tackar nej. Tackar du nej står det boendet fritt att återkomma med ett annat pris.",
+        "imageAlt": "En förfrågan om fyra nätter i oktober för 240 $ per natt, med två boenden som accepterade och ett motbud"
       },
       "book": {
         "title": "Boka det du vill ha",
         "description": "När du bokar ett boende tackas de andra buden nej och de får besked, så att ingen håller ett rum du ändå inte tar. Gatuadressen och värdens kontaktuppgifter delas med dig när vistelsen är bokad.",
-        "imageAlt": "Ett boendes sida i appen: bilder, beskrivning, betyg och priset per natt som det kan ta emot dig för"
+        "imageAlt": "Hotel Marbury i appen: en bild på rummet, de 240 $ per natt som det accepterade och en knapp för att boka"
       }
     }
   },
@@ -74,14 +74,14 @@
       },
       "decide": {
         "title": "Jämför och bestäm",
-        "description": "Pris, datum och resenärens betyg sida vid sida. Acceptera, lägg motbud eller tacka nej direkt på raden."
+        "description": "Datum, sällskap, pris och hur länge den har väntat, allt på raden. Acceptera, lägg motbud eller tacka nej där, eller öppna förfrågan för resenärens betyg."
       },
       "welcome": {
         "title": "Acceptera och välkomna",
         "description": "Acceptera, så får resenären din adress och dina uppgifter inför ankomstdagen."
       }
     },
-    "inboxAlt": "Trawise värdpanel med öppna förfrågningar och knapparna Acceptera, Motbud och Avslå på varje rad",
+    "inboxAlt": "Trawise värdpanel med förfrågningar för en organisations hotell och knapparna Acceptera, Motbud och Avslå på varje öppen rad",
     "benefitsHeading": "Därför väljer värdar Trawise",
     "benefits": {
       "lastMinute": {

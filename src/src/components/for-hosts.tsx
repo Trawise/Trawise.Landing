@@ -73,19 +73,26 @@ export function ForHosts() {
         tone="dark"
       />
 
-      <BrowserFrame url="host.trawise.org" tone="dark">
-        <img
-          src="/app/host-inbox.webp"
-          alt={t("forHosts.inboxAlt")}
-          width={1440}
-          height={900}
-          loading="lazy"
-          decoding="async"
-          className="block w-full h-auto"
-        />
-      </BrowserFrame>
+      {/* From md up only. The dashboard is a 1440px layout and every row runs
+          the full width of it, so there is no crop that survives a phone: at
+          390px it is a grey smudge that says nothing. The four steps below say
+          the same thing and can actually be read, so on a phone they carry the
+          section on their own. */}
+      <div className="hidden md:block">
+        <BrowserFrame url="host.trawise.org" tone="dark">
+          <img
+            src="/app/host-inbox.webp"
+            alt={t("forHosts.inboxAlt")}
+            width={1440}
+            height={900}
+            loading="lazy"
+            decoding="async"
+            className="block w-full h-auto"
+          />
+        </BrowserFrame>
+      </div>
 
-      <ol className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 list-none">
+      <ol className="md:mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 list-none">
         {STEP_KEYS.map((stepKey, index) => (
           <li
             key={stepKey}
