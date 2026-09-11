@@ -125,7 +125,7 @@ const GROUPS: Group[] = [
         id: "cancel-booking",
         question: "Can I cancel after booking?",
         answer:
-          "Yes, and so can the place. Either side can cancel a confirmed booking with a reason, and the other side is notified. What that means for any deposit or cancellation terms is between you and the place, since Trawise holds no money either way.",
+          "Yes. You can cancel a confirmed booking with a reason, and the place is told straight away. What that means for any deposit or cancellation terms is between you and the place, since Trawise holds no money either way.",
       },
     ],
   },
