@@ -6,6 +6,7 @@ import { HOST_APP_URL, SITE_CONFIG } from "../lib/constants";
 import { useCookieConsent } from "../hooks/use-cookie-consent";
 import { CONTENT_WIDTH, Container } from "./ui";
 import { LanguageSwitcher } from "./language-switcher";
+import { SocialLinks } from "./social-links";
 
 // Shared by the footer links and the cookie-settings button so they stay
 // visually identical — the button must not read as a different kind of control.
@@ -56,6 +57,7 @@ export function Footer() {
               <p className="text-gray-600 max-w-sm">
                 {t("footer.description")}.
               </p>
+              <SocialLinks />
             </div>
 
             {/* One "Trawise" column rather than a travellers one and a hosts one:

@@ -110,7 +110,8 @@
     "allRightsReserved": "Tutti i diritti riservati",
     "legal": "Note legali",
     "hostDashboard": "Dashboard host",
-    "deleteAccount": "Elimina il tuo account"
+    "deleteAccount": "Elimina il tuo account",
+    "socialLink": "{{name}} su {{network}}"
   },
   "languages": {
     "english": "English",
