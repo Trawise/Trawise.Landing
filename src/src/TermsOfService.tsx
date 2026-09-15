@@ -18,6 +18,7 @@ export function TermsOfService() {
     title: t("pageTitles.termsOfService"),
     description: t("pageDescriptions.termsOfService"),
     path: "/terms",
+    localised: false,
   });
 
   return (

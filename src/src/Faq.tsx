@@ -222,6 +222,7 @@ export function Faq() {
     title: t("pageTitles.faq"),
     description: t("faq.subtitle"),
     path: "/faq",
+    localised: false,
   });
 
   // A FAQPage graph is what puts these answers in a search result rather than

@@ -24,6 +24,13 @@ interface PageMeta {
   path: string;
   /** Keep the route out of search results (utility and error pages). */
   noindex?: boolean;
+  /**
+   * False for routes whose body is English at every locale — the FAQ and the
+   * legal pages. They canonicalise to the English URL and emit no hreflang,
+   * because alternates that serve the same English text are alternates Google
+   * discards, taking the rest of the annotation with them.
+   */
+  localised?: boolean;
 }
 
 /**
@@ -68,6 +75,7 @@ export function usePageMeta({
   description,
   path,
   noindex = false,
+  localised = true,
 }: PageMeta): void {
   const { pathname } = useLocation();
 
@@ -91,10 +99,13 @@ export function usePageMeta({
   // same, and these tags all have to move with it.
   useEffect(() => {
     const locale = localeFromPath(pathname);
-    const canonical = new URL(localePath(locale, path), SITE_CONFIG.url).href;
+    const canonical = new URL(
+      localePath(localised ? locale : DEFAULT_LOCALE, path),
+      SITE_CONFIG.url,
+    ).href;
 
     setMeta("property", "og:url", canonical);
-    setMeta("property", "og:locale", locale);
+    setMeta("property", "og:locale", localised ? locale : DEFAULT_LOCALE);
 
     let link = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
 
@@ -114,6 +125,12 @@ export function usePageMeta({
       )
       .forEach((previous) => previous.remove());
 
+    // Removal happens first regardless, so arriving from a localised route does
+    // not leave that route's alternates behind on an English-only page.
+    if (!localised) {
+      return;
+    }
+
     const alternates = [
       ...LOCALES.map((alternate) => ({ hreflang: alternate, locale: alternate })),
       { hreflang: "x-default", locale: DEFAULT_LOCALE },
@@ -131,7 +148,7 @@ export function usePageMeta({
       alternateLink.dataset.pageMeta = "true";
       document.head.appendChild(alternateLink);
     });
-  }, [path, pathname]);
+  }, [path, pathname, localised]);
 
   useEffect(() => {
     let meta = document.querySelector<HTMLMetaElement>('meta[name="robots"]');

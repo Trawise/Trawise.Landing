@@ -110,7 +110,8 @@
     "allRightsReserved": "All rights reserved",
     "legal": "Legal",
     "hostDashboard": "Host dashboard",
-    "deleteAccount": "Delete your account"
+    "deleteAccount": "Delete your account",
+    "socialLink": "{{name}} on {{network}}"
   },
   "languages": {
     "english": "English",

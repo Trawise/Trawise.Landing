@@ -110,7 +110,8 @@
     "allRightsReserved": "Alla rättigheter förbehållna",
     "legal": "Juridik",
     "hostDashboard": "Värdpanel",
-    "deleteAccount": "Ta bort ditt konto"
+    "deleteAccount": "Ta bort ditt konto",
+    "socialLink": "{{name}} på {{network}}"
   },
   "languages": {
     "english": "English",
