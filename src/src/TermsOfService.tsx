@@ -126,6 +126,12 @@ export function TermsOfService() {
                       terms the two of you have agreed.
                     </p>
                     <p className="text-gray-700 leading-relaxed mt-4">
+                      Either side may cancel a confirmed booking through the
+                      Service, giving a reason, and the other side is told at
+                      once. A cancelled booking closes the request; post a new
+                      one if you still need the stay.
+                    </p>
+                    <p className="text-gray-700 leading-relaxed mt-4">
                       Payment, deposits, taxes, city fees, house rules and
                       cancellation terms are matters between you and the place.
                       We do not collect, hold, refund or mediate money, and we
@@ -201,8 +207,9 @@ export function TermsOfService() {
                     <p className="text-gray-700 leading-relaxed">
                       An offer you send is a commitment. Only offer a stay you
                       can deliver, at a price you will honour, and honour a
-                      booking once it is confirmed — or tell the traveller
-                      promptly if you cannot. Prices you quote must be complete
+                      booking once it is confirmed — or cancel it through the
+                      Service, with the reason, the moment you know you cannot,
+                      so the traveller is told. Prices you quote must be complete
                       and truthful: anything a traveller will be asked to pay
                       belongs in the offer or in the listing, not on arrival.
                     </p>

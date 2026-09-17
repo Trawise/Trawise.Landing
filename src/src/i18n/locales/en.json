@@ -101,7 +101,7 @@
   },
   "questions": {
     "title": "Questions before you start?",
-    "description": "The FAQ covers what it costs, who can see your request, what a counter-offer is, and what happens after a place says yes.",
+    "description": "The FAQ covers who can see your request, what a counter-offer is, and what happens after a place says yes.",
     "cta": "Read the FAQ"
   },
   "footer": {
@@ -123,12 +123,12 @@
   },
   "privacyPolicy": {
     "title": "Trawise Privacy Policy",
-    "lastUpdated": "Last updated: September 2, 2026",
+    "lastUpdated": "Last updated: September 17, 2026",
     "backToHome": "Back to home"
   },
   "termsOfService": {
     "title": "Trawise Terms of Service",
-    "lastUpdated": "Last updated: August 28, 2026",
+    "lastUpdated": "Last updated: September 17, 2026",
     "backToHome": "Back to home"
   },
   "notFound": {
@@ -180,7 +180,7 @@
   "opensInNewTab": "opens in a new tab",
   "faq": {
     "title": "Frequently asked questions",
-    "subtitle": "How Trawise works, what it costs, and what happens after a place says yes.",
+    "subtitle": "How Trawise works and what happens after a place says yes.",
     "backToHome": "Back to home"
   },
   "openInApp": {

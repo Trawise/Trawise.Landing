@@ -101,7 +101,7 @@
   },
   "questions": {
     "title": "Domande prima di iniziare?",
-    "description": "Le domande frequenti spiegano quanto costa, chi può vedere la tua richiesta, cos'è una controproposta e cosa succede quando una struttura accetta.",
+    "description": "Le domande frequenti spiegano chi può vedere la tua richiesta, cos'è una controproposta e cosa succede quando una struttura dice sì.",
     "cta": "Leggi le FAQ"
   },
   "footer": {
@@ -123,12 +123,12 @@
   },
   "privacyPolicy": {
     "title": "Informativa sulla privacy di Trawise",
-    "lastUpdated": "Ultimo aggiornamento: 2 settembre 2026",
+    "lastUpdated": "Ultimo aggiornamento: 17 settembre 2026",
     "backToHome": "Torna alla home"
   },
   "termsOfService": {
     "title": "Termini di servizio di Trawise",
-    "lastUpdated": "Ultimo aggiornamento: 28 agosto 2026",
+    "lastUpdated": "Ultimo aggiornamento: 17 settembre 2026",
     "backToHome": "Torna alla home"
   },
   "notFound": {
@@ -180,7 +180,7 @@
   "opensInNewTab": "si apre in una nuova scheda",
   "faq": {
     "title": "Domande frequenti",
-    "subtitle": "Come funziona Trawise, quanto costa e cosa accade quando una struttura accetta.",
+    "subtitle": "Come funziona Trawise e cosa succede quando una struttura dice sì.",
     "backToHome": "Torna alla home"
   },
   "openInApp": {

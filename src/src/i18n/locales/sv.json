@@ -101,7 +101,7 @@
   },
   "questions": {
     "title": "Frågor innan du börjar?",
-    "description": "Vanliga frågor tar upp vad det kostar, vem som kan se din förfrågan, vad ett motbud är och vad som händer när ett boende säger ja.",
+    "description": "Vanliga frågor förklarar vem som kan se din förfrågan, vad ett motbud är och vad som händer när ett boende säger ja.",
     "cta": "Läs vanliga frågor"
   },
   "footer": {
@@ -123,12 +123,12 @@
   },
   "privacyPolicy": {
     "title": "Trawise integritetspolicy",
-    "lastUpdated": "Senast uppdaterad: 2 september 2026",
+    "lastUpdated": "Senast uppdaterad: 17 september 2026",
     "backToHome": "Tillbaka till startsidan"
   },
   "termsOfService": {
     "title": "Trawise användarvillkor",
-    "lastUpdated": "Senast uppdaterad: 28 augusti 2026",
+    "lastUpdated": "Senast uppdaterad: 17 september 2026",
     "backToHome": "Tillbaka till startsidan"
   },
   "notFound": {
@@ -180,7 +180,7 @@
   "opensInNewTab": "öppnas i en ny flik",
   "faq": {
     "title": "Vanliga frågor",
-    "subtitle": "Så fungerar Trawise, vad det kostar och vad som händer när ett boende säger ja.",
+    "subtitle": "Så fungerar Trawise och vad som händer när ett boende säger ja.",
     "backToHome": "Tillbaka till startsidan"
   },
   "openInApp": {

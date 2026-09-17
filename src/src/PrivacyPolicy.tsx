@@ -138,18 +138,29 @@ export function PrivacyPolicy() {
                         availability
                       </li>
                       <li>
-                        <strong>Organisation, if you host:</strong> its name and
-                        country, whether it is a business or a private
-                        individual, its members and their roles, and the email
-                        addresses you invite colleagues with
+                        <strong>Organisation, if you host:</strong> its name,
+                        whether it is a business or a private individual, its
+                        members and their roles, and the email addresses you
+                        invite colleagues with
+                      </li>
+                      <li>
+                        <strong>Bookings:</strong> the stay once it is booked
+                        — the place, the room type, the dates and the agreed
+                        nightly price — and, if it is cancelled, which side
+                        cancelled and the reason given
                       </li>
                       <li>
                         <strong>Messages:</strong> what you write to the other
-                        side of a request, and when each side read it
+                        side of a request, and how far each side has read
                       </li>
                       <li>
                         <strong>Reviews:</strong> the rating and comment written
                         after a stay, in either direction
+                      </li>
+                      <li>
+                        <strong>Reports:</strong> what you report to us about a
+                        listing, a message, a review or an account, and how it
+                        was resolved
                       </li>
                       <li>
                         <strong>Anything you write to support</strong>
@@ -168,9 +179,17 @@ export function PrivacyPolicy() {
                         operating system
                       </li>
                       <li>
-                        <strong>Push tokens:</strong> a device token issued by
-                        Apple or Google and delivered through Expo, held while
-                        you have push notifications switched on
+                        <strong>Devices:</strong> for each handset you sign in
+                        on, a push token issued by Apple or Google and
+                        delivered through Expo, and when it was last seen
+                      </li>
+                      <li>
+                        <strong>Notifications:</strong> a record of each thing
+                        the Service told you — a request arriving, an offer, a
+                        booking, a cancellation, unread messages, a review
+                        reminder — with the facts it names and whether you have
+                        read it, plus the address or device each email or push
+                        went to and whether it was sent
                       </li>
                       <li>
                         <strong>Presence:</strong> a record of your live chat
@@ -423,9 +442,10 @@ export function PrivacyPolicy() {
                       <li>
                         <strong>When you delete your account</strong> we
                         anonymise it rather than erase the rows outright: your
-                        name, email address and password are removed, your push
-                        tokens are deleted, your sessions are ended and your
-                        host memberships are suspended. What remains is the
+                        name, email address and password are removed, your
+                        devices are removed, anything still queued to be sent to
+                        you is discarded, your sessions are ended and your host
+                        memberships are suspended. What remains is the
                         record of stays, messages and reviews that belongs to
                         the other party as much as to you, with nothing left in
                         it that identifies you. It cannot be undone
@@ -436,9 +456,17 @@ export function PrivacyPolicy() {
                         ends
                       </li>
                       <li>
-                        <strong>Push tokens</strong> until you switch
-                        notifications off, delete your account, or the token
-                        stops being valid
+                        <strong>Devices</strong> until you sign out on the
+                        handset, delete your account, or the push network
+                        reports it gone; an account keeps its ten most recently
+                        seen
+                      </li>
+                      <li>
+                        <strong>Notifications</strong> for 180 days once read
+                        and a year if never read; the record of an email or
+                        push being sent for 30 days, or 90 days if it could not
+                        be delivered; the receipt a push network returns for
+                        about a day
                       </li>
                       <li>
                         <strong>Server logs and diagnostics</strong> for a short
@@ -502,11 +530,13 @@ export function PrivacyPolicy() {
                       <li>
                         <strong>Download my data</strong>, in Settings in either
                         app, gives you a file with your profile, your
-                        notification settings, your requests and the offers on
-                        them, the messages you wrote, the reviews you wrote and
-                        received, and your organisation memberships. Messages
-                        you received are left out: the other half of a
-                        conversation is someone else's personal data
+                        notification settings and devices, your requests and
+                        the offers on them, your bookings, the messages you
+                        wrote, the reviews you wrote and received, the
+                        notifications you were sent, your reports, and your
+                        organisation memberships. Messages you received are
+                        left out: the other half of a conversation is someone
+                        else's personal data
                       </li>
                       <li>
                         <strong>Delete account</strong>, in Settings in either
