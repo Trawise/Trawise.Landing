@@ -101,7 +101,7 @@
   },
   "questions": {
     "title": "¿Alguna duda antes de empezar?",
-    "description": "Las preguntas frecuentes explican cuánto cuesta, quién puede ver tu solicitud, qué es una contraoferta y qué pasa cuando un alojamiento acepta.",
+    "description": "Las preguntas frecuentes explican quién puede ver tu solicitud, qué es una contraoferta y qué ocurre cuando un alojamiento dice sí.",
     "cta": "Leer las preguntas frecuentes"
   },
   "footer": {
@@ -123,12 +123,12 @@
   },
   "privacyPolicy": {
     "title": "Política de privacidad de Trawise",
-    "lastUpdated": "Última actualización: 2 de septiembre de 2026",
+    "lastUpdated": "Última actualización: 17 de septiembre de 2026",
     "backToHome": "Volver al inicio"
   },
   "termsOfService": {
     "title": "Términos del servicio de Trawise",
-    "lastUpdated": "Última actualización: 28 de agosto de 2026",
+    "lastUpdated": "Última actualización: 17 de septiembre de 2026",
     "backToHome": "Volver al inicio"
   },
   "notFound": {
@@ -180,7 +180,7 @@
   "opensInNewTab": "se abre en una pestaña nueva",
   "faq": {
     "title": "Preguntas frecuentes",
-    "subtitle": "Cómo funciona Trawise, cuánto cuesta y qué pasa cuando un alojamiento acepta.",
+    "subtitle": "Cómo funciona Trawise y qué ocurre cuando un alojamiento dice sí.",
     "backToHome": "Volver al inicio"
   },
   "openInApp": {
