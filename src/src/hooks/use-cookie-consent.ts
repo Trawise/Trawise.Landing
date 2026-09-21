@@ -11,6 +11,8 @@
 
 import { useSyncExternalStore } from "react";
 
+import { denyAnalyticsConsent, grantAnalyticsConsent } from "../lib/analytics";
+
 const CONSENT_KEY = "cookie-consent";
 
 export type ConsentStatus = "accepted" | "rejected" | null;
@@ -31,21 +33,6 @@ function writeStoredConsent(status: ConsentStatus): void {
     else localStorage.setItem(CONSENT_KEY, status);
   } catch {
     // A decision that cannot be stored is still honoured this visit.
-  }
-}
-
-/**
- * Safe before gtag has loaded: the command queues into dataLayer and is
- * replayed when the library arrives.
- */
-function updateGtagConsent(accepted: boolean): void {
-  if (typeof window === "undefined") return;
-  const gtagFn = (window as Window & { gtag?: (...args: unknown[]) => void })
-    .gtag;
-  if (typeof gtagFn === "function") {
-    gtagFn("consent", "update", {
-      analytics_storage: accepted ? "granted" : "denied",
-    });
   }
 }
 
@@ -78,12 +65,12 @@ export interface CookieConsentState {
 
 function accept(): void {
   setStatus("accepted");
-  updateGtagConsent(true);
+  grantAnalyticsConsent();
 }
 
 function reject(): void {
   setStatus("rejected");
-  updateGtagConsent(false);
+  denyAnalyticsConsent();
 }
 
 /**
@@ -93,7 +80,7 @@ function reject(): void {
  */
 function reopen(): void {
   setStatus(null);
-  updateGtagConsent(false);
+  denyAnalyticsConsent();
 }
 
 export function useCookieConsent(): CookieConsentState {
