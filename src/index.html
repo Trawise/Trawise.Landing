@@ -105,54 +105,11 @@
     }
   </script>
 
-  <!-- Google tag (gtag.js) -->
-  <!--
-    All inline gtag commands are kept in one script block so the required
-    dataLayer command order (consent default → js timestamp → config) is
-    explicit and easy to audit in one place.  The async loader is a
-    separate tag so it never blocks the HTML parser.
-  -->
-  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-
-    // Google Consent Mode v2 — must be called before gtag('config', ...).
-    // Read any prior decision from localStorage so returning visitors who
-    // already accepted get analytics_storage granted immediately and GA
-    // fires without any delay.
-    // For first-time visitors (no stored decision) analytics_storage is
-    // denied.  wait_for_update gives the React app 2 s to call
-    // gtag('consent','update',...) from useCookieConsent after the user
-    // interacts with the banner.  If no update arrives within that window
-    // GA discards the queued hit — correct GDPR behaviour.
-    // wait_for_update is only meaningful when a signal is 'denied', so it
-    // is omitted entirely for returning visitors who already accepted.
-    (function () {
-      var stored = '';
-      try { stored = localStorage.getItem('cookie-consent') || ''; } catch (e) { }
-      var analyticsGranted = stored === 'accepted';
-      var consentDefaults = {
-        'analytics_storage': analyticsGranted ? 'granted' : 'denied',
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'functionality_storage': 'granted',
-        'security_storage': 'granted'
-      };
-      if (!analyticsGranted) {
-        consentDefaults['wait_for_update'] = 2000;
-      }
-      gtag('consent', 'default', consentDefaults);
-    })();
-
-    gtag('js', new Date());
-    gtag('config', 'G-9HC828T9RG');
-  </script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9HC828T9RG"></script>
-
   <!-- Single Page Apps for GitHub Pages -->
   <!-- https://github.com/rafgraph/spa-github-pages -->
+  <!-- Above the Google tag on purpose: a deep link arrives through 404.html
+       as "/?/faq" and only this rewrites it back, so running it first keeps
+       the encoded form out of page_location whatever order gtag.js loads in. -->
   <script type="text/javascript">
     // Single Page Apps for GitHub Pages
     // MIT License
@@ -180,6 +137,46 @@
       }
     })(window.location);
   </script>
+
+  <!-- Google tag (gtag.js) -->
+  <!--
+    All inline gtag commands are kept in one script block so the required
+    dataLayer command order (consent default → js timestamp → config) is
+    explicit and easy to audit in one place.  The async loader is a
+    separate tag so it never blocks the HTML parser.
+  -->
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+
+    // Google Consent Mode v2 — must be called before gtag('config', ...).
+    // The stored decision is read here so a returning visitor who accepted is
+    // granted before the first hit and GA never has to wait.
+    // No wait_for_update: it only helps when a consent platform answers by
+    // itself in a second or two, and this answer comes from a person reading
+    // a banner.  Their page_view leaves as a cookieless ping instead, and
+    // useCookieConsent sends a fresh one on accept — a consent update does
+    // not re-send an event that already went out.
+    (function () {
+      var stored = '';
+      try { stored = localStorage.getItem('cookie-consent') || ''; } catch (e) { }
+      var analyticsGranted = stored === 'accepted';
+      var consentDefaults = {
+        'analytics_storage': analyticsGranted ? 'granted' : 'denied',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'functionality_storage': 'granted',
+        'security_storage': 'granted'
+      };
+      gtag('consent', 'default', consentDefaults);
+    })();
+
+    gtag('js', new Date());
+    gtag('config', 'G-9HC828T9RG');
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9HC828T9RG"></script>
 </head>
 
 <body>

@@ -119,8 +119,8 @@ export function PrivacyPolicy() {
                     </li>
                     <li>
                       <strong>Requests:</strong> the spot or area, the dates,
-                      the party, the nightly budget and currency, and the
-                      reason if you cancel.
+                      the party, the nightly budget and currency, and the reason
+                      if you cancel.
                     </li>
                     <li>
                       <strong>Listings, if you host:</strong> the place's name,
@@ -136,8 +136,8 @@ export function PrivacyPolicy() {
                     </li>
                     <li>
                       <strong>Bookings:</strong> the place, room type, dates and
-                      agreed nightly price of each stay, and if it is
-                      cancelled, which side cancelled and the reason given.
+                      agreed nightly price of each stay, and if it is cancelled,
+                      which side cancelled and the reason given.
                     </li>
                     <li>
                       <strong>Messages:</strong> what you write to the other
@@ -148,8 +148,8 @@ export function PrivacyPolicy() {
                       after a stay, in either direction.
                     </li>
                     <li>
-                      <strong>Reports:</strong> what you report to us and how
-                      it was resolved.
+                      <strong>Reports:</strong> what you report to us and how it
+                      was resolved.
                     </li>
                   </List>
 
@@ -163,15 +163,15 @@ export function PrivacyPolicy() {
                       or browser version, device type and operating system.
                     </li>
                     <li>
-                      <strong>Devices:</strong> for each handset you sign in
-                      on, a push token issued by Apple or Google and delivered
+                      <strong>Devices:</strong> for each handset you sign in on,
+                      a push token issued by Apple or Google and delivered
                       through Expo, and when it was last seen.
                     </li>
                     <li>
-                      <strong>Notifications:</strong> a record of each thing
-                      the Service told you, with the facts it names and whether
-                      you have read it, and the address or device each email or
-                      push went to.
+                      <strong>Notifications:</strong> a record of each thing the
+                      Service told you, with the facts it names and whether you
+                      have read it, and the address or device each email or push
+                      went to.
                     </li>
                     <li>
                       <strong>Location:</strong> the traveller app reads your
@@ -191,8 +191,8 @@ export function PrivacyPolicy() {
                     </li>
                     <li>
                       <strong>Website analytics:</strong> aggregate use of this
-                      website through Google Analytics, only if you accept
-                      analytics cookies (section 8).
+                      website and the host dashboard through Google Analytics,
+                      only if you accept analytics cookies (section 8).
                     </li>
                   </List>
 
@@ -203,8 +203,8 @@ export function PrivacyPolicy() {
                     We take no payment for stays, so we hold no card, bank or
                     payment details. We do not ask travellers for a telephone
                     number, collect identity documents, track location in the
-                    background, or run advertising or cross-site tracking in
-                    the apps. Other guests on a booking are a count and nothing
+                    background, or run advertising or cross-site tracking in the
+                    apps. Other guests on a booking are a count and nothing
                     more.
                   </p>
                 </Section>
@@ -226,8 +226,8 @@ export function PrivacyPolicy() {
                     <li>
                       <strong>To keep the Service working and safe:</strong>{" "}
                       rate limiting, preventing abuse, looking into reports,
-                      measuring app start-up. Ground: our legitimate interest
-                      in a secure, reliable service.
+                      measuring app start-up. Ground: our legitimate interest in
+                      a secure, reliable service.
                     </li>
                     <li>
                       <strong>To meet legal obligations</strong> and to
@@ -317,9 +317,10 @@ export function PrivacyPolicy() {
 
                 <Section title="8. Cookies">
                   <p>
-                    This website sets analytics cookies only after you accept
-                    them. Storage for your cookie choice and language is always
-                    on. Change your choice at any time in{" "}
+                    This website and the host dashboard set analytics cookies
+                    only after you accept them, and remove them again if you
+                    withdraw. Storage for your cookie choice and language is
+                    always on. Change your choice at any time in{" "}
                     <button
                       type="button"
                       onClick={reopen}
@@ -339,12 +340,12 @@ export function PrivacyPolicy() {
                       account exists.
                     </li>
                     <li>
-                      <strong>When you delete your account</strong> we
-                      anonymise it: name, email address, password and devices
-                      are removed, queued notifications are discarded, sessions
-                      are ended and host memberships are suspended. Stays,
-                      messages and reviews remain on the other party's record
-                      with nothing that identifies you. It cannot be undone.
+                      <strong>When you delete your account</strong> we anonymise
+                      it: name, email address, password and devices are removed,
+                      queued notifications are discarded, sessions are ended and
+                      host memberships are suspended. Stays, messages and
+                      reviews remain on the other party's record with nothing
+                      that identifies you. It cannot be undone.
                     </li>
                     <li>
                       <strong>Devices</strong> until you sign out on the
@@ -375,9 +376,9 @@ export function PrivacyPolicy() {
                     Traffic is encrypted in transit. Passwords are stored
                     hashed; changing one ends every session. Sign-in attempts
                     and emailed codes are rate limited. Uploaded images are
-                    re-encoded, so nothing hidden in the original file
-                    survives. No system is perfectly secure; where the law
-                    requires us to report a breach, we will.
+                    re-encoded, so nothing hidden in the original file survives.
+                    No system is perfectly secure; where the law requires us to
+                    report a breach, we will.
                   </p>
                 </Section>
 
@@ -400,8 +401,8 @@ export function PrivacyPolicy() {
                     <li>
                       <strong>Delete account</strong>, in Settings in either
                       app, confirmed with your password, does what section 9
-                      describes. The last owner of an organisation hands it
-                      over first.
+                      describes. The last owner of an organisation hands it over
+                      first.
                     </li>
                   </List>
                   <p>
