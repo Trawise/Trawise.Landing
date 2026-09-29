@@ -51,6 +51,9 @@ export function Header() {
                 rel="noopener noreferrer"
                 className="hidden sm:inline-flex rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600"
               >
+                {/* h-11 (44px): the exact rendered height of the secondary
+                    button beside it (sm:px-6 sm:text-base, py-2, border-2),
+                    so the two controls read as the same size. */}
                 <img
                   src="/app-store-badge.svg"
                   alt={t("appStoreAlt")}
@@ -58,7 +61,7 @@ export function Header() {
                   height={40}
                   loading="eager"
                   decoding="async"
-                  className="h-8 w-auto"
+                  className="h-11 w-auto"
                 />
                 <span className="sr-only"> ({t("opensInNewTab")})</span>
               </a>
