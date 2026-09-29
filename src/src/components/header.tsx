@@ -53,11 +53,13 @@ export function Header() {
               >
                 {/* h-11 (44px): the exact rendered height of the secondary
                     button beside it (sm:px-6 sm:text-base, py-2, border-2),
-                    so the two controls read as the same size. */}
+                    so the two controls read as the same size. 120x40 matches
+                    the badge asset's true 119.664:40 ratio, so the reserved
+                    box is correct before the SVG loads. */}
                 <img
                   src="/app-store-badge.svg"
                   alt={t("appStoreAlt")}
-                  width={135}
+                  width={120}
                   height={40}
                   loading="eager"
                   decoding="async"

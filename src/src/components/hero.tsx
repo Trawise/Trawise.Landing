@@ -97,12 +97,14 @@ export function Hero() {
                 rel="noopener noreferrer"
                 className="sm:hidden inline-flex rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600"
               >
+                {/* 120x40 matches the badge asset's true 119.664:40 ratio,
+                    so the reserved box is correct before the SVG loads. */}
                 <img
                   src="/app-store-badge.svg"
                   alt={t("appStoreAlt")}
-                  width={135}
+                  width={120}
                   height={40}
-                  loading="lazy"
+                  loading="eager"
                   decoding="async"
                   className="h-10 w-auto"
                 />
