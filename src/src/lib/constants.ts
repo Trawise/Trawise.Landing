@@ -10,6 +10,9 @@ export const SITE_CONFIG = {
 
 export const HOST_APP_URL = "https://host.trawise.org/";
 
+export const APP_STORE_URL =
+  "https://apps.apple.com/us/app/trawise/id6749550755";
+
 export const SOCIAL_LINKS = [
   { network: "LinkedIn", url: "https://www.linkedin.com/company/trawise" },
   { network: "Instagram", url: "https://www.instagram.com/tra.wise" },

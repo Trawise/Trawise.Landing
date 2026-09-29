@@ -1,6 +1,7 @@
 import { Trans, useTranslation } from "react-i18next";
 
 import { PhoneFrame } from "./device-frame";
+import { APP_STORE_URL } from "../lib/constants";
 import { CONTENT_WIDTH, Container, buttonClass } from "./ui";
 
 /**
@@ -88,10 +89,24 @@ export function Hero() {
 
             <div className="space-y-1">
               <p className="text-base text-gray-600">{t("hero.free")}</p>
-              {/* Said plainly rather than shown as store badges: the app is in
-                  neither store yet, and both stores require their own artwork
-                  for a link that actually resolves to a listing. */}
-              <p className="text-sm text-gray-500">{t("hero.storeNote")}</p>
+              {/* Said plainly rather than shown as a store badge: Google Play
+                  isn't live yet, and a badge needs its own artwork to match. */}
+              <p className="text-sm text-gray-500">
+                <Trans
+                  i18nKey="hero.storeNote"
+                  components={{
+                    appStore: (
+                      <a
+                        href={APP_STORE_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-700 underline hover:text-gray-900"
+                      />
+                    ),
+                  }}
+                />
+                <span className="sr-only"> ({t("opensInNewTab")})</span>
+              </p>
             </div>
           </div>
 
