@@ -89,29 +89,25 @@ export function Hero() {
 
             <div className="space-y-3">
               <p className="text-base text-gray-600">{t("hero.free")}</p>
-              <div className="flex flex-wrap items-center gap-3">
-                <a
-                  href={APP_STORE_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600"
-                >
-                  <img
-                    src="/app-store-badge.svg"
-                    alt={t("hero.appStoreAlt")}
-                    width={135}
-                    height={40}
-                    loading="lazy"
-                    decoding="async"
-                    className="h-10 w-auto"
-                  />
-                  <span className="sr-only"> ({t("opensInNewTab")})</span>
-                </a>
-                {/* Said plainly rather than shown as a store badge: Google
-                    Play isn't live yet, so there's no listing for one to
-                    link to. */}
-                <p className="text-sm text-gray-500">{t("hero.storeNote")}</p>
-              </div>
+              {/* sm and up: the header carries this badge instead, so the
+                  same link isn't shown twice on one screen. */}
+              <a
+                href={APP_STORE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="sm:hidden inline-flex rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600"
+              >
+                <img
+                  src="/app-store-badge.svg"
+                  alt={t("appStoreAlt")}
+                  width={135}
+                  height={40}
+                  loading="lazy"
+                  decoding="async"
+                  className="h-10 w-auto"
+                />
+                <span className="sr-only"> ({t("opensInNewTab")})</span>
+              </a>
             </div>
           </div>
 

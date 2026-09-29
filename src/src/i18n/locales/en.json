@@ -15,8 +15,6 @@
     "free": "Free to use, and Trawise never takes a cut — you pay the place directly.",
     "seeHowItWorks": "See how it works",
     "hostCta": "I have rooms to fill",
-    "appStoreAlt": "Download on the App Store",
-    "storeNote": "Google Play — coming soon.",
     "mapAlt": "The Trawise app showing a map of San Francisco with five places within two kilometres of a dropped pin, listed underneath",
     "offerAlt": "Three replies to one request — two places accepted at $240 a night, a third countered at $268"
   },
@@ -179,6 +177,7 @@
     "termsOfService": "The terms you agree to when you use Trawise, and what Trawise is and is not responsible for."
   },
   "opensInNewTab": "opens in a new tab",
+  "appStoreAlt": "Download on the App Store",
   "faq": {
     "title": "Frequently asked questions",
     "subtitle": "How Trawise works and what happens after a place says yes.",

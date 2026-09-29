@@ -43,7 +43,8 @@ export function Header() {
               className="flex items-center gap-3 sm:gap-4"
             >
               {/* Hidden below sm: at phone widths it would push "Become a
-                  host" into the logo, and it repeats in the hero below. */}
+                  host" into the logo. The hero carries this badge instead
+                  on phones, so the link is never shown twice on one screen. */}
               <a
                 href={APP_STORE_URL}
                 target="_blank"
@@ -52,7 +53,7 @@ export function Header() {
               >
                 <img
                   src="/app-store-badge.svg"
-                  alt={t("hero.appStoreAlt")}
+                  alt={t("appStoreAlt")}
                   width={135}
                   height={40}
                   loading="eager"
