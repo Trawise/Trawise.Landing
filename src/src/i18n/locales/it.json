@@ -15,7 +15,6 @@
     "free": "Gratis, e Trawise non trattiene alcuna commissione: paghi direttamente la struttura.",
     "seeHowItWorks": "Scopri come funziona",
     "hostCta": "Ho camere da riempire",
-    "storeNote": "L'app arriverà presto su App Store e Google Play.",
     "mapAlt": "L'app Trawise con una mappa di San Francisco e cinque strutture entro due chilometri dal segnaposto, elencate sotto",
     "offerAlt": "Tre risposte alla stessa richiesta: due strutture hanno accettato 240 $ a notte, una terza ha proposto 268 $"
   },
@@ -178,6 +177,7 @@
     "termsOfService": "Le condizioni che accetti usando Trawise, e di che cosa Trawise risponde e di che cosa non risponde."
   },
   "opensInNewTab": "si apre in una nuova scheda",
+  "appStoreAlt": "Scaricala su App Store",
   "faq": {
     "title": "Domande frequenti",
     "subtitle": "Come funziona Trawise e cosa succede quando una struttura dice sì.",
