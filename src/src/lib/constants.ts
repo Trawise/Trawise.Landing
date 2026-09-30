@@ -11,7 +11,7 @@ export const SITE_CONFIG = {
 export const HOST_APP_URL = "https://host.trawise.org/";
 
 export const APP_STORE_URL =
-  "https://apps.apple.com/us/app/trawise/id6749550755";
+  "https://apps.apple.com/us/app/trawise/id6749550755?itscg=30200&itsct=apps_box_badge&mttnsubad=6749550755";
 
 export const PRODUCT_HUNT_URL =
   "https://www.producthunt.com/products/trawise?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-trawise";
