@@ -1,8 +1,12 @@
 import { Trans, useTranslation } from "react-i18next";
 
 import { PhoneFrame } from "./device-frame";
-import { APP_STORE_URL } from "../lib/constants";
-import { CONTENT_WIDTH, Container, buttonClass } from "./ui";
+import {
+  APP_STORE_URL,
+  PRODUCT_HUNT_BADGE_URL,
+  PRODUCT_HUNT_URL,
+} from "../lib/constants";
+import { CONTENT_WIDTH, Container } from "./ui";
 
 /**
  * The phone the hero opens on, with the payoff — two real offers — floated over
@@ -45,6 +49,38 @@ function HeroDevice() {
   );
 }
 
+interface BadgeProps {
+  href: string;
+  src: string;
+  alt: string;
+  /** The asset's width at a 54px height, so its ratio is reserved on load. */
+  width: number;
+}
+
+function Badge({ href, src, alt, width }: BadgeProps) {
+  const { t } = useTranslation();
+
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex rounded-lg transition-opacity hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600"
+    >
+      <img
+        src={src}
+        alt={alt}
+        width={width}
+        height={54}
+        loading="eager"
+        decoding="async"
+        className="h-10 sm:h-[54px] w-auto"
+      />
+      <span className="sr-only"> ({t("opensInNewTab")})</span>
+    </a>
+  );
+}
+
 export function Hero() {
   const { t } = useTranslation();
 
@@ -78,38 +114,30 @@ export function Hero() {
               {t("hero.description")}
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <a href="#how-it-works" className={buttonClass("primary", "lg")}>
-                {t("hero.seeHowItWorks")}
-              </a>
-              <a href="#for-hosts" className={buttonClass("secondary", "lg")}>
-                {t("hero.hostCta")}
-              </a>
-            </div>
-
-            <div className="space-y-3">
-              <p className="text-base text-gray-600">{t("hero.free")}</p>
-              {/* sm and up: the header carries this badge instead, so the
-                  same link isn't shown twice on one screen. */}
-              <a
-                href={APP_STORE_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="sm:hidden inline-flex rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600"
-              >
-                {/* 120x40 matches the badge asset's true 119.664:40 ratio,
-                    so the reserved box is correct before the SVG loads. */}
-                <img
+            {/* The badges and the line under them are one unit, the download
+                and what it costs, so they sit closer to each other than to
+                the copy above. */}
+            <div className="space-y-4">
+              {/* One shared height so the two read as a pair. h-10 is Apple's
+                  minimum on screen and keeps both on one line from a 360px
+                  phone up; gap-4 at sm is the quarter-height clear space
+                  Apple asks for around the badge. */}
+              <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+                <Badge
+                  href={APP_STORE_URL}
                   src="/app-store-badge.svg"
                   alt={t("appStoreAlt")}
-                  width={120}
-                  height={40}
-                  loading="eager"
-                  decoding="async"
-                  className="h-10 w-auto"
+                  width={162}
                 />
-                <span className="sr-only"> ({t("opensInNewTab")})</span>
-              </a>
+                <Badge
+                  href={PRODUCT_HUNT_URL}
+                  src={PRODUCT_HUNT_BADGE_URL}
+                  alt={t("productHuntAlt")}
+                  width={250}
+                />
+              </div>
+
+              <p className="text-base text-gray-600">{t("hero.free")}</p>
             </div>
           </div>
 
