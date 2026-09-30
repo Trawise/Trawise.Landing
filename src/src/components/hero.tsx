@@ -1,5 +1,4 @@
 import { Trans, useTranslation } from "react-i18next";
-import { useLocation } from "react-router-dom";
 
 import { PhoneFrame } from "./device-frame";
 import {
@@ -7,7 +6,6 @@ import {
   PRODUCT_HUNT_BADGE_URL,
   PRODUCT_HUNT_URL,
 } from "../lib/constants";
-import { type Locale, localeFromPath } from "../lib/locales";
 import { CONTENT_WIDTH, Container } from "./ui";
 
 /**
@@ -51,14 +49,6 @@ function HeroDevice() {
   );
 }
 
-// Apple's own artwork for each language; the four share one 119.664:40 ratio.
-const APP_STORE_BADGE: Record<Locale, string> = {
-  en: "/app-store-badge.svg",
-  es: "/app-store-badge-es.svg",
-  it: "/app-store-badge-it.svg",
-  sv: "/app-store-badge-sv.svg",
-};
-
 interface BadgeProps {
   href: string;
   src: string;
@@ -93,7 +83,6 @@ function Badge({ href, src, alt, width }: BadgeProps) {
 
 export function Hero() {
   const { t } = useTranslation();
-  const { pathname } = useLocation();
 
   return (
     // min-h-viewport, not min-h-screen: the sticky header and the consent
@@ -136,7 +125,7 @@ export function Hero() {
               <div className="flex flex-wrap items-center gap-3 sm:gap-4">
                 <Badge
                   href={APP_STORE_URL}
-                  src={APP_STORE_BADGE[localeFromPath(pathname)]}
+                  src="/app-store-badge.svg"
                   alt={t("appStoreAlt")}
                   width={162}
                 />
