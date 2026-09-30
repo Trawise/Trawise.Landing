@@ -1,8 +1,12 @@
 import { Trans, useTranslation } from "react-i18next";
 
 import { PhoneFrame } from "./device-frame";
-import { APP_STORE_URL } from "../lib/constants";
-import { CONTENT_WIDTH, Container, buttonClass } from "./ui";
+import {
+  APP_STORE_URL,
+  PRODUCT_HUNT_BADGE_URL,
+  PRODUCT_HUNT_URL,
+} from "../lib/constants";
+import { CONTENT_WIDTH, Container } from "./ui";
 
 /**
  * The phone the hero opens on, with the payoff — two real offers — floated over
@@ -78,39 +82,48 @@ export function Hero() {
               {t("hero.description")}
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <a href="#how-it-works" className={buttonClass("primary", "lg")}>
-                {t("hero.seeHowItWorks")}
-              </a>
-              <a href="#for-hosts" className={buttonClass("secondary", "lg")}>
-                {t("hero.hostCta")}
-              </a>
-            </div>
-
-            <div className="space-y-3">
-              <p className="text-base text-gray-600">{t("hero.free")}</p>
-              {/* sm and up: the header carries this badge instead, so the
-                  same link isn't shown twice on one screen. */}
+            {/* Both badges share one height so they read as a pair: h-11 fits
+                them on one line at a 390px phone, and they wrap cleanly below
+                that. The width and height attributes keep each asset's own
+                ratio, so the reserved box is right before the SVG loads. */}
+            <div className="flex flex-wrap items-center gap-3">
               <a
                 href={APP_STORE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="sm:hidden inline-flex rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600"
+                className="inline-flex rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600"
               >
-                {/* 120x40 matches the badge asset's true 119.664:40 ratio,
-                    so the reserved box is correct before the SVG loads. */}
                 <img
                   src="/app-store-badge.svg"
                   alt={t("appStoreAlt")}
-                  width={120}
-                  height={40}
+                  width={162}
+                  height={54}
                   loading="eager"
                   decoding="async"
-                  className="h-10 w-auto"
+                  className="h-11 sm:h-[54px] w-auto"
+                />
+                <span className="sr-only"> ({t("opensInNewTab")})</span>
+              </a>
+              <a
+                href={PRODUCT_HUNT_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600"
+              >
+                <img
+                  src={PRODUCT_HUNT_BADGE_URL}
+                  alt={t("productHuntAlt")}
+                  width={250}
+                  height={54}
+                  loading="eager"
+                  decoding="async"
+                  className="h-11 sm:h-[54px] w-auto"
                 />
                 <span className="sr-only"> ({t("opensInNewTab")})</span>
               </a>
             </div>
+
+            <p className="text-base text-gray-600">{t("hero.free")}</p>
           </div>
 
           <div className="flex justify-center">

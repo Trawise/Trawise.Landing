@@ -1,8 +1,11 @@
 import { useTranslation } from "react-i18next";
 
 import { LocaleLink } from "./locale-link";
-import { APP_STORE_URL, HOST_APP_URL, SITE_CONFIG } from "../lib/constants";
+import { HOST_APP_URL, SITE_CONFIG } from "../lib/constants";
 import { CONTENT_WIDTH, Container, buttonClass } from "./ui";
+
+const NAV_LINK_CLASS =
+  "font-medium text-gray-600 hover:text-gray-900 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600 rounded";
 
 export function Header() {
   const { t } = useTranslation();
@@ -25,12 +28,13 @@ export function Header() {
             >
               {/* 199x40 matches the asset's true 1123:226 ratio at h-10, so the
                 reserved box is correct before the stylesheet applies. The logo
-                steps down to h-8 on phones: at h-10 it is 199px wide, which
-                together with the CTA overflows a 320px viewport. */}
+                steps down on phones: at h-10 it is 199px wide, which together
+                with the CTA overflows a 320px viewport, and even h-8 leaves the
+                CTA too little room there and wraps it onto two lines. */}
               <img
                 src="/full-logo.png"
                 alt={t("navigation.logoAlt", { name: SITE_CONFIG.name })}
-                className="h-8 sm:h-10 w-auto"
+                className="h-7 min-[360px]:h-8 sm:h-10 w-auto"
                 width={199}
                 height={40}
                 loading="eager"
@@ -40,33 +44,22 @@ export function Header() {
 
             <nav
               aria-label={t("navigation.primary")}
-              className="flex items-center gap-3 sm:gap-4"
+              className="flex items-center gap-6"
             >
-              {/* Hidden below sm: at phone widths it would push "Become a
-                  host" into the logo. The hero carries this badge instead
-                  on phones, so the link is never shown twice on one screen. */}
-              <a
-                href={APP_STORE_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hidden sm:inline-flex rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600"
+              {/* Hidden below md: beside "Become a host" they would push into
+                  the logo, and on a phone the sections are a scroll away. */}
+              <LocaleLink
+                to="/#how-it-works"
+                className={`hidden md:inline ${NAV_LINK_CLASS}`}
               >
-                {/* h-11 (44px): the exact rendered height of the secondary
-                    button beside it (sm:px-6 sm:text-base, py-2, border-2),
-                    so the two controls read as the same size. 120x40 matches
-                    the badge asset's true 119.664:40 ratio, so the reserved
-                    box is correct before the SVG loads. */}
-                <img
-                  src="/app-store-badge.svg"
-                  alt={t("appStoreAlt")}
-                  width={120}
-                  height={40}
-                  loading="eager"
-                  decoding="async"
-                  className="h-11 w-auto"
-                />
-                <span className="sr-only"> ({t("opensInNewTab")})</span>
-              </a>
+                {t("hero.seeHowItWorks")}
+              </LocaleLink>
+              <LocaleLink
+                to="/#for-hosts"
+                className={`hidden md:inline ${NAV_LINK_CLASS}`}
+              >
+                {t("hero.hostCta")}
+              </LocaleLink>
               <a
                 href={HOST_APP_URL}
                 target="_blank"
@@ -74,7 +67,7 @@ export function Header() {
                 className={buttonClass(
                   "secondary",
                   "sm",
-                  "sm:px-6 sm:text-base",
+                  "whitespace-nowrap sm:px-6 sm:text-base",
                 )}
               >
                 {t("navigation.becomeHost")}

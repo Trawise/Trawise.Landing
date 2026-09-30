@@ -2,12 +2,7 @@ import { type ReactNode } from "react";
 import { useTranslation } from "react-i18next";
 
 import { LocaleLink } from "./locale-link";
-import {
-  HOST_APP_URL,
-  PRODUCT_HUNT_BADGE_URL,
-  PRODUCT_HUNT_URL,
-  SITE_CONFIG,
-} from "../lib/constants";
+import { HOST_APP_URL, SITE_CONFIG } from "../lib/constants";
 import { useCookieConsent } from "../hooks/use-cookie-consent";
 import { CONTENT_WIDTH, Container } from "./ui";
 import { LanguageSwitcher } from "./language-switcher";
@@ -63,23 +58,6 @@ export function Footer() {
                 {t("footer.description")}.
               </p>
               <SocialLinks />
-              <a
-                href={PRODUCT_HUNT_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600"
-              >
-                <img
-                  src={PRODUCT_HUNT_BADGE_URL}
-                  alt={t("productHuntAlt")}
-                  width={250}
-                  height={54}
-                  loading="lazy"
-                  decoding="async"
-                  className="h-[54px] w-auto"
-                />
-                <span className="sr-only"> ({t("opensInNewTab")})</span>
-              </a>
             </div>
 
             {/* One "Trawise" column rather than a travellers one and a hosts one:
