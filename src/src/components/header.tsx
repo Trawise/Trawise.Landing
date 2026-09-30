@@ -1,11 +1,50 @@
+import { type ReactNode } from "react";
 import { useTranslation } from "react-i18next";
+import { Link, useLocation } from "react-router-dom";
 
 import { LocaleLink } from "./locale-link";
 import { HOST_APP_URL, SITE_CONFIG } from "../lib/constants";
+import { localeFromPath, localePath, pathWithoutLocale } from "../lib/locales";
 import { CONTENT_WIDTH, Container, buttonClass } from "./ui";
 
-const NAV_LINK_CLASS =
-  "font-medium text-gray-600 hover:text-gray-900 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600 rounded";
+// Hidden below lg: in Spanish they wrap and crowd the logo even at md, and
+// on a phone the sections are a short scroll away.
+const SECTION_LINK_CLASS =
+  "hidden lg:inline-block whitespace-nowrap py-2 font-medium text-gray-600 hover:text-gray-900 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600 rounded underline decoration-transparent underline-offset-4 hover:decoration-current focus:decoration-current";
+
+interface SectionLinkProps {
+  id: string;
+  children: ReactNode;
+}
+
+/**
+ * A link to a section of the home page, from any page.
+ *
+ * On the home page it is a plain fragment link: a router link to the hash the
+ * URL already has is not a navigation, so a second click would do nothing.
+ */
+function SectionLink({ id, children }: SectionLinkProps) {
+  const { pathname } = useLocation();
+
+  if (pathWithoutLocale(pathname) === "/") {
+    return (
+      <a href={`#${id}`} className={SECTION_LINK_CLASS}>
+        {children}
+      </a>
+    );
+  }
+
+  // Link rather than LocaleLink: that one would write "/sv/#id", not the
+  // "/sv#id" the home page itself lives at.
+  return (
+    <Link
+      to={`${localePath(localeFromPath(pathname), "/")}#${id}`}
+      className={SECTION_LINK_CLASS}
+    >
+      {children}
+    </Link>
+  );
+}
 
 export function Header() {
   const { t } = useTranslation();
@@ -46,20 +85,10 @@ export function Header() {
               aria-label={t("navigation.primary")}
               className="flex items-center gap-6"
             >
-              {/* Hidden below md: beside "Become a host" they would push into
-                  the logo, and on a phone the sections are a scroll away. */}
-              <LocaleLink
-                to="/#how-it-works"
-                className={`hidden md:inline ${NAV_LINK_CLASS}`}
-              >
+              <SectionLink id="how-it-works">
                 {t("hero.seeHowItWorks")}
-              </LocaleLink>
-              <LocaleLink
-                to="/#for-hosts"
-                className={`hidden md:inline ${NAV_LINK_CLASS}`}
-              >
-                {t("hero.hostCta")}
-              </LocaleLink>
+              </SectionLink>
+              <SectionLink id="for-hosts">{t("hero.hostCta")}</SectionLink>
               <a
                 href={HOST_APP_URL}
                 target="_blank"

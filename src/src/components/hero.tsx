@@ -1,4 +1,5 @@
 import { Trans, useTranslation } from "react-i18next";
+import { useLocation } from "react-router-dom";
 
 import { PhoneFrame } from "./device-frame";
 import {
@@ -6,6 +7,7 @@ import {
   PRODUCT_HUNT_BADGE_URL,
   PRODUCT_HUNT_URL,
 } from "../lib/constants";
+import { type Locale, localeFromPath } from "../lib/locales";
 import { CONTENT_WIDTH, Container } from "./ui";
 
 /**
@@ -49,8 +51,49 @@ function HeroDevice() {
   );
 }
 
+// Apple's own artwork for each language; the four share one 119.664:40 ratio.
+const APP_STORE_BADGE: Record<Locale, string> = {
+  en: "/app-store-badge.svg",
+  es: "/app-store-badge-es.svg",
+  it: "/app-store-badge-it.svg",
+  sv: "/app-store-badge-sv.svg",
+};
+
+interface BadgeProps {
+  href: string;
+  src: string;
+  alt: string;
+  /** The asset's width at a 54px height, so its ratio is reserved on load. */
+  width: number;
+}
+
+function Badge({ href, src, alt, width }: BadgeProps) {
+  const { t } = useTranslation();
+
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex rounded-lg transition-opacity hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600"
+    >
+      <img
+        src={src}
+        alt={alt}
+        width={width}
+        height={54}
+        loading="eager"
+        decoding="async"
+        className="h-10 sm:h-[54px] w-auto"
+      />
+      <span className="sr-only"> ({t("opensInNewTab")})</span>
+    </a>
+  );
+}
+
 export function Hero() {
   const { t } = useTranslation();
+  const { pathname } = useLocation();
 
   return (
     // min-h-viewport, not min-h-screen: the sticky header and the consent
@@ -82,48 +125,31 @@ export function Hero() {
               {t("hero.description")}
             </p>
 
-            {/* Both badges share one height so they read as a pair: h-11 fits
-                them on one line at a 390px phone, and they wrap cleanly below
-                that. The width and height attributes keep each asset's own
-                ratio, so the reserved box is right before the SVG loads. */}
-            <div className="flex flex-wrap items-center gap-3">
-              <a
-                href={APP_STORE_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600"
-              >
-                <img
-                  src="/app-store-badge.svg"
+            {/* The badges and the line under them are one unit, the download
+                and what it costs, so they sit closer to each other than to
+                the copy above. */}
+            <div className="space-y-4">
+              {/* One shared height so the two read as a pair. h-10 is Apple's
+                  minimum on screen and keeps both on one line from a 360px
+                  phone up; gap-4 at sm is the quarter-height clear space
+                  Apple asks for around the badge. */}
+              <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+                <Badge
+                  href={APP_STORE_URL}
+                  src={APP_STORE_BADGE[localeFromPath(pathname)]}
                   alt={t("appStoreAlt")}
                   width={162}
-                  height={54}
-                  loading="eager"
-                  decoding="async"
-                  className="h-11 sm:h-[54px] w-auto"
                 />
-                <span className="sr-only"> ({t("opensInNewTab")})</span>
-              </a>
-              <a
-                href={PRODUCT_HUNT_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-600"
-              >
-                <img
+                <Badge
+                  href={PRODUCT_HUNT_URL}
                   src={PRODUCT_HUNT_BADGE_URL}
                   alt={t("productHuntAlt")}
                   width={250}
-                  height={54}
-                  loading="eager"
-                  decoding="async"
-                  className="h-11 sm:h-[54px] w-auto"
                 />
-                <span className="sr-only"> ({t("opensInNewTab")})</span>
-              </a>
-            </div>
+              </div>
 
-            <p className="text-base text-gray-600">{t("hero.free")}</p>
+              <p className="text-base text-gray-600">{t("hero.free")}</p>
+            </div>
           </div>
 
           <div className="flex justify-center">
