@@ -2,6 +2,7 @@ import { Trans, useTranslation } from "react-i18next";
 
 import { PhoneFrame } from "./device-frame";
 import {
+  APP_STORE_BADGE_URL,
   APP_STORE_URL,
   PRODUCT_HUNT_BADGE_URL,
   PRODUCT_HUNT_URL,
@@ -74,7 +75,7 @@ function Badge({ href, src, alt, width }: BadgeProps) {
         height={54}
         loading="eager"
         decoding="async"
-        className="h-10 sm:h-[54px] w-auto"
+        className="h-10 sm:h-[54px] w-auto object-contain"
       />
       <span className="sr-only"> ({t("opensInNewTab")})</span>
     </a>
@@ -125,8 +126,8 @@ export function Hero() {
               <div className="flex flex-wrap items-center gap-3 sm:gap-4">
                 <Badge
                   href={APP_STORE_URL}
-                  src="/app-store-badge.svg"
-                  alt={t("appStoreAlt")}
+                  src={APP_STORE_BADGE_URL}
+                  alt="Download on the App Store"
                   width={162}
                 />
                 <Badge
